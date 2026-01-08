@@ -1,0 +1,70 @@
+---
+sidebar: sidebar 
+permalink: task-configure-dashboard.html 
+keywords: configure, dashboard, AWS tags, CloudWatch, FSx for ONTAP, Workload Factory, EDA, electronic design automation 
+summary: Configure seu painel de controle EDA adicionando tags para coletar métricas. 
+---
+= Use o painel de controle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ao fazer login no EDA pela primeira vez, você pode usar o painel de controle para observar o uso do projeto em seus sistemas de arquivos e volumes FSx para ONTAP . O painel de controle inclui vários filtros padrão que você pode usar para personalizar as informações exibidas. Além disso, você pode criar e aplicar suas próprias tags da AWS para organizar e filtrar os dados de acordo com as necessidades específicas do seu negócio.
+
+O painel de controle ajuda você a monitorar o uso do armazenamento, incluindo capacidade alocada, capacidade utilizada, taxa de transferência e IOPS.
+
+As métricas do CloudWatch coletadas incluem:
+
+* Capacidade provisionada: Métrica em nível de volume que representa a capacidade de armazenamento provisionada.
+* Capacidade utilizada: Métrica em nível de volume que representa o armazenamento utilizado.
+* Taxa de transferência média/máxima: Calculada como a média ou o valor máximo da soma de DataReadBytes e DataWriteBytes durante o período de tempo especificado.
+* IOPS médio/máximo: Calculado como a média ou o valor máximo da soma de DataReadOperations, DataWriteOperations e MetadataOperations durante o período de tempo especificado.
+
+
+
+
+== Configure o painel de controle
+
+Para usar o painel de controle de forma eficaz, configure tags da AWS em seus volumes FSx para ONTAP com base em suas necessidades de negócios, por exemplo, tags que representam projetos ou unidades de negócios. Para mais detalhes, consulte <<Configurar filtros personalizados>>.
+
+As tags da AWS são metadados para seus recursos da AWS. Elas ajudam você a categorizar seus recursos da AWS de diferentes maneiras, por exemplo, por projeto, aplicativo ou unidade de negócios. Para obter mais detalhes sobre a marcação, consulte https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/what-are-tags.html["O que são tags?"^] e  https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/overview.html["Referência da API de marcação de grupos de recursos da AWS"^].
+
+Após a configuração, na página *Configuração de tags*, forneça os nomes das chaves de tag da AWS e os rótulos correspondentes para exibição no seu painel.
+
+Quando essas tags são aplicadas, o Workload Factory começa a coletar e exibir as métricas relevantes do CloudWatch.
+
+Seu painel de controle se torna uma ferramenta dinâmica para organizar, acompanhar custos e filtrar recursos com base nas necessidades da sua organização.
+
+
+
+=== Configurar filtros personalizados
+
+. Faça login usando um dos seguintes métodos: link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] e então selecione *EDA*.
++
+Se você ainda não configurou seu painel de controle, será solicitado automaticamente que o faça.
+
+. Para cada filtro necessário, adicione um nome de rótulo de filtro e o nome da chave de tag da AWS que você deseja associar a ele.
+. Selecione *Aplicar*.
+. Para visualizar as alterações após aplicar tags ou filtros, selecione o ícone de atualização no painel. O painel dinâmico, configurado com os novos filtros, é exibido no painel de projetos EDA.
+. Para editar a configuração do painel posteriormente, selecione *Configurar*.
+
+
+
+
+=== Filtrar o painel de controle
+
+Você pode filtrar as informações exibidas no painel selecionando um ou todos os seguintes filtros padrão, bem como quaisquer filtros personalizados que você tenha criado:
+
+* Credenciais
+* Região
+* Sistema de arquivos
+* Tipo de volume
+* Intervalo de tempo
+
+
+Após selecionar os filtros desejados, clique no ícone de atualização para atualizar as informações do painel.
+
+Para obter uma explicação das informações exibidas em um cartão, selecione o ícone de informações correspondente.

@@ -1,0 +1,11 @@
+= Lançamento inicial da carga de trabalho dos construtores
+:allow-uri-read: 
+
+
+
+
+=== Lançamento inicial da carga de trabalho dos construtores
+
+O BlueXP Workload Factory for Builders simplifica o consumo e o acesso às versões de software, eliminando a necessidade de ferramentas ou scripts personalizados. Ele permite que você utilize versões de software como clones instantâneos integrados ao Perforce Helix Core, criando um espaço de trabalho conveniente para seus processos de desenvolvimento, economizando tempo e recursos.
+
+A versão inicial inclui a capacidade de gerenciar projetos e espaços de trabalho, além de automatizar ações com o Codebox. Você também pode integrar o Builders com o Perforce Helix Core, para gerenciar diferentes versões de cada projeto e alternar entre elas rapidamente.

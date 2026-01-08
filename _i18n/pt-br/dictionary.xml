@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="4cd460e2c71c2ffba346f4471ea0fa00" category="doc">Lançamento inicial da carga de trabalho dos construtores</block>
+  <block id="323dd81fcb961ffe9d54fa99152c0e51" category="paragraph">O BlueXP Workload Factory for Builders simplifica o consumo e o acesso às versões de software, eliminando a necessidade de ferramentas ou scripts personalizados. Ele permite que você utilize versões de software como clones instantâneos integrados ao Perforce Helix Core, criando um espaço de trabalho conveniente para seus processos de desenvolvimento, economizando tempo e recursos.</block>
+  <block id="5f9f7bdd8b86c6cc583afabbd903007c" category="paragraph">A versão inicial inclui a capacidade de gerenciar projetos e espaços de trabalho, além de automatizar ações com o Codebox. Você também pode integrar o Builders com o Perforce Helix Core, para gerenciar diferentes versões de cada projeto e alternar entre elas rapidamente.</block>
+  <block id="514f1fc0ac0ff6e4200d3637146367f1" category="doc">Terminologia de permissões atualizada</block>
+  <block id="962abee1b74c5d5ab5f9bd0c47cbb068" category="paragraph">A interface do usuário e a documentação do Workload Factory agora usam "somente leitura" para se referir a permissões de leitura e "leitura/gravação" para se referir a permissões de automação.</block>
+  <block id="fc031ba945e09cb6053f39527ae4937f" category="doc">Suporte a clones</block>
+  <block id="2755dd60db288e29e6f06b54dc696d1e" category="paragraph">Agora você pode clonar um projeto no BlueXP Workload Factory for Builders. Ao clonar um projeto, o Builders cria um novo projeto a partir de um snapshot, com a mesma configuração do original. A clonagem é útil para criar rapidamente projetos semelhantes ou para fins de teste. Você pode montar o novo clone do projeto seguindo as instruções em Builders.</block>
+  <block id="2c66253b5627d775e178720764bbf7bf" category="inline-link">Gerenciar versões de projetos do BlueXP Workload Factory para Builders</block>
+  <block id="5cfea31bf03490b6d93b9e2e79a99599" category="paragraph"><block ref="5cfea31bf03490b6d93b9e2e79a99599" category="inline-link-rx"></block></block>
+  <block id="2bbead322f2dd5c4a40fbd66537e304f" category="doc">BlueXP workload factory agora NetApp Workload Factory</block>
+  <block id="9c80606adc6065bc48c6d99fbb8c3f1d" category="paragraph">O BlueXP foi renomeado e redesenhado para refletir melhor o papel que ele tem no gerenciamento da sua infraestrutura de dados. Como resultado, a BlueXP workload factory foi renomeada para NetApp Workload Factory.</block>
+  <block id="ef702fb37688ffbfdf16f6b005df7436" category="doc">O NetApp Workload Factory para Builders agora é o NetApp Workload Factory para EDA.</block>
+  <block id="f48bd4568e33f95e23f1ea90df81f8af" category="paragraph">Workload Factory for Builders agora é Workload Factory for EDA. A mudança de nome reflete o foco nas cargas de trabalho de automação de projeto eletrônico (EDA).</block>
+  <block id="8e2c84558eaf80d5e8e99422d320b395" category="paragraph">O Workload Factory for EDA ajuda você a otimizar o FSx para ONTAP em vários sistemas de arquivos. Você pode otimizar o desempenho e reduzir os custos operacionais automatizando os parâmetros de armazenamento, analisando as restrições de desempenho e obtendo insights sobre projetos de EDA. O Workload Factory para EDA foi projetado para se integrar com suas estruturas de Infraestrutura como Código (IaC).</block>
+  <block id="5e3b7f958129022f75fe2931c55615b2" category="section-title">Integração da página inicial do assistente de IA "Pergunte-me"</block>
+  <block id="65bcc541760e8f25e0281edbfdfbf7f3" category="paragraph">A página inicial do console do Workload Factory incorpora o assistente de IA "Pergunte-me", permitindo que você faça perguntas sobre seu próprio ambiente de armazenamento, obtenha insights personalizados diretamente do seu ambiente e consulte conversas anteriores. Você pode interagir com o recurso "Pergunte-me" para entender suas cargas de trabalho, solucionar problemas e aprender mais sobre o Workload Factory — tudo isso sem sair do console.</block>
+  <block id="08c1bf6e31ef174ff608b5eb3d282063" category="summary">Com o Codebox, você pode automatizar a implantação de hosts, a criação de bancos de dados e muito mais.</block>
+  <block id="e7865839bdb0670c8ccd4e6029a8580b" category="doc">Automatize tarefas de EDA com o Codebox.</block>
+  <block id="971492a505365b895740e7ae6a7e5a70" category="paragraph">Com o Codebox, você pode automatizar a criação de projetos e as operações de proteção de dados. O Codebox é um copiloto de infraestrutura como código (IaC) que ajuda você a gerar código para executar quaisquer operações suportadas pelo Workload Factory.</block>
+  <block id="bd282943a337f4287ca0d70f9a836261" category="inline-link-macro">Automação Codebox</block>
+  <block id="7954c9f6b266222ad558a397a97a8531" category="paragraph">Saiba mais sobre <block ref="d6a91743d83ea88006a3d66c27289981" category="inline-link-macro-rx"></block> e como usá-lo.</block>
+  <block id="14f9e37de51ef9bfb9372bcc2644a7d3" category="summary">Um espaço de trabalho no NetApp Workload Factory para EDA é uma representação Perforce de um projeto, baseada em um snapshot do projeto. Você pode criar espaços de trabalho como parte de um projeto EDA.</block>
+  <block id="fb1790577e5f5d791fc376eb201401a4" category="doc">Crie um espaço de trabalho EDA</block>
+  <block id="ae1c3d36c4598376c2263464aa4284de" category="paragraph">Um espaço de trabalho no NetApp Workload Factory para EDA é uma representação Perforce de um projeto em um momento específico. Os espaços de trabalho são criados usando um instantâneo do projeto como base. Você pode criar novos espaços de trabalho dentro de um projeto EDA. Você pode criar espaços de trabalho a partir da interface do usuário do Perforce.</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">Antes de começar</block>
+  <block id="678fde6363662adb0e14514d5e0ea203" category="inline-link-macro">Integre EDA com Perforce</block>
+  <block id="40e2dc00245d381e14b11b6af1aa9325" category="paragraph">Certifique-se de ter integrado o EDA com o Perforce Helix Visual Client. Ver <block ref="4451768d6f25b13dcd53f8576a8b3816" category="inline-link-macro-rx"></block> Para obter mais informações.</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Passos</block>
+  <block id="da8298c164d94d09143ffe89648c5d3c" category="list-text">Faça login no Perforce.</block>
+  <block id="0d8bfed2e411f7c8b7dff958995d4b8d" category="list-text">No menu Perforce, selecione *Exibir* &gt; *WF*.</block>
+  <block id="905278c1db6bd8497d1b33523cff6fc7" category="paragraph">A tela de login do Workload Factory aparece na interface do usuário do Perforce.</block>
+  <block id="dcafe9cce796ce855e87b270f0a5af59" category="inline-link-macro">experiências de console</block>
+  <block id="e1e54933838bb7ba662301d01c937d2d" category="list-text">Faça login usando um dos seguintes métodos: <block ref="68ceec76279c6913cdee16884c2d813a" category="inline-link-macro-rx"></block>.</block>
+  <block id="342a19841e494c61bf9c06a5879eaffa" category="inline-image-macro">O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração.</block>
+  <block id="b8e80bdc143cd93756cdc18a9e1dbec8" category="list-text">Selecione o menu <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> e então selecione *EDA*.</block>
+  <block id="e697a1da1a063826188852846e2e5db7" category="list-text">Selecione *CI/CD*.</block>
+  <block id="d09286017eb6bb6a42c1f431c40b762f" category="list-text">Selecione *Criar projeto* e, em seguida, selecione *Criar espaço de trabalho*.</block>
+  <block id="7e8ef7f44044b6d0f74789559287feea" category="list-text">Na página Criar um projeto de espaço de trabalho, forneça as seguintes informações:</block>
+  <block id="84e0437fbb34f7df37fde5cd3164b871" category="list-text">Selecione uma imagem para usar como base para o espaço de trabalho.</block>
+  <block id="823e06a14b6847643d4e237d4323c8c4" category="list-text">Insira um nome para o espaço de trabalho.</block>
+  <block id="23746643d2ed59cbb329d766d3165e53" category="list-text">Opcionalmente, insira um identificador de usuário para reivindicar o espaço de trabalho. Este identificador deve corresponder ao ID de usuário do Perforce do desenvolvedor que utilizará este espaço de trabalho.</block>
+  <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">Selecione *Criar*.</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Resultado</block>
+  <block id="2d8f6486127f82c2bea30c11d743290d" category="paragraph">O espaço de trabalho foi criado e aparece na lista de espaços de trabalho na página Espaços de Trabalho.</block>
+  <block id="3c6efe0ce159fb5b8ee4882bcf3ad973" category="summary">A NetApp oferece suporte ao Workload Factory e seus serviços em nuvem de diversas maneiras. Diversas opções gratuitas de autoatendimento estão disponíveis 24 horas por dia, 7 dias por semana, como artigos da base de conhecimento (KB) e um fórum da comunidade. Seu cadastro de suporte inclui suporte técnico remoto via sistema de tickets online.</block>
+  <block id="9dd6fbb22308fb878005d005d21076f4" category="doc">Obtenha ajuda com o Workload Factory para EDA.</block>
+  <block id="6a7b2c9c4cec65ad972b108fa0a1192b" category="section-title">Obtenha suporte para FSx para ONTAP</block>
+  <block id="4435b263dd1a35bcd8dfda050db92b3b" category="paragraph">Para obter suporte técnico relacionado ao FSx for ONTAP, sua infraestrutura ou qualquer solução que utilize o serviço, consulte a seção "Obtendo ajuda" na documentação do Workload Factory para esse produto.</block>
+  <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">Amazon FSx para ONTAP</block>
+  <block id="359d8b16e442ffaa72e03c95fcd60448" category="paragraph"><block ref="359d8b16e442ffaa72e03c95fcd60448" category="inline-link-macro-rx"></block></block>
+  <block id="35f9849ffdd809bda11d0fc56e1e3583" category="paragraph">Para receber suporte técnico específico para o Workload Factory e suas soluções e serviços de armazenamento, utilize as opções de suporte descritas abaixo.</block>
+  <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">Use opções de autoapoio</block>
+  <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">Estas opções estão disponíveis gratuitamente, 24 horas por dia, 7 dias por semana:</block>
+  <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">Documentação</block>
+  <block id="d935525f4850c4638cbf48ae53fb4686" category="paragraph">A documentação do Workload Factory que você está visualizando no momento.</block>
+  <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">Base de conhecimento</block>
+  <block id="436f63b446dba5a418c698d49bd39718" category="list-text"><block ref="436f63b446dba5a418c698d49bd39718" category="inline-link-rx"></block></block>
+  <block id="ba6274b9c9d1f81bb3a648fa289986b8" category="paragraph">Pesquise na base de conhecimento do Workload Factory para encontrar artigos úteis que o ajudarão a solucionar problemas.</block>
+  <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">Comunidades</block>
+  <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
+  <block id="7faef90df03399696ba9d4815b37171a" category="paragraph">Participe da comunidade Workload Factory para acompanhar discussões em andamento ou criar novas.</block>
+  <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">Crie um caso com o suporte da NetApp</block>
+  <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">Além das opções de autossuporte acima, você pode trabalhar com um especialista em suporte da NetApp para resolver quaisquer problemas após ativar o suporte.</block>
+  <block id="8fece025a1a8fef7018449bf104a2527" category="paragraph-title">Antes de começar</block>
+  <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">Aprenda como se registrar para receber suporte</block>
+  <block id="a12ea39ddf1c98adfd7f751299705efa" category="paragraph">Para usar a funcionalidade *Criar um Caso*, primeiro você precisa se cadastrar para obter suporte e associar suas credenciais do Site de Suporte da NetApp ao seu login do Workload Factory. <block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>.</block>
+  <block id="356c88ac4b0ec3f7689cc91f54701fef" category="list-text">No canto superior direito do console do Workload Factory, selecione *Ajuda &gt; Suporte*.</block>
+  <block id="6e74b203173a9994c366c7e7a3cf4748" category="paragraph">Selecionar esta opção abre o NetApp Console em uma nova aba do navegador e carrega o painel de suporte.</block>
+  <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">Na página *Recursos*, escolha uma das opções disponíveis em Suporte Técnico:</block>
+  <block id="6a1b74969231967ed071d465206b15c7" category="list-text">Selecione *Ligue para nós* se quiser falar com alguém por telefone. Você será direcionado para uma página no netapp.com que lista os números de telefone para os quais você pode ligar.</block>
+  <block id="d65a2a6fc9caad1867728d4382eeb989" category="list-text">Selecione *Criar um caso* para abrir um tíquete com um especialista de suporte da NetApp :</block>
+  <block id="d7d0da18fbb8f8f85c1364883fbdf4c7" category="list-text">*Serviço*: Selecione *Workload Factory*.</block>
+  <block id="e6f29fb3c7636dc0040600dd0e84bb79" category="list-text">*Prioridade do caso*: escolha a prioridade do caso, que pode ser Baixa, Média, Alta ou Crítica.</block>
+  <block id="835eb4008e97c2a7f69bbb2725285e34" category="paragraph">Para saber mais detalhes sobre essas prioridades, passe o mouse sobre o ícone de informações ao lado do nome do campo.</block>
+  <block id="0f7d9319c95a8be1492e74601c4b3259" category="list-text">*Descrição do problema*: Forneça uma descrição detalhada do seu problema, incluindo quaisquer mensagens de erro aplicáveis ou etapas de solução de problemas que você executou.</block>
+  <block id="002c6f26fb01affb37b8cf3cef7a1fb0" category="list-text">*Endereços de e-mail adicionais*: insira endereços de e-mail adicionais se quiser informar outra pessoa sobre esse problema.</block>
+  <block id="c7f5c1a75acc58c6f004efc0ce1eba09" category="list-text">*Anexo (Opcional)*: Carregue até cinco anexos, um de cada vez.</block>
+  <block id="bfa80e7aaad6da353b431bff3a0e12d6" category="paragraph">Os anexos são limitados a 25 MB por arquivo. As seguintes extensões de arquivo são suportadas: txt, log, pdf, jpg/jpeg, rtf, doc/docx, xls/xlsx e csv.</block>
+  <block id="baaf0e61add7d12cf8d12e023d5aef18" category="inline-image-macro">Uma captura de tela do formulário Criar um caso que permite criar um caso com o Suporte da NetApp .</block>
+  <block id="b0c6c3ee60a29925d3f09cd609b79483" category="paragraph"><block ref="b0c6c3ee60a29925d3f09cd609b79483" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">Depois que você terminar</block>
+  <block id="18f487556417bb6d9721a7005ae097c9" category="paragraph">Um pop-up aparecerá com o número do seu caso de suporte. Um especialista em suporte da NetApp analisará seu caso e entrará em contato com você em breve.</block>
+  <block id="0ff9b4b8684b9e03c9c1e1320935eae3" category="paragraph">Para obter um histórico dos seus casos de suporte, você pode selecionar *Configurações &gt; Linha do tempo* e procurar por ações chamadas "criar caso de suporte". Um botão na extrema direita permite expandir a ação para ver detalhes.</block>
+  <block id="5c56753585e89a84941bb3a78bc681af" category="paragraph">É possível que você encontre a seguinte mensagem de erro ao tentar criar um caso:</block>
+  <block id="a30f69ab0ec85d427a3e8835713525bd" category="paragraph">"Você não está autorizado a criar um caso contra o serviço selecionado"</block>
+  <block id="3f13dd54818447375c92bf35e0a35f00" category="paragraph">Esse erro pode significar que a conta NSS e a empresa registrada associada a ela não são a mesma empresa registrada para o número de série da conta do NetApp Console (ou seja, 960xxxx) ou o número de série do sistema. Você pode buscar ajuda utilizando uma das seguintes opções:</block>
+  <block id="e01df0b4dfd95eba2c59333419e4fac6" category="list-text">Use o chat do produto</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-link"></block>
+  <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">Envie um caso não técnico em<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
+  <block id="898e35e1a4bf4b025c3edec879439b08" category="section-title">Gerencie seus casos de suporte (visualização)</block>
+  <block id="289d2ab2d9b0e116790d035921c12b56" category="paragraph">Você pode visualizar e gerenciar casos de suporte ativos e resolvidos diretamente do NetApp Console. Você pode gerenciar os casos associados à sua conta NSS e à sua empresa.</block>
+  <block id="394ef093ad3259b9ff0fe7406f015b83" category="paragraph">O gerenciamento de casos está disponível como uma prévia. Planejamos refinar essa experiência e adicionar melhorias em versões futuras. Envie-nos seu feedback usando o chat do produto.</block>
+  <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">Observe o seguinte:</block>
+  <block id="5e4e7672ec2ba2b8a763da7f6714e212" category="list-text">O painel de gerenciamento de casos na parte superior da página oferece duas visualizações:</block>
+  <block id="01c3ffea552d74a5ae390b10e71a1f26" category="list-text">A visualização à esquerda mostra o total de casos abertos nos últimos 3 meses pela conta NSS do usuário que você forneceu.</block>
+  <block id="e3b6c09a5686233f72ce1ea60a1eb088" category="list-text">A visualização à direita mostra o total de casos abertos nos últimos 3 meses no nível da sua empresa com base na sua conta de usuário NSS.</block>
+  <block id="b19b168cc8a2b8c984465e140256b3a2" category="paragraph">Os resultados na tabela refletem os casos relacionados à exibição que você selecionou.</block>
+  <block id="56dcadeee6b0e5c47a52673f9b5a0bb3" category="list-text">Você pode adicionar ou remover colunas de interesse e filtrar o conteúdo de colunas como Prioridade e Status. Outras colunas fornecem apenas recursos de classificação.</block>
+  <block id="6f936762e1223311f031685422fcd3a4" category="paragraph">Veja as etapas abaixo para mais detalhes.</block>
+  <block id="b14929795a61440e9b4ec9f8a4885ae3" category="list-text">Em cada caso, oferecemos a possibilidade de atualizar notas do caso ou fechar um caso que ainda não esteja no status Fechado ou Pendente Fechado.</block>
+  <block id="f9a63cd3a07378e169c58addd5fdce8d" category="paragraph">Selecionar esta opção abre o NetApp Console em uma nova aba do navegador e carrega o painel de suporte.</block>
+  <block id="785b440c0be1d853c5e2f4fb1f1ee2ab" category="list-text">Selecione *Gerenciamento de Casos* e, se solicitado, adicione sua conta NSS ao NetApp Console.</block>
+  <block id="c80d8addb8aa8e8872bbc44894b077f3" category="paragraph">A página *Gerenciamento de casos* exibe os casos em aberto relacionados à conta NSS associada à sua conta de usuário do NetApp Console . Esta é a mesma conta NSS que aparece no topo da página de *gerenciamento NSS*.</block>
+  <block id="2ae5ae78bdb2d222f15fd8e89248709c" category="list-text">Modifique opcionalmente as informações exibidas na tabela:</block>
+  <block id="1d39d3ab518e1e3f16cbafb2a56e1fd9" category="list-text">Em *Casos da organização*, selecione *Exibir* para visualizar todos os casos associados à sua empresa.</block>
+  <block id="059e856250b59be3069246887b74a23c" category="list-text">Modifique o intervalo de datas escolhendo um intervalo de datas exato ou escolhendo um período de tempo diferente.</block>
+  <block id="dfb3764bce2548df4e06357403f9c7d0" category="inline-image-macro">Uma captura de tela da opção acima da tabela na página Gerenciamento de casos que permite que você escolha um intervalo de datas exato ou os últimos 7 dias, 30 dias ou 3 meses.</block>
+  <block id="4f7062c5c309a833cf46e4a1a5a5d366" category="paragraph"><block ref="4f7062c5c309a833cf46e4a1a5a5d366" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a1bb576be9e5a356290f231efb51b3f5" category="list-text">Filtrar o conteúdo das colunas.</block>
+  <block id="3753f10a59e21f58b30e3e67d416453e" category="inline-image-macro">Uma captura de tela da opção de filtro na coluna Status que permite filtrar casos que correspondem a um status específico, como Ativo ou Fechado.</block>
+  <block id="8f624dee500d9670a27c4404084a7a62" category="paragraph"><block ref="8f624dee500d9670a27c4404084a7a62" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1c6ea5ef583389e18e7d7bda70beaa71" category="inline-image-macro">O ícone de mais que aparece na tabela</block>
+  <block id="002f1c0a8cf4a68b888010ddef3a7f7e" category="list-text">Altere as colunas que aparecem na tabela selecionando<block ref="e55ec8dc42ae68d9326c51261c8a5f4f" category="inline-image-macro-rx" type="image"></block> e então escolher as colunas que você gostaria de exibir.</block>
+  <block id="370b44009f1b82d0b6b178bb80cc62fa" category="inline-image-macro">Uma captura de tela que mostra as colunas que você pode mostrar na tabela.</block>
+  <block id="72c5c65442a2c44e7f2546b8b4c957df" category="paragraph"><block ref="72c5c65442a2c44e7f2546b8b4c957df" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ad0ae9ea1f2e8d973a9a0f6bb169f494" category="inline-image-macro">Um ícone com três pontos que aparece na última coluna da tabela</block>
+  <block id="000a1376035909240f559b8ab724030c" category="list-text">Gerencie um caso existente selecionando<block ref="54181d1b918b28e5f92545f8b3b4a30c" category="inline-image-macro-rx" type="image"></block> e selecionando uma das opções disponíveis:</block>
+  <block id="6d9dd74e7709ef802d299966f7898f6b" category="list-text">*Ver caso*: Veja detalhes completos sobre um caso específico.</block>
+  <block id="8e6b52a532a4fbbfc98dca3ebfa5f1e6" category="list-text">*Atualizar notas do caso*: Forneça detalhes adicionais sobre seu problema ou selecione *Carregar arquivos* para anexar até no máximo cinco arquivos.</block>
+  <block id="bb6d5d351525342dd6b3cf4d15b6f298" category="list-text">*Fechar caso*: Forneça detalhes sobre o motivo pelo qual você está fechando o caso e selecione *Fechar caso*.</block>
+  <block id="e93217b2f709a398ce3c0fb753beb05f" category="inline-image-macro">Uma captura de tela que mostra as ações que você pode realizar após selecionar o menu na última coluna da tabela.</block>
+  <block id="6f7cf78e14aa346236a87d9541221fb2" category="paragraph"><block ref="6f7cf78e14aa346236a87d9541221fb2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e2c3d4fe26e2a57771176f8d971d83e0" category="summary">Aprenda como integrar EDA com o Perforce.</block>
+  <block id="cdca25b114cc65b57af3f2dc65baa554" category="paragraph">Integre o EDA com o Perforce Helix Visual Client (P4V) para que os desenvolvedores possam gerenciar seus espaços de trabalho usando a CLI do Perforce. Isso permite que os desenvolvedores alternem rapidamente entre projetos e espaços de trabalho, economizando tempo durante o desenvolvimento.</block>
+  <block id="46a36d37c0e9a3ece7f56b7e840f1b27" category="inline-link">Arquivo de integração P4V</block>
+  <block id="7c359035b875bf519bc132bc94cafdab" category="list-text">Baixe o<block ref="093cf1344a1daf53cd0d14d747e3c73f" category="inline-link-rx"></block>.</block>
+  <block id="f5a1a9adabcc26ef07e31dc7417fb595" category="list-text">Abra o P4V e vá para *Ferramentas* &gt; *Gerenciar Ferramentas* &gt; *Abas HTML*.</block>
+  <block id="78b6e5d76f833be63e70a3cd5925a698" category="list-text">Selecione *Importar guias HTML*.</block>
+  <block id="e0ca1ffa7a7ff194727a7c27c1091abd" category="list-text">Selecione o arquivo XML de integração P4V e selecione *Importar*.</block>
+  <block id="8021afdc93837bf89b4d2209922664f5" category="list-text">Acesse *Exibir* &gt; *Fábrica de Carga de Trabalho*.</block>
+  <block id="9a68fc2523ab5eb5357c2c3ba6b626d9" category="paragraph">A interface web do NetApp Workload Factory para EDA aparece como uma aba HTML dentro do cliente P4V.</block>
+  <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">Qual o próximo passo?</block>
+  <block id="bf9f27fc21322ff6302a870d86e2e722" category="inline-link-macro">Crie um plano de implantação do Amazon EC2 usando o assistente de migração.</block>
+  <block id="87ca10f516e69b36084d36d28809162e" category="paragraph"><block ref="a5520c5bc95caf26ab1a143ec38e8340" category="inline-link-macro-rx"></block>.</block>
+  <block id="1eba71d64e6c5e410e558530711e835b" category="summary">Limitações conhecidas identificam plataformas, dispositivos ou funções que não são suportados por esta versão do produto ou que não interoperam corretamente com ele. Revise essas limitações cuidadosamente.</block>
+  <block id="f340a055e7f6e6033a05917a218d98bf" category="doc">Limitações conhecidas do NetApp Workload Factory para EDA</block>
+  <block id="406b6743d6cb27b667d9600f28f51fe8" category="section-title">É necessário obter autorização do operador.</block>
+  <block id="c1ff9ef1c0ec2e919c5fb8f99ade5a2c" category="paragraph">O NetApp Workload Factory para EDA requer permissões de operador para funcionar corretamente.</block>
+  <block id="09593340bc6b0dc8107502c02818e9b4" category="summary">Aprenda como usar a integração do Perforce no NetApp Workload Factory para EDA.</block>
+  <block id="1df0a36c15777610fdaa9898d2c03d7b" category="doc">Saiba mais sobre a integração do Perforce no NetApp Workload Factory para EDA.</block>
+  <block id="aaece55db43004e3cc685d5bd165253e" category="paragraph">A integração do Perforce com pipelines de CI/CD aprimora o processo de desenvolvimento ao automatizar compilações, testes e implantações, resultando em uma entrega de software mais rápida e confiável.</block>
+  <block id="e365225a054a446470ef3e9d340e350c" category="paragraph">A Integração Contínua e a Implantação Contínua (CI/CD) em EDA são ferramentas para a criação rápida de ambientes de desenvolvimento de software. Permite a configuração rápida de ambientes de desenvolvimento pessoais, economizando tempo e possibilitando o autosserviço para os desenvolvedores, ao mesmo tempo que capacita as equipes de DevOps a manter o controle da infraestrutura. Utilizando CI/CD, os desenvolvedores de software podem criar espaços de trabalho rapidamente, sem a necessidade de armazenamento de dados especializado ou conhecimento da infraestrutura de desenvolvimento.</block>
+  <block id="44583f52606e67cb0d8ed1bc84bffdad" category="section-title">O que é CI/CD?</block>
+  <block id="4e7764c6c48491248a7f9cb95e3bb4b2" category="paragraph">Ao utilizar CI/CD, você pode simplificar a maneira como os desenvolvedores gerenciam e interagem com diferentes versões de seus softwares. Ele funciona com o Perforce Helix Core para clonar instantaneamente versões de software e criar espaços de trabalho para desenvolvimento, controle de qualidade e CI/CD.</block>
+  <block id="7459a9c0d44a28a6af05450d4b5725c6" category="paragraph">Você pode facilmente criar um projeto e atribuir um volume que represente seu ambiente de software e seus artefatos. Ao atualizar seu software, você pode tirar instantâneos do volume, capturando o estado do seu software naquele momento. Você pode acessar qualquer versão de software instantaneamente, sem precisar resincronizar, economizando tempo e recursos.</block>
+  <block id="6ae8e58cb52cd45b321927bcb2961f4e" category="inline-link-macro">Visão geral do Workload Factory</block>
+  <block id="3eb276000847b70b99710a1321f3d0fd" category="paragraph">Utilizando os recursos de snapshot e clonagem do NetApp ONTAP, você pode acessar rapidamente diferentes versões do seu software, permitindo desenvolver e lançar atualizações com maior agilidade. Para obter mais informações sobre o Workload Factory, consulte o <block ref="74c54dbaee345ad32db577029257fe31" category="inline-link-macro-rx"></block>.</block>
+  <block id="738d1e9d6dd124044b0ec1a288e6f583" category="section-title">Características CI/CD</block>
+  <block id="f727cac0ddae92d9de3567e9a3b11511" category="inline-link-macro">Gerenciar projetos</block>
+  <block id="768616a039ef86952662b0f5f95dacff" category="list-text">Criar, editar e remover projetos. Ver <block ref="fb9c7d63e5ff0ecfa02b9d9ceca63ade" category="inline-link-macro-rx"></block>.</block>
+  <block id="adbb6bf856639e7a9dcf34b22158718f" category="inline-link-macro">Gerenciar versões do projeto</block>
+  <block id="9e2b5fcc0baa9499d81cb1d33e0351cc" category="list-text">Criar instantâneos de versões de software definidas. Ver <block ref="3450e7fe73800d5e4b142cc04d5492a2" category="inline-link-macro-rx"></block>.</block>
+  <block id="5638176be5dd4e400efc77338868cf55" category="inline-link-macro">Crie um espaço de trabalho</block>
+  <block id="13cc80731190b5b6c8a04fe1cd7b905f" category="list-text">Criar e excluir espaços de trabalho (com base em clones). Ver <block ref="b6d499cb2bdcbe9fb792f99b678211f5" category="inline-link-macro-rx"></block>.</block>
+  <block id="11573c020d9072fbccd8d9e1bf8ddeb7" category="list-text">Crie políticas de acesso para controlar o acesso a um projeto.</block>
+  <block id="8b6548bf1466502744b54390adb22945" category="list-text">Analise a utilização da capacidade de cada projeto.</block>
+  <block id="0df732682654fdd4c15db93d5b63bf29" category="list-text">Controle os limites de tamanho dos clones e a retenção de clones para cada projeto.</block>
+  <block id="7d20cea7fccf92ee5c728f01adf10466" category="inline-link-macro">Integre com o Perforce</block>
+  <block id="e502bf8ed1d56ac2c9a91fb93607144c" category="list-text">Integre-se com sistemas de controle de versão como o Perforce. Ver <block ref="3ab2b6936d981c86648665276d6f8cb3" category="inline-link-macro-rx"></block>.</block>
+  <block id="a087ba044cc23ff2c6dc451db3a70ced" category="section-title">Projetos e espaços de trabalho na EDA</block>
+  <block id="427ad364fcc508c8123dff592683a053" category="paragraph">Você pode criar um projeto e atribuir um volume que represente seu ambiente de software e seus artefatos. Cada vez que você cria uma nova versão do software, é necessário ressincronizar os dados do volume e criar um instantâneo do projeto para marcar o estado do volume como uma versão conhecida. O volume de origem do projeto pode receber atualizações contínuas e conter vários snapshots para marcar diferentes versões. Você pode usar cada snapshot imediatamente como um clone instantâneo, um repositório editável dedicado ou compartilhado, disponível para desenvolvedores, controle de qualidade ou processos de compilação. Um clone, no contexto de uma versão específica de software, é um espaço de trabalho.</block>
+  <block id="5354d1e9ecaabd928d4235d17bb92d9e" category="section-title">Automação com Workload Factory Codebox</block>
+  <block id="e8d2772773d0b560ee5057d9b413b85b" category="paragraph">O Workload Factory introduz automação integrada com o _Codebox_. O Codebox oferece os seguintes benefícios de automação:</block>
+  <block id="f1214f35af0ff103c79251078e169af6" category="list-text">*Geração de trechos de código*: Trechos de código de Infraestrutura como Código (IaC) são gerados durante a criação de recursos, permitindo a integração perfeita com fluxos de trabalho de orquestração existentes.</block>
+  <block id="3b9355b880979c4a10f7d88ded288364" category="list-text">*Copiloto de Infraestrutura como Código*: o Codebox é um copiloto de Infraestrutura como Código (IaC) que ajuda desenvolvedores e equipes de DevOps a gerar código para executar qualquer operação suportada pelo Workload Factory.</block>
+  <block id="d8135e6fae6748dcba5e9d108c9af427" category="list-text">*Visualizador de código e catálogo de automação*: o Codebox oferece um visualizador de código para análise rápida de automação e um catálogo de automação para reutilização futura facilitada.</block>
+  <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">Custo</block>
+  <block id="e3cfd8fddc6e34f6e4b5bcb35c0eff93" category="paragraph">O uso da funcionalidade de CI/CD do Workload Factory é gratuito.</block>
+  <block id="0b9c6eef4e3d3a222eb04e910d252339" category="section-title">Licenciamento</block>
+  <block id="28e7b14076114555ea849e44c76b8f5d" category="paragraph">Não são necessárias licenças especiais da NetApp para usar os recursos de CI/CD do Workload Factory.</block>
+  <block id="5948f3347ebc02ebc690227c059661e1" category="section-title">Regiões</block>
+  <block id="d5b1044cbc510048a5dac270bde89ed5" category="inline-link">Veja as regiões da Amazon suportadas.</block>
+  <block id="10476aa104cddb6c41cdc64fc271134e" category="paragraph">O EDA é compatível com todas as regiões comerciais onde o FSx para ONTAP é suportado.<block ref="54b85ac4e794c565ea8c7aad421e6e67" category="inline-link-rx"></block></block>
+  <block id="186585d175a4fff1722ac82a5520c584" category="paragraph">As seguintes regiões da AWS não são suportadas:</block>
+  <block id="cc6dcf46ebcb08f1caa420526cc0ab18" category="list-text">Regiões da China</block>
+  <block id="1411debdb32e6b128ca27ec92a708cbd" category="list-text">Regiões GovCloud (EUA)</block>
+  <block id="ecd96786b112acf6970d6aaf3be575ca" category="list-text">Nuvem Secreta</block>
+  <block id="151ef168e17772f7a361db78a0c86552" category="list-text">Nuvem Top Secret</block>
+  <block id="20c404f3ca0633629eee9b1b4ccd6737" category="section-title">Obtendo ajuda</block>
+  <block id="d63f6bd7594c764e42de13a94ad6deed" category="paragraph">O Amazon FSx for NetApp ONTAP é uma solução própria da AWS. Para obter suporte, use a Central de Suporte no seu Console de Gerenciamento da AWS para abrir um chamado. Selecione "FSx para ONTAP" e a categoria, depois forneça as informações necessárias.</block>
+  <block id="4061d1385f49cdab5cc5c663b17b9344" category="inline-link-macro">Obtenha ajuda para EDA no Workload Factory</block>
+  <block id="af7e1e5db86c674cf11518c1e371ec9a" category="paragraph">Para perguntas gerais sobre o Workload Factory ou sobre os aplicativos e serviços do Workload Factory, consulte: <block ref="ed1f973cd7efc0e358f933a5620a23d0" category="inline-link-macro-rx"></block>.</block>
+  <block id="20e29dd4b2600e7b8ce680efd9bce4a1" category="summary">O NetApp Workload Factory para EDA ajuda você a otimizar o desempenho de uso do FSx para ONTAP .</block>
+  <block id="e2f999d4cb1ec42e357866f39d18461e" category="doc">Saiba mais sobre o NetApp Workload Factory para EDA.</block>
+  <block id="1f50716a1dc398d31a2f5b4964e79b43" category="paragraph">O Workload Factory for EDA ajuda você a otimizar o FSx para ONTAP em vários sistemas de arquivos. Você pode otimizar o desempenho e reduzir os custos operacionais automatizando os parâmetros de armazenamento, analisando as restrições de desempenho e obtendo insights sobre projetos de EDA.</block>
+  <block id="7e352fac3dcf36358e8bc2cf1bfa3922" category="paragraph">Ele foi projetado para se integrar com suas estruturas de Infraestrutura como Código (IaC).</block>
+  <block id="9f3e7d074ca9509cad5dc61c364243ae" category="paragraph">O Workload Factory for EDA fornece painéis de controle, estruturas de automação de armazenamento e utilitários que ajudam você a gerenciar vários sistemas de arquivos FSx para ONTAP .</block>
+  <block id="26436f2413992fe24dbc64926658bc5b" category="paragraph">Oferece o seguinte:</block>
+  <block id="7ab37bddd2d34b72128a35046a2b28fa" category="inline-link-macro">Painel de projetos EDA</block>
+  <block id="9bb927b46ba8405e6b26ef482f63fce8" category="list-text"><block ref="b9507aa4ad79652e28b98ba9f8b1d274" category="inline-link-macro-rx"></block>Oferece uma visão centralizada do consumo de armazenamento em seus sistemas de arquivos FSx for ONTAP para ajudar você a planejar, avaliar custos e coletar informações sobre o uso de armazenamento em seus projetos.</block>
+  <block id="a91e4ff4bf49e8de7de911d95062662e" category="inline-link-macro">CI/CD</block>
+  <block id="737d3db4a03ab89d7e0df877e3aa077f" category="list-text"><block ref="fedcbac8f77f4477ef069024bcbbfdde" category="inline-link-macro-rx"></block>: Simplifica e reduz o tempo de compilação de software, aproveitando os recursos de clonagem de volumes do FSx para ONTAP .</block>
+  <block id="5f225b11f8fcd5f0bc2d9460c6da4cd8" category="doc">Avisos legais para o NetApp Workload Factory para EDA</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">Os avisos legais fornecem acesso a declarações de direitos autorais, marcas registradas, patentes e muito mais.</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">Direitos autorais</block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">Marcas registradas</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NETAPP, o logotipo da NETAPP e as marcas listadas na página de Marcas Registradas da NetApp são marcas registradas da NetApp, Inc. Outros nomes de empresas e produtos podem ser marcas registradas de seus respectivos proprietários.</block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">Patentes</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">A lista atual de patentes pertencentes à NetApp pode ser encontrada em:</block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">Política de Privacidade</block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Código aberto</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">Os arquivos de aviso fornecem informações sobre direitos autorais e licenças de terceiros usados no software NetApp .</block>
+  <block id="aeb31c9f8c311597856b129ab948b4e6" category="inline-link">NetApp Workload Factory</block>
+  <block id="55f7843f27571db97da76bdf68a76d22" category="paragraph"><block ref="55f7843f27571db97da76bdf68a76d22" category="inline-link-rx"></block></block>
+  <block id="aee6f8bed903be1fd0e588691dc83ee2" category="summary">Gerencie instâncias do Microsoft SQL Server no Workload Factory para Bancos de Dados.</block>
+  <block id="542205217e86e3e0edf1c789d246d4ba" category="doc">Gerenciar projetos EDA</block>
+  <block id="7a96064e2353eee73d82c2c834e20b4f" category="paragraph">Você pode gerenciar projetos EDA para controlar como seu código e artefatos são gerenciados para cada projeto no NetApp Workload Factory para EDA.</block>
+  <block id="be86ca474df5e14056bc0f20d2cdb767" category="section-title">Criar um projeto</block>
+  <block id="595ed1445f27184aa0033396b3201df3" category="paragraph">Você pode criar um novo projeto EDA para aproveitar os recursos de proteção de dados do seu sistema de arquivos Amazon FSX para NetApp ONTAP para seu código e artefatos. .Passos</block>
+  <block id="b69f6093d3af738998065396fbb1b499" category="list-text">Selecione *Criar projeto*.</block>
+  <block id="3b6aee0d7586fa2e996955209e86b05d" category="list-text">Na página Criar projeto, forneça as seguintes informações:</block>
+  <block id="7ee7bbb308ec85b0e9fa63e91fe6f62f" category="list-text">*Nome do projeto*: Insira um nome para o projeto.</block>
+  <block id="0cca7644aa0cba3c4f8ebb05e857a455" category="list-text">*Descrição*: Insira uma descrição para o projeto.</block>
+  <block id="ba325028343b8f10b90df796110a4920" category="list-text">*Sistema de arquivos*: Forneça o seguinte:</block>
+  <block id="595ae27652f3e5fcd27b27dd7e2995ec" category="list-text">*Credenciais*: Selecione as credenciais da Amazon AWS que deseja usar. O EDA usa essas credenciais para descobrir sistemas de arquivos FSx para ONTAP que você pode usar com este projeto e para criar clones e snapshots de projetos.</block>
+  <block id="8f4fb3217144e591177c8ab486235b32" category="list-text">*Região*: Selecione a região onde reside este sistema de arquivos FSx para ONTAP .</block>
+  <block id="66386ee0d90d8185f4bf8daf0ad53e14" category="list-text">*Sistema de arquivos FSx para ONTAP *: Selecione um sistema de arquivos FSx para ONTAP para usar com este projeto.</block>
+  <block id="6015cd2e9e5bc5b037ad456163cc26cb" category="inline-link">Saiba mais sobre links</block>
+  <block id="d81239812675b4359f2d53d5493ec461" category="paragraph">Você só pode selecionar sistemas de arquivos que estejam configurados com um link.<block ref="69ba18be3e95c1116b4fd108f5c6f03b" category="inline-link-rx"></block>.</block>
+  <block id="ec138dddaf46c45871ca71eed01a3e90" category="list-text">*Escolha um volume*: Selecione um volume para armazenar o projeto; o EDA usa este volume como repositório de software.</block>
+  <block id="73699ce7a6810990bfdfcd9d66248475" category="paragraph">Você só pode selecionar volumes que estejam configurados como compartilhamento NFS.</block>
+  <block id="54707d044b3f7dbd9190e90c0c26da4b" category="list-text">*Políticas operacionais*: Estabelecer limites para clones de projetos:</block>
+  <block id="e55e29e359599d9e8e2c9c6bba3c7299" category="list-text">*Retenção máxima em dias*: Insira o número máximo de dias que um clone deve ser retido. Após esse número de dias, o Workload Factory remove o clone.</block>
+  <block id="1b50a415b7236d521d4caff453dc9d8c" category="list-text">*Número máximo de clones por usuário ou grupo*: Insira o número máximo de clones que podem ser provisionados para um usuário ou grupo.</block>
+  <block id="1aa5ccae7f0dcce26f22d0ad5c7ad270" category="list-text">*Tamanho máximo do clone em GiB*: Insira o tamanho máximo em GiB de um clone do projeto.</block>
+  <block id="60df076fa27b46615c02a69a695d47fa" category="list-text">*Políticas de acesso*: Conceda acesso ao projeto explicitamente a usuários ou grupos específicos:</block>
+  <block id="872c4bee2d347ff2c530983493966657" category="list-text">*Escopo de aplicação da política*: Insira endereços IP individuais ou intervalos de endereços IP para limitar o acesso ao projeto somente a esses endereços IP ou intervalos.</block>
+  <block id="6103d4c0df4fa9e11f3ff7d4206cb2c6" category="paragraph">Por exemplo:<block ref="b80ff0a24c4ff47488b3e445109bfe19" prefix=" " category="inline-code"></block></block>
+  <block id="fbfbd4c7a8f9575234f1d85a65b369a0" category="list-text">*Identificadores de usuário ou grupo*: Insira os identificadores de usuário ou grupo para limitar o acesso ao projeto apenas a esses usuários ou grupos.</block>
+  <block id="601e4c99c321f541ac2b8eb0510576a5" category="paragraph">Por exemplo:<block ref="6edf26f6e0badff12fca32b16db38bf2" prefix=" " category="inline-code"></block></block>
+  <block id="48ddfff7668ec69b4b4aba6cb8178ea2" category="paragraph">O projeto foi criado e aparece na lista de projetos na página Projetos.</block>
+  <block id="5adc04409266bb451a371fe1fb4271b5" category="section-title">Veja os projetos existentes</block>
+  <block id="a279392e9c267153717e18db2c1a3fe2" category="paragraph">Você pode visualizar os projetos existentes criados no NetApp Workload Factory para EDA seguindo estes passos.</block>
+  <block id="5efe5319618aec329621bb926d321c12" category="list-text">Selecione *Ir para a página de Projetos*.</block>
+  <block id="8d316038ebf1829df9f37bc4382f5c99" category="list-text">Veja os projetos existentes listados na página Projetos.</block>
+  <block id="83879b61fc6dcf133f90392c69f25d38" category="section-title">Editar um projeto</block>
+  <block id="7725fdf63a5f6cb955bcaa6473dd1c51" category="paragraph">Você pode editar as configurações de um projeto a qualquer momento.</block>
+  <block id="2041999f6b6b70199d1267ee84f453a6" category="inline-image-macro">o botão de opção</block>
+  <block id="d0db1d4c3851445a0852041a52b296c9" category="list-text">Na página Projetos, selecione <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> para o projeto que você deseja editar.</block>
+  <block id="66b51b35cd8204795ab7fee998410a48" category="list-text">Faça as alterações necessárias na configuração do projeto.</block>
+  <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">Selecione *Salvar*.</block>
+  <block id="332e8f9755f014bf425402dbc3cb5c58" category="section-title">Veja os espaços de trabalho de um projeto</block>
+  <block id="9cfa855917c2aba68c914931f8189bc6" category="paragraph">Um clone ou instantâneo de um projeto é conhecido como espaço de trabalho. Ao criar um espaço de trabalho, ele será mantido enquanto a política de operação do projeto permitir. Você pode visualizar os espaços de trabalho existentes para um projeto seguindo estes passos.</block>
+  <block id="63b8f67914ccd74aae4ec183f8b47a02" category="list-text">Na página Projetos, escolha um projeto e selecione *Visualizar*.</block>
+  <block id="afe6f323353ce261146c3950281e3680" category="list-text">Veja o status e os detalhes de todos os espaços de trabalho deste projeto.</block>
+  <block id="8ca9805ea33bde88fc83f8cc3dd200f0" category="list-text">Se você vir alertas ou avisos para um espaço de trabalho, passe o cursor sobre o ícone de alerta ou aviso para ver o motivo.</block>
+  <block id="bb92ae025a739a684fde28b70cb90df5" category="section-title">Excluir um projeto</block>
+  <block id="7d597c8bc9a2f2e7d749c445b50fe509" category="paragraph">Você pode excluir um projeto quando ele não for mais necessário, seguindo estes passos.</block>
+  <block id="bafa817ae318f3f9b180bd46a2e63961" category="list-text">Na página Projetos, selecione <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> para o projeto que você deseja excluir.</block>
+  <block id="0f024621e0673f1f4e657983682d6e72" category="list-text">Selecione *Excluir*.</block>
+  <block id="8186fba50e8e4d5abb2f25404b3ac987" category="list-text">Na caixa de diálogo de confirmação, selecione *Excluir*.</block>
+  <block id="6acbdc8ddf8c914f95d450771ab7cede" category="paragraph">O projeto é excluído e todo o código ou artefatos associados a ele são removidos do volume. São mantidos instantâneos e clones do projeto.</block>
+  <block id="22358702cb945913fe9b03fc1642777a" category="summary">Os bancos de dados possuem três modos diferentes, cada um com requisitos distintos.</block>
+  <block id="761a234d3f3830d5e2b894f7f8c6df06" category="doc">Início rápido para EDA</block>
+  <block id="67a78d8a3f1d46031c9a29ea5fc8a03a" category="paragraph">Comece a criar um projeto EDA. Administradores e líderes de equipe podem usar o EDA para administrar projetos e espaços de trabalho para equipes de desenvolvedores.</block>
+  <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">Um</block>
+  <block id="3d784fb83da69a092542ad97e84229a1" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Faça login no Workload Factory</block>
+  <block id="e3f4d5b3a0d16b68c0f95c7031bbab0f" category="inline-link">Crie uma conta no Workload Factory.</block>
+  <block id="8af94ef3a55ab31e78f60c3968ecc4e3" category="paragraph">Você precisará de<block ref="c1e10d5d77d21feb199911d5a4450d55" category="inline-link-rx"></block> e faça login usando um dos<block ref="17b71e2884d56fdbadfe752689dbd4d6" category="inline-link-rx"></block>.</block>
+  <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Dois</block>
+  <block id="27c19be9febabd1e2fb82d7a39784f2d" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>Adicionar credenciais e permissões</block>
+  <block id="1a2a34271660d68479742e2088763ce9" category="paragraph">Escolha as políticas de permissão que melhor atendam às suas necessidades.</block>
+  <block id="7b99279c8c7f2ee4589e01f520d3ed8e" category="paragraph">Se optar por não conceder permissões, você poderá começar a usar o Workload Factory for EDA para copiar exemplos de código parcialmente concluídos.</block>
+  <block id="f0b5a88b55550ee6b4c30aaba61be809" category="paragraph">Se optar por conceder permissões, terá de adicionar manualmente as credenciais a uma conta, o que inclui selecionar as capacidades de carga de trabalho, como EDA e IA, e criar as políticas IAM para as permissões necessárias.</block>
+  <block id="fb391f4cf6483b8b419032dc188bd9d8" category="inline-link">Aprenda como adicionar credenciais e permissões.</block>
+  <block id="c01367c7ec78f01defe37cab59b14851" category="paragraph"><block ref="d162e97fcdf643050da77419fb18d12e" category="inline-link-rx"></block>.</block>
+  <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">Três</block>
+  <block id="9d416a07e693910e3f444835dcc86a81" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Configure seu ambiente para atender aos requisitos da EDA.</block>
+  <block id="fecfde27c537152de469ba41e82d7a28" category="paragraph">Você precisará de um sistema de arquivos FSx para ONTAP implantado e detectado que contenha pelo menos um volume configurado como um compartilhamento NFS.</block>
+  <block id="7601729d359de4f5cd6af27402c9e70e" category="inline-link-macro">Saiba mais sobre os requisitos de EDA</block>
+  <block id="10b5ea1be0d70891fd944479056f796a" category="paragraph"><block ref="52ec48856eba661b3a8f3a8489ac6cc4" category="inline-link-macro-rx"></block>.</block>
+  <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="inline-image-macro">Quatro</block>
+  <block id="34eeb12f254dcf2a9f8b56de71337ad8" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> Configure o painel de controle do projeto</block>
+  <block id="912684b68ca184698a4e55744c3cbcca" category="paragraph">Configure o painel de controle do projeto para monitorar a integridade do sistema, o desempenho e o uso de armazenamento, permitindo que você otimize seu ambiente EDA de forma eficaz.</block>
+  <block id="28af2b5a7e7a84074709a118bb9b0eb5" category="inline-link-macro">Aprenda como configurar o painel de controle do projeto</block>
+  <block id="7313277f6c1d299dab9d7a1fbeaa1986" category="paragraph"><block ref="08702ddc4fe94c202550bb766938b242" category="inline-link-macro-rx"></block>.</block>
+  <block id="e5d9de39f7ca1ba2637e5640af3ae8aa" category="inline-image-macro">Cinco</block>
+  <block id="22323438d1bdd2e3d1e9f7aa97e6fcac" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> Integrar com outros serviços</block>
+  <block id="816e9ad4acc00dc8e266d7bd5cec516b" category="paragraph">Integre o EDA com outros serviços, como um portal de serviços ou o Perforce Helix Core, usando a API REST do Workload Factory.</block>
+  <block id="dce6d9a52d216801c96ea309acf6ac73" category="inline-link-macro">Aprenda como integrar EDA com Perforce.</block>
+  <block id="79d86c078f10e35b854431eab12b31a6" category="paragraph"><block ref="46b2e9ce515b7538a0db67e1aa1bc892" category="inline-link-macro-rx"></block>.</block>
+  <block id="0ce746c3ad5ad5ef805497116e224e0c" category="summary">Certifique-se de que o Workload Factory e a AWS estejam configurados corretamente antes de começar a usar o NetApp Workload Factory para EDA. Isso inclui ter suas credenciais de login da AWS, um sistema de arquivos FSx for ONTAP implantado e muito mais.</block>
+  <block id="a464dafbec2b55bfe0812751d811de55" category="doc">Requisitos do EDA</block>
+  <block id="e637e8dfaf1801d56b1ae323e4bb23fb" category="paragraph">Certifique-se de que o Workload Factory e a AWS estejam configurados corretamente antes de usar o NetApp Workload Factory para EDA. Isso inclui ter suas credenciais de login da AWS, um sistema de arquivos FSx for ONTAP implantado e muito mais.</block>
+  <block id="7881e5952d93ca1a1396ec11c08fa645" category="list-text">Login e conta do Workload Factory</block>
+  <block id="97911b3c54a4e826b34c1f79026316c5" category="list-text">Credenciais e permissões da AWS</block>
+  <block id="42f4fbe9bc96b7b414265e0b938084d8" category="list-text">Você precisa adicionar as credenciais da AWS ao Workload Factory com permissões de leitura/gravação, o que significa que você usará o Workload Factory no modo de leitura/gravação para EDA.</block>
+  <block id="c45d86a4185cef0bc3cadb7e6e9b46f4" category="paragraph">As permissões de modo _básico_ e modo _somente leitura_ não são suportadas no momento.</block>
+  <block id="b6358992bb0152c2af9f3e2e315ef468" category="inline-link">Aprenda como adicionar credenciais da AWS ao Workload Factory.</block>
+  <block id="83106366073f0e7e6a64705516568b5d" category="paragraph"><block ref="83106366073f0e7e6a64705516568b5d" category="inline-link-rx"></block></block>
+  <block id="e48bc5875c01dd007b7b2a370e879cde" category="list-text">FSx para sistema de arquivos ONTAP</block>
+  <block id="c16810aa96ec44a060863610996db3f6" category="list-text">Você precisa de no mínimo um sistema de arquivos FSx para ONTAP :</block>
+  <block id="f9fada3871257363b73049c3d57c6260" category="list-text">O sistema de arquivos será usado pelo EDA para armazenar os projetos e espaços de trabalho que você criar.</block>
+  <block id="c076421513a5b28b674cdd0d818b4476" category="paragraph">Este sistema de arquivos FSx para ONTAP deve usar volumes FlexVol . Os volumes FlexGroup não são suportados.</block>
+  <block id="0d8ba413f648e51fef4fb209cc7b48a1" category="list-text">Você precisará saber a região da AWS, a VPC e a sub-rede onde reside o sistema de arquivos AWS FSx para ONTAP .</block>
+  <block id="a0241ec69557b1efd3602bf4d51ce98e" category="list-text">Você precisará de pelo menos um volume no sistema de arquivos com a seguinte configuração:</block>
+  <block id="a138b35d2cf3191dc5044ce9b7c8afc6" category="list-text">O volume deve ser configurado como um compartilhamento NFS.</block>
+  <block id="d22045fbfcf6f7c1c69b271245369732" category="list-text">O sistema de arquivos deve ser configurado com um link.<block ref="69ba18be3e95c1116b4fd108f5c6f03b" category="inline-link-rx"></block>.</block>
+  <block id="1f44141a0f383810dac8c932e0d76754" category="list-text">Você precisará considerar os pares de chave/valor das tags que deseja aplicar aos recursos da AWS que fazem parte desta implantação (opcional).</block>
+  <block id="d5858b81edfda50f75f7994c971764f0" category="inline-link">Aprenda como implantar e gerenciar sistemas de arquivos FSx para ONTAP.</block>
+  <block id="7d57ea8255b8142e76fbb442ea9a782f" category="paragraph"><block ref="7d57ea8255b8142e76fbb442ea9a782f" category="inline-link-rx"></block></block>
+  <block id="b334128403ed60ff931947907046e1f0" category="summary">Antes de abrir um chamado de suporte com o suporte técnico da NetApp , você precisa adicionar uma conta do NetApp Support Site ao Workload Factory e, em seguida, registrar-se para receber suporte.</block>
+  <block id="ba0f011d5889db25564cd78e6f5b974f" category="doc">Registre-se para obter suporte para o NetApp Workload Factory para EDA.</block>
+  <block id="3d9b602ae77ac6a4951ca31b05b6b54f" category="paragraph">É necessário se cadastrar para receber suporte técnico específico para o NetApp Workload Factory e suas soluções e serviços de armazenamento. Você precisa se cadastrar para obter suporte no NetApp Console, que é um console baseado na web separado do Workload Factory.</block>
+  <block id="c552970fd4dc8118ba1806da596acad9" category="paragraph">O cadastro para suporte não habilita o suporte da NetApp para um serviço de arquivos de um provedor de nuvem. Para obter suporte técnico relacionado a um serviço de arquivos de um provedor de nuvem, sua infraestrutura ou qualquer solução que utilize o serviço, consulte a seção "Obtendo ajuda" na documentação do Workload Factory para esse produto.</block>
+  <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">Visão geral do registro de suporte</block>
+  <block id="eb803e55617f13b716b5e56642cce2b0" category="paragraph">O registro da sua assinatura de suporte com ID de conta (seu número de série de 20 dígitos 960xxxxxxxxx, localizado na página Recursos de Suporte no NetApp Console) serve como seu ID de assinatura de suporte único. Cada assinatura de suporte em nível de conta NetApp deve ser registrada.</block>
+  <block id="4cffd3c1dbf2f1038c01d18e7a860305" category="paragraph">O cadastro habilita funcionalidades como abertura de chamados de suporte e geração automática de casos. O registro é concluído adicionando contas do NetApp Support Site (NSS) ao NetApp Console , conforme descrito abaixo.</block>
+  <block id="856edc4caec68fece6859c4be9360f3c" category="section-title">Registre sua conta para obter suporte da NetApp.</block>
+  <block id="f6c4a3ae75d6616126e6da8310ae7384" category="paragraph">Para se cadastrar no suporte e ativar o direito ao suporte, um usuário da sua conta deve associar uma conta do Site de Suporte da NetApp ao seu login do NetApp Console . A forma de se cadastrar para obter suporte da NetApp depende de você já possuir uma conta no NetApp Support Site (NSS).</block>
+  <block id="bf4c731c0ee7f60c8018ad8f96828dda" category="section-title">Cliente existente com uma conta NSS</block>
+  <block id="f732375b4bc27328f202e3b10a957017" category="paragraph">Se você é cliente da NetApp e possui uma conta NSS, basta se cadastrar para obter suporte através do NetApp Console.</block>
+  <block id="f65aaf10469eac2932fc53c6a37afb71" category="list-text">No menu do NetApp Console , selecione *Administração* e, em seguida, selecione *Credenciais*.</block>
+  <block id="f19ab635e6d5f884a22ee4ce067fdbfd" category="list-text">Selecione *Credenciais do usuário*.</block>
+  <block id="0c788a722f31f8f0cf36539ee04615cf" category="list-text">Selecione *Adicionar credenciais NSS* e siga o prompt de autenticação do NetApp Support Site (NSS).</block>
+  <block id="cfc5506589d5a4d055e721267d5f0732" category="list-text">Para confirmar que o processo de registro foi bem-sucedido, selecione o ícone Ajuda e selecione *Suporte*.</block>
+  <block id="8add4eb0d3f6ce61d374f3df3ee4eadf" category="paragraph">A página *Recursos* deve mostrar que sua conta está registrada para receber suporte.</block>
+  <block id="10c56875db7a47f791d653e5d5bff0e9" category="inline-image-macro">Uma captura de tela que mostra um número de série da conta, uma caixa de seleção verde e o texto "Registrado para suporte".</block>
+  <block id="fa7897454f637026faa3e00ccbfec239" category="paragraph"><block ref="fa7897454f637026faa3e00ccbfec239" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9094354ffd09e4644caa0010edc66d24" category="paragraph">Observe que outros usuários do NetApp Console não verão esse mesmo status de registro de suporte se não tiverem associado uma conta do Site de Suporte da NetApp ao seu login do NetApp Console . No entanto, isso não significa que sua conta NetApp não esteja registrada para suporte. Desde que um dos usuários da conta tenha seguido esses passos, sua conta estará registrada.</block>
+  <block id="1ff5aefce774ec72a211f2b3bb10b950" category="section-title">Cliente existente, mas sem conta NSS</block>
+  <block id="a8f62b208e5177a219f0b0d4ce88e0a9" category="paragraph">Se você já é cliente da NetApp com licenças e números de série, mas não possui uma conta NSS, você precisa criar uma conta NSS e associá-la ao seu login do NetApp Console .</block>
+  <block id="5b2b7f628f804bcb786a097c7e45aa41" category="inline-link">Formulário de registro de usuário do site de suporte da NetApp</block>
+  <block id="0c4a8b62da9473fbd5401273c4f85ee0" category="list-text">Crie uma conta no site de suporte da NetApp preenchendo o<block ref="041bcb6d9bdf91f7d6ac92ae3a196e12" category="inline-link-rx"></block></block>
+  <block id="d61c9f72493817776f392db42ac446a2" category="list-text">Certifique-se de selecionar o Nível de usuário apropriado, que normalmente é * Cliente/Usuário final da NetApp *.</block>
+  <block id="fb9b6bbcab5fb396a13f67594a0ba1ee" category="list-text">Certifique-se de copiar o número de série da conta NetApp (960xxxx) usado acima para o campo de número de série. Isso agilizará o processamento da conta.</block>
+  <block id="40eff8559acd41057187b6cb11fa1919" category="list-text">Associe sua nova conta NSS ao seu login do NetApp Console concluindo as etapas abaixo. <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
+  <block id="e9b1f53d6cabb3394833a4e102eb6a69" category="section-title">Novidade na NetApp</block>
+  <block id="c20c107d0d4eef6351660f3590324232" category="paragraph">Se você é novo na NetApp e não tem uma conta NSS, siga cada etapa abaixo.</block>
+  <block id="f5d7029ed18f998c0a9d780b2554e538" category="list-text">Localize o número de série do seu ID de conta na página de Recursos de Suporte.</block>
+  <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">Uma captura de tela do menu Ajuda onde Suporte é a primeira opção listada</block>
+  <block id="55adf589d087b17fca134b34f65498ed" category="paragraph"><block ref="55adf589d087b17fca134b34f65498ed" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dd50e314c18933734174c1156dd9237f" category="inline-link">Site de registro de suporte da NetApp</block>
+  <block id="78f94e749b89d69dcbf3baff21ccb958" category="list-text">Navegar para<block ref="e1c4be66250fd76d5c52bfe2cb7daee2" category="inline-link-rx"></block> e selecione *Não sou um cliente registrado da NetApp *.</block>
+  <block id="d4f633ef130727b2776fa7f45024ca7d" category="list-text">Preencha os campos obrigatórios (aqueles com asteriscos vermelhos).</block>
+  <block id="1128fc8d5ec64880f4d49337ed798d31" category="list-text">No campo *Linha de produtos*, selecione *Cloud Manager* e, em seguida, selecione seu provedor de cobrança aplicável.</block>
+  <block id="50a1dc01b7312307c34a888071586955" category="list-text">Copie o número de série da sua conta da etapa 2 acima, conclua a verificação de segurança e confirme que você leu a Política Global de Privacidade de Dados da NetApp.</block>
+  <block id="3a24c87c9971d2011b4df223718f84b4" category="paragraph">Um e-mail é enviado imediatamente para a caixa de correio fornecida para finalizar esta transação segura. Não deixe de verificar sua caixa de spam caso o e-mail de validação não chegue em alguns minutos.</block>
+  <block id="03413baeca1ff7222737d8ce299bd4e8" category="list-text">Confirme a ação no e-mail.</block>
+  <block id="201080500e946070a2e4873042507c77" category="paragraph">A confirmação envia sua solicitação à NetApp e recomenda que você crie uma conta no site de suporte da NetApp .</block>
+  <block id="cc8b0535948da368f832027c19b7f853" category="list-text">Certifique-se de copiar o número de série da conta (960xxxx) usado acima para o campo de número de série. Isso acelerará o processamento da conta.</block>
+  <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">A NetApp entrará em contato com você durante esse processo. Este é um exercício de integração único para novos usuários.</block>
+  <block id="f335678326583cea28377216c5515221" category="paragraph">Após criar sua conta no site de suporte da NetApp , associe-a ao seu login do NetApp Console seguindo os passos descritos abaixo. <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
+  <block id="487644be42ec68bfbe1af8bedccf87d4" category="summary">Configure seu painel de controle EDA adicionando tags para coletar métricas.</block>
+  <block id="b5ca39077f3b34df657d01b0e4e66348" category="doc">Use o painel de controle</block>
+  <block id="9f87c2937598d5a669f7fda9b2860b22" category="paragraph">Ao fazer login no EDA pela primeira vez, você pode usar o painel de controle para observar o uso do projeto em seus sistemas de arquivos e volumes FSx para ONTAP . O painel de controle inclui vários filtros padrão que você pode usar para personalizar as informações exibidas. Além disso, você pode criar e aplicar suas próprias tags da AWS para organizar e filtrar os dados de acordo com as necessidades específicas do seu negócio.</block>
+  <block id="9108e435212992e269c4a0e10c304297" category="paragraph">O painel de controle ajuda você a monitorar o uso do armazenamento, incluindo capacidade alocada, capacidade utilizada, taxa de transferência e IOPS.</block>
+  <block id="00909736de459ef354dd54f7a12c7137" category="paragraph">As métricas do CloudWatch coletadas incluem:</block>
+  <block id="83ec7827b9a51abd480f21f9797d1c3b" category="list-text">Capacidade provisionada: Métrica em nível de volume que representa a capacidade de armazenamento provisionada.</block>
+  <block id="99051abc318cae9824d95692d1c95b25" category="list-text">Capacidade utilizada: Métrica em nível de volume que representa o armazenamento utilizado.</block>
+  <block id="ff1cfca20a1660c53ade527b17be8ad8" category="list-text">Taxa de transferência média/máxima: Calculada como a média ou o valor máximo da soma de DataReadBytes e DataWriteBytes durante o período de tempo especificado.</block>
+  <block id="a0932dae893409aa61370e810d740d59" category="list-text">IOPS médio/máximo: Calculado como a média ou o valor máximo da soma de DataReadOperations, DataWriteOperations e MetadataOperations durante o período de tempo especificado.</block>
+  <block id="c4d073c70378b04dc94a31c6e002190c" category="section-title">Configure o painel de controle</block>
+  <block id="4a77707914ca5addc817ef4b8452e03d" category="paragraph">Para usar o painel de controle de forma eficaz, configure tags da AWS em seus volumes FSx para ONTAP com base em suas necessidades de negócios, por exemplo, tags que representam projetos ou unidades de negócios. Para mais detalhes, consulte <block ref="56431a7f0461e9258a1144a0e01a6b8d" category="inline-xref-macro-rx"></block>.</block>
+  <block id="4c6f0009ac1f9c550c3c27ca47734a94" category="inline-link">O que são tags?</block>
+  <block id="6ec564eeb8bbd7d65ea723d7377e4535" category="inline-link">Referência da API de marcação de grupos de recursos da AWS</block>
+  <block id="3c533aef31dd27afb54ebf253685f3c2" category="paragraph">As tags da AWS são metadados para seus recursos da AWS. Elas ajudam você a categorizar seus recursos da AWS de diferentes maneiras, por exemplo, por projeto, aplicativo ou unidade de negócios. Para obter mais detalhes sobre a marcação, consulte<block ref="3a728828042c1a731e3aa740ed780475" category="inline-link-rx"></block> e <block ref="53b3c63786d21199a28ae32477919693" category="inline-link-rx"></block>.</block>
+  <block id="12b1905f436fbb7db0d6037ed14f827e" category="paragraph">Após a configuração, na página *Configuração de tags*, forneça os nomes das chaves de tag da AWS e os rótulos correspondentes para exibição no seu painel.</block>
+  <block id="b7292e9663476d06f727bb41cc243d7b" category="paragraph">Quando essas tags são aplicadas, o Workload Factory começa a coletar e exibir as métricas relevantes do CloudWatch.</block>
+  <block id="40dded464250d8f5174e221d1ee142f9" category="paragraph">Seu painel de controle se torna uma ferramenta dinâmica para organizar, acompanhar custos e filtrar recursos com base nas necessidades da sua organização.</block>
+  <block id="976e508c4d7059185077a486bc23c939" category="section-title">Configurar filtros personalizados</block>
+  <block id="0de06b59453acb74b09edb405890d19b" category="paragraph">Se você ainda não configurou seu painel de controle, será solicitado automaticamente que o faça.</block>
+  <block id="b5aff8f837547a2440ebe2a08de996e4" category="list-text">Para cada filtro necessário, adicione um nome de rótulo de filtro e o nome da chave de tag da AWS que você deseja associar a ele.</block>
+  <block id="24347b3ddf5a25cc9c27e54ae285ade1" category="list-text">Selecione *Aplicar*.</block>
+  <block id="cd272c40b08a69d4fcdc74ed592a2f25" category="list-text">Para visualizar as alterações após aplicar tags ou filtros, selecione o ícone de atualização no painel. O painel dinâmico, configurado com os novos filtros, é exibido no painel de projetos EDA.</block>
+  <block id="365caa3dff9ac22391eab30998fdad59" category="list-text">Para editar a configuração do painel posteriormente, selecione *Configurar*.</block>
+  <block id="26949f06981e97a3e3cda29668de2aff" category="section-title">Filtrar o painel de controle</block>
+  <block id="6e25e66f3be3bae488d3ee4d44bfdd2d" category="paragraph">Você pode filtrar as informações exibidas no painel selecionando um ou todos os seguintes filtros padrão, bem como quaisquer filtros personalizados que você tenha criado:</block>
+  <block id="2daf1cb573c2c61422faf64610cf9402" category="list-text">Credenciais</block>
+  <block id="f447ac856e7e72435904956e3b15f433" category="list-text">Região</block>
+  <block id="53b936091a984a22f4042eeb94499891" category="list-text">Sistema de arquivos</block>
+  <block id="fc18634852d4299cd5f8c7ad55ddefbe" category="list-text">Tipo de volume</block>
+  <block id="8ae4a627e28635267b1fc532c618e41b" category="list-text">Intervalo de tempo</block>
+  <block id="8a9876fcec3611024b1737894816d045" category="paragraph">Após selecionar os filtros desejados, clique no ícone de atualização para atualizar as informações do painel.</block>
+  <block id="a3f123658200529c4e7f0b941eeacf6a" category="paragraph">Para obter uma explicação das informações exibidas em um cartão, selecione o ícone de informações correspondente.</block>
+  <block id="663855c524023164098db8a9a351a92a" category="summary">Gerencie versões de seus projetos EDA usando snapshots e clones.</block>
+  <block id="72cc10b2027da541649606ce0bdc96d6" category="doc">Gerenciar versões do NetApp Workload Factory para projetos EDA</block>
+  <block id="0270aa16b7068d8fdfd9200b20cfc5ce" category="inline-link">API REST do Workload Factory</block>
+  <block id="5c9c8db206c0c8031726241f0cedacaa" category="paragraph">Trabalhe com diferentes versões de seus projetos EDA criando snapshots e clones sob demanda diretamente do Workload Factory. Instantâneos e clones de um projeto são armazenados no sistema de arquivos associado ao projeto no momento de sua criação. Você também pode gerenciar snapshots e clones usando o<block ref="fcbcfb6a9b5948c86224e0f3dc582c2b" category="inline-link-rx"></block>.</block>
+  <block id="1c88041df602722b072eab90c31d79ca" category="section-title">Criar um instantâneo de um projeto</block>
+  <block id="1370537941b9a464462bf9a14972eee6" category="paragraph">Você pode criar um instantâneo de um projeto seguindo estes passos.</block>
+  <block id="b6dd3178b375027143d1694361b475e4" category="list-text">Na página Projetos, selecione <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> para o projeto que você deseja capturar.</block>
+  <block id="0cd11b8225f7c80bcdc81d2f77114559" category="list-text">No menu que aparecer, selecione *Criar um instantâneo*.</block>
+  <block id="a8ef1104b5eb15d48613229daace44e9" category="list-text">Na caixa de diálogo *Criar instantâneo*, escolha um nome para o instantâneo e selecione *Criar*.</block>
+  <block id="527db32c9553673d65f35d38b044b7de" category="section-title">Criar um clone de um projeto</block>
+  <block id="73719741ef6e4fd3860e314290794eb4" category="paragraph">Clone um projeto EDA a partir de um snapshot seguindo estes passos. Ao criar um clone, um novo volume editável é criado para conter o clone.</block>
+  <block id="ffd0b63d4491cd8691ad26a9457b8f6a" category="list-text">Na página Projetos, selecione <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> para o projeto que você deseja clonar.</block>
+  <block id="e289b398c25a5d7192096ffdb52be29f" category="list-text">No menu que aparecer, selecione *Criar um clone*.</block>
+  <block id="1baa1309157b6d07509f68ee5fbfebaa" category="list-text">Na caixa de diálogo *Criar clone*, faça o seguinte:</block>
+  <block id="c9f8a1bc51e7ad4b5dbd3b4fd54d159e" category="list-text">Insira um nome para o clone.</block>
+  <block id="ef9eed0d84a82b3fb511fd837da2eef7" category="paragraph">O nome padrão para o clone é o nome do projeto com um sufixo contendo a data e hora atuais.</block>
+  <block id="34ec6730fd54f4c463f31402d0ea9b83" category="list-text">Selecione um instantâneo para usar como base para o clone.</block>
+  <block id="c53c752e3fb8fda71f585d5e8721e833" category="paragraph">O Workload Factory cria um novo clone do projeto, e o clone aparece como um novo projeto na página Projetos.</block>
+  <block id="91ff6a222c07990103d82fb8831e3c69" category="summary">Descubra as novidades do Workload Factory para EDA.</block>
+  <block id="8aa901901d7a7435a17fc1f732006316" category="doc">Novidades do NetApp Workload Factory para EDA</block>
+  <block id="ddd57eb702782b0c009fb89b951edaae" category="paragraph">Descubra as novidades da funcionalidade EDA do Workload Factory.</block>
+  <block id="0ccb64fb4de18921b08df0c5dcb5549f" category="section-title">4 de janeiro de 2026</block>
+  <block id="992efefab3dd15099f5eff3f904d8df4" category="section-title">5 de outubro de 2025</block>
+  <block id="f6db487abe903d447c5070f569416c3a" category="section-title">16 de junho de 2025</block>
+  <block id="dac96c84baa92faab0eb342df5283a1b" category="section-title">4 de maio de 2025</block>
+  <block id="5c8df45cbe01191b205c30373b7e5739" category="section-title">1 de dezembro de 2024</block>
+  <block id="5a95308a37eeed889f29af5726a8c5f0" category="sidebar">Otimize suas operações de armazenamento EDA no NetApp Workload Factory , otimizando o desempenho, integrando-se à sua infraestrutura como código (IaC) para automatizar parâmetros de armazenamento e garantindo a integridade operacional.</block>
+  <block id="840dd1018fcf9154cab5478c53b3dfcb" category="sidebar">Documentação do NetApp Workload Factory para EDA</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Comece agora</block>
+  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Notas de lançamento</block>
+  <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">Início rápido</block>
+  <block id="caa089a1da7216e4a330dc949b81bd35" category="sidebar">Utilize o painel de controle do projeto</block>
+  <block id="585b016fb4d762098f713d093667d688" category="sidebar">Utilize a integração com o Perforce</block>
+  <block id="38929f60770d1a358e1351986015fff6" category="sidebar">Saiba mais sobre a integração com o Perforce.</block>
+  <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="sidebar">Requisitos</block>
+  <block id="2ea6aca63123969c1931cd33bf4619a0" category="sidebar">Automatize com o Codebox</block>
+  <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Conhecimento e suporte</block>
+  <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="sidebar">Registre-se para obter suporte</block>
+  <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="sidebar">Obter ajuda</block>
+  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">Blogs e comunidade</block>
+  <block id="3c031b939f6ec312ee601d021e7a6644" category="sidebar">NetApp Console</block>
+  <block id="cc58d3a9b2264c4fd8cb1d3f61b90bdc" category="sidebar">NetApp Data Services</block>
+  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">Comunidade NetApp</block>
+  <block id="c7e9eccd134165dc82f4a6c90642a09b" category="sidebar">Documentação sobre cargas de trabalho EDA</block>
+  <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">O que há de novo</block>
+  <block id="482723983a4f2af954e36ff41e567451" category="sidebar">Limitações conhecidas</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="sidebar">Avisos legais</block>
+</blocks>

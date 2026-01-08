@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: learn-eda.html 
+keywords: software builders, development, benefits, eda, electronic design automation 
+summary: O NetApp Workload Factory para EDA ajuda você a otimizar o desempenho de uso do FSx para ONTAP . 
+---
+= Saiba mais sobre o NetApp Workload Factory para EDA.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+O Workload Factory for EDA ajuda você a otimizar o FSx para ONTAP em vários sistemas de arquivos. Você pode otimizar o desempenho e reduzir os custos operacionais automatizando os parâmetros de armazenamento, analisando as restrições de desempenho e obtendo insights sobre projetos de EDA.
+
+Ele foi projetado para se integrar com suas estruturas de Infraestrutura como Código (IaC).
+
+O Workload Factory for EDA fornece painéis de controle, estruturas de automação de armazenamento e utilitários que ajudam você a gerenciar vários sistemas de arquivos FSx para ONTAP .
+
+Oferece o seguinte:
+
+* link:task-configure-dashboard.html["Painel de projetos EDA"]Oferece uma visão centralizada do consumo de armazenamento em seus sistemas de arquivos FSx for ONTAP para ajudar você a planejar, avaliar custos e coletar informações sobre o uso de armazenamento em seus projetos.
+* link:learn-eda-workloads.html["CI/CD"]: Simplifica e reduz o tempo de compilação de software, aproveitando os recursos de clonagem de volumes do FSx para ONTAP .
+

@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: create-workspaces.html 
+keywords: manage, workspace, snapshot, project 
+summary: Um espaço de trabalho no NetApp Workload Factory para EDA é uma representação Perforce de um projeto, baseada em um snapshot do projeto. Você pode criar espaços de trabalho como parte de um projeto EDA. 
+---
+= Crie um espaço de trabalho EDA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Um espaço de trabalho no NetApp Workload Factory para EDA é uma representação Perforce de um projeto em um momento específico. Os espaços de trabalho são criados usando um instantâneo do projeto como base. Você pode criar novos espaços de trabalho dentro de um projeto EDA. Você pode criar espaços de trabalho a partir da interface do usuário do Perforce.
+
+.Antes de começar
+Certifique-se de ter integrado o EDA com o Perforce Helix Visual Client. Ver link:integrate-perforce.html["Integre EDA com Perforce"^] Para obter mais informações.
+
+.Passos
+. Faça login no Perforce.
+. No menu Perforce, selecione *Exibir* > *WF*.
++
+A tela de login do Workload Factory aparece na interface do usuário do Perforce.
+
+. Faça login usando um dos seguintes métodos: link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] e então selecione *EDA*.
+. Selecione *CI/CD*.
+. Selecione *Criar projeto* e, em seguida, selecione *Criar espaço de trabalho*.
+. Na página Criar um projeto de espaço de trabalho, forneça as seguintes informações:
++
+.. Selecione uma imagem para usar como base para o espaço de trabalho.
+.. Insira um nome para o espaço de trabalho.
+.. Opcionalmente, insira um identificador de usuário para reivindicar o espaço de trabalho. Este identificador deve corresponder ao ID de usuário do Perforce do desenvolvedor que utilizará este espaço de trabalho.
+
+
+. Selecione *Criar*.
+
+
+.Resultado
+O espaço de trabalho foi criado e aparece na lista de espaços de trabalho na página Espaços de Trabalho.
