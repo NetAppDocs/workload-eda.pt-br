@@ -1,0 +1,176 @@
+---
+sidebar: sidebar 
+permalink: task-monitor-latency.html 
+keywords: latency analysis, CloudWatch alarms, volume latency, read latency, write latency, critical events, warning events, latency thresholds, IOPS thresholds, latency monitoring, FSx for ONTAP 
+summary: Monitore e analise o desempenho da latência de volume com limites configuráveis para eventos de aviso e críticos, a fim de identificar proativamente gargalos de desempenho. 
+---
+= Monitorar a latência do volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Usando a análise de latência, você pode monitorar proativamente o desempenho do volume rastreando as métricas de latência de leitura e gravação em seus sistemas de arquivos FSx for ONTAP. Configure limites personalizáveis para eventos de aviso e críticos para identificar possíveis gargalos de desempenho antes que eles impactem suas cargas de trabalho de EDA.
+
+
+
+== Visão geral
+
+A análise de latência coleta e monitora as métricas do CloudWatch para operações de leitura e gravação de volumes. Quando tanto os limites de latência quanto de IOPS são ultrapassados para todos os pontos de dados dentro de um intervalo de tempo especificado, o sistema gera alertas que aparecem na tabela de eventos de latência. Isso permite que você:
+
+* Identifique volumes que apresentam degradação de desempenho.
+* Diferencie entre problemas de desempenho de nível de alerta e de nível crítico.
+* Acompanhe as tendências de latência ao longo do tempo para otimizar as configurações de armazenamento.
+* Tome medidas proativas antes que a latência afete o desempenho da carga de trabalho.
+
+
+
+
+== Antes de começar
+
+Para usar a análise de latência, você precisa ter credenciais da AWS configuradas no Workload Factory. O recurso requer acesso às métricas do CloudWatch para todos os volumes do FSx for ONTAP associados às suas credenciais da AWS.
+
+Se você ainda não configurou as credenciais AWS, consulte link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Adicionar credenciais da AWS"^].
+
+
+
+== Configurar limites de latência
+
+Você pode configurar limites para eventos de aviso e críticos. Cada tipo de evento inclui limites separados para operações de leitura e gravação. O sistema avalia esses limites continuamente e gera alertas quando as condições são atendidas.
+
+
+NOTE: Você deve definir limites para eventos críticos superiores aos limites para eventos de aviso para garantir a escalação adequada de alertas. Caso contrário, você não pode salvar sua configuração.
+
+.Sobre esta tarefa
+Para que um alerta seja acionado, tanto o limite de latência quanto o limite de IOPS devem ser ultrapassados para todos os pontos de dados dentro do intervalo de tempo especificado. Essa lógica de dupla condição ajuda a reduzir falsos positivos, garantindo que a alta latência seja mantida sob carga significativa.
+
+.Passos
+. Faça login usando um dos seguintes métodos: link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
+. Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer"] e depois selecione *EDA*.
+. No menu EDA, selecione *Latência*.
+. Na página de configuração de latência do EDA, configure os seguintes limites:
++
+** *Eventos de aviso*
++
+*** *Limite de latência de leitura*: insira o limite de latência em milissegundos. Padrão: 6 ms.
+*** *Limite de IOPS de leitura*: insira o limite de IOPS em operações por segundo. Padrão: 100 ops/seg.
+*** *Intervalo de tempo de leitura*: insira o intervalo de tempo em minutos (5-20). Padrão: 10 minutos.
+*** *Limite de latência de gravação*: Insira o limite de latência em milissegundos. Padrão: 8 ms.
+*** *Limite de IOPS de gravação*: insira o limite de IOPS em operações por segundo. Padrão: 100 ops/seg.
+*** *Write time range*: Digite o intervalo de tempo em minutos (5-20). Padrão: 10 minutos.
+
+
+** *Eventos críticos*
++
+*** *Limite de latência de leitura*: Insira o limite de latência em milissegundos. Padrão: 12 ms.
+*** *Limite de IOPS de leitura*: insira o limite de IOPS em operações por segundo. Padrão: 100 ops/seg.
+*** *Intervalo de tempo de leitura*: insira o intervalo de tempo em minutos (5-20). Padrão: 10 minutos.
+*** *Limite de latência de gravação*: Insira o limite de latência em milissegundos. Padrão: 15 ms.
+*** *Limite de IOPS de gravação*: insira o limite de IOPS em operações por segundo. Padrão: 100 ops/seg.
+*** *Write time range*: Digite o intervalo de tempo em minutos (5-20). Padrão: 10 minutos.
+
+
+
+
+. Selecione *Aplicar*.
+
+
+.Resultado
+O Workload Factory começa a coletar métricas de latência para todos os volumes do FSx for ONTAP associados às suas credenciais da AWS. As métricas são coletadas pelo menos a cada 20 minutos. A tabela de eventos de latência exibe quaisquer volumes que ultrapassem os limites configurados.
+
+
+
+== Entendendo alertas
+
+O recurso de análise de latência usa alarmes do CloudWatch para monitorar o desempenho do volume. Compreender como os alertas são acionados ajuda você a configurar limites apropriados e interpretar os resultados.
+
+
+
+=== Métricas coletadas
+
+O sistema coleta as seguintes métricas do CloudWatch para cada volume:
+
+* *Limite de latência de leitura*: Calculado como 1000 * m2/(m1+0.000001), onde m1 = DataReadOperations e m2 = DataReadOperationTime
+* *Limite de latência de escrita*: Calculado como 1000 * m2/(m1+0.000001), onde m1 = DataWriteOperations e m2 = DataWriteOperationTime
+
+
+
+
+=== Condições de ativação do alerta
+
+Um alerta é acionado quando todas as seguintes condições são atendidas:
+
+* O limite de latência foi excedido para o tipo de operação (leitura ou gravação).
+* O limite de IOPS foi excedido para o tipo de operação.
+* Ambas as condições persistem para todos os pontos de dados dentro do intervalo de tempo configurado.
+
+
+Por exemplo, com os limites de aviso padrão, um alerta de leitura é acionado somente se a latência de leitura exceder 6 ms E o IOPS de leitura exceder 100 ops/seg para todos os pontos de dados dentro de um período de 10 minutos.
+
+
+
+=== Gravidade do evento
+
+* *Eventos de aviso*: Indicam latência elevada que pode necessitar de atenção.
+* *Eventos críticos*: indicam latência severa que requer investigação imediata.
+
+
+
+
+== Visualizar eventos de latência
+
+A tabela de eventos de latência exibe todos os eventos de aviso e críticos detectados nas últimas 72 horas. Use esta tabela para monitorar o desempenho do volume e identificar os volumes que requerem otimização.
+
+.Informações adicionais
+* Apenas a violação mais recente para cada volume é exibida na tabela. Se um volume sofrer múltiplas violações, apenas o evento mais recente é exibido.
+* Os eventos são removidos automaticamente após 72 horas.
+* A tabela exibe um máximo de 200 eventos. Eventos mais antigos são removidos à medida que novos eventos são adicionados.
+
+
+.Passos
+. Na aba *Latência*, visualize a tabela de eventos de latência.
+. Analise as informações de cada evento incluindo:
++
+** *Gravidade*: Indica se o evento é Critical ou Warning.
+** *Nome do volume*: o nome do volume afetado.
+** *Volume ID*: O ID do volume afetado.
+** *Sistema de arquivos*: O sistema de arquivos FSx for ONTAP que contém o volume.
+** *Hora detectada*: Quando a violação foi detectada
+** *Latência mediana*: O valor da latência mediana durante o período da violação.
+
+
+. Para classificar a tabela, selecione qualquer cabeçalho de coluna. Por padrão, eventos críticos aparecem primeiro classificados por tempo, seguidos por eventos de aviso classificados por tempo.
+. Para descartar um ou mais eventos, ao lado de cada evento selecione *Descartar*.
+. Para adicionar colunas à tabela, selecione o ícone de coluna, escolha as colunas e selecione *Apply*.
+
+
+
+
+== Gerenciar configuração de latência
+
+Após a configuração inicial, você pode editar seus limites.
+
+.Passos
+. Na página *Latência*, selecione *Editar*.
+. Modifique qualquer um dos valores de limite conforme necessário.
++
+
+NOTE: Certifique-se de que os limites críticos permaneçam acima dos limites de alerta. O sistema exibe um erro se você configurar limites críticos abaixo dos limites de alerta.
+
+. Selecione *Apply* para salvar suas alterações.
+
+
+
+
+== Melhores práticas
+
+Considere estas recomendações ao configurar e usar a análise de latência:
+
+* *Defina limites realistas*: Configure limites com base nos requisitos da sua carga de trabalho. Os valores padrão fornecem um ponto de partida mas podem precisar de ajuste para o seu ambiente específico.
+* *Comece com limites de alerta*: use eventos de alerta para estabelecer expectativas de desempenho básicas antes de ajustar os limites críticos.
+* *Considere cuidadosamente os intervalos de tempo*: Intervalos de tempo mais curtos (5-10 minutos) detectam problemas mais rapidamente, mas podem gerar mais alertas. Intervalos de tempo mais longos (15-20 minutos) reduzem falsos positivos, mas podem atrasar a detecção.
+* *Monitore tendências*: analise regularmente a tabela de eventos de latência para identificar padrões ou problemas recorrentes que possam indicar problemas de configuração subjacentes.
+* *Coordene os limites de IOPS e latência*: A lógica de dupla condição significa que ambos devem ser excedidos. Definir limites de IOPS muito altos pode impedir alertas mesmo quando a latência for problemática.
+* *Revisar eventos rejeitados*: revise periodicamente por que os eventos foram rejeitados para identificar oportunidades de ajuste de limites ou melhorias na infraestrutura.
+

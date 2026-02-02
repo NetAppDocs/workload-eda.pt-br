@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task-configure-dashboard.html 
-keywords: configure, dashboard, AWS tags, CloudWatch, FSx for ONTAP, Workload Factory, EDA, electronic design automation 
-summary: Configure seu painel de controle EDA adicionando tags para coletar métricas. 
+keywords: configure, dashboard, AWS tags, CloudWatch, FSx for ONTAP, Workload Factory, EDA, electronic design automation, volume details, top volumes, capacity utilization, throughput utilization, IOPS utilization 
+summary: Configure seu painel de controle EDA adicionando tags para coletar métricas. Personalize filtros com opções de seleção única ou múltipla para atender às necessidades do seu negócio. 
 ---
 = Use o painel de controle
 :allow-uri-read: 
@@ -11,9 +11,9 @@ summary: Configure seu painel de controle EDA adicionando tags para coletar mét
 
 
 [role="lead"]
-Ao fazer login no EDA pela primeira vez, você pode usar o painel de controle para observar o uso do projeto em seus sistemas de arquivos e volumes FSx para ONTAP . O painel de controle inclui vários filtros padrão que você pode usar para personalizar as informações exibidas. Além disso, você pode criar e aplicar suas próprias tags da AWS para organizar e filtrar os dados de acordo com as necessidades específicas do seu negócio.
+Ao fazer login no EDA pela primeira vez, você pode usar o painel para observar o uso do projeto em seus sistemas de arquivos FSx for ONTAP e volumes. O painel inclui vários filtros padrão que você pode usar para personalizar as informações exibidas. Além disso, você pode criar até cinco filtros personalizados com base em suas tags da AWS, com opções de seleção única ou múltipla, para organizar e filtrar os dados de acordo com as necessidades específicas do seu negócio.
 
-O painel de controle ajuda você a monitorar o uso do armazenamento, incluindo capacidade alocada, capacidade utilizada, taxa de transferência e IOPS.
+O painel de controle ajuda você a monitorar o uso do armazenamento para capacidade alocada, capacidade utilizada, taxa de transferência e IOPS. Para monitoramento de desempenho de latência proativo, consulte link:task-monitor-latency.html["Monitorar a latência do volume"].
 
 As métricas do CloudWatch coletadas incluem:
 
@@ -27,7 +27,7 @@ As métricas do CloudWatch coletadas incluem:
 
 == Configure o painel de controle
 
-Para usar o painel de controle de forma eficaz, configure tags da AWS em seus volumes FSx para ONTAP com base em suas necessidades de negócios, por exemplo, tags que representam projetos ou unidades de negócios. Para mais detalhes, consulte <<Configurar filtros personalizados>>.
+Para usar o painel de controle de forma eficaz, configure até cinco tags da AWS em seus volumes FSx for ONTAP com base em suas necessidades de negócios, por exemplo, tags que representam projetos ou unidades de negócios. Para obter detalhes, consulte <<Configurar filtros personalizados>>.
 
 As tags da AWS são metadados para seus recursos da AWS. Elas ajudam você a categorizar seus recursos da AWS de diferentes maneiras, por exemplo, por projeto, aplicativo ou unidade de negócios. Para obter mais detalhes sobre a marcação, consulte https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/what-are-tags.html["O que são tags?"^] e  https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/overview.html["Referência da API de marcação de grupos de recursos da AWS"^].
 
@@ -41,13 +41,29 @@ Seu painel de controle se torna uma ferramenta dinâmica para organizar, acompan
 
 === Configurar filtros personalizados
 
+Você pode configurar até cinco filtros personalizados com base em suas tags da AWS. Cada filtro personalizado requer três componentes: um nome de rótulo de filtro, um nome de chave de tag da AWS e um tipo de seleção (seleção única ou múltipla). Se você não configurar nenhum filtro personalizado, os filtros padrão (sistema de arquivos, tipo de volume e intervalo de tempo) permanecem disponíveis para que você ainda possa visualizar e interagir com seus painéis.
+
 . Faça login usando um dos seguintes métodos: link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
 . Selecione o menu image:workloads-menu-icon.png["O ícone do menu hambúrguer é usado para navegar até cargas de trabalho como armazenamento, EDA, IA, bancos de dados, VMware e administração."] e então selecione *EDA*.
 +
 Se você ainda não configurou seu painel de controle, será solicitado automaticamente que o faça.
 
-. Para cada filtro necessário, adicione um nome de rótulo de filtro e o nome da chave de tag da AWS que você deseja associar a ele.
+. Selecione *+ Add filters*.
+. Para cada filtro personalizado que você deseja criar (até cinco), forneça o seguinte:
++
+** *Nome do rótulo do filtro*: o nome de exibição que aparece no painel.
+** *AWS tag key name*: A chave da tag do recurso AWS que corresponde a este filtro.
+** *Seleção múltipla*: escolha se este filtro permite seleção única ou múltipla. Quando você seleciona *Seleção múltipla*, pode selecionar vários valores para este filtro simultaneamente. A seleção única restringe você a selecionar apenas um valor por vez.
++
+
+NOTE: Os filtros aparecem no painel na ordem em que você os configurar. Considere organizar primeiro os filtros que você usa com mais frequência para facilitar o acesso.
+
+
+
 . Selecione *Aplicar*.
++
+Você pode excluir um filtro personalizado selecionando o ícone da lixeira ao lado desse filtro antes de aplicar suas alterações.
+
 . Para visualizar as alterações após aplicar tags ou filtros, selecione o ícone de atualização no painel. O painel dinâmico, configurado com os novos filtros, é exibido no painel de projetos EDA.
 . Para editar a configuração do painel posteriormente, selecione *Configurar*.
 
@@ -56,7 +72,9 @@ Se você ainda não configurou seu painel de controle, será solicitado automati
 
 === Filtrar o painel de controle
 
-Você pode filtrar as informações exibidas no painel selecionando um ou todos os seguintes filtros padrão, bem como quaisquer filtros personalizados que você tenha criado:
+Você pode filtrar as informações exibidas no painel usando uma combinação de filtros padrão e quaisquer filtros personalizados que você criou.
+
+Os seguintes filtros padrão estão sempre disponíveis:
 
 * Credenciais
 * Região
@@ -65,6 +83,59 @@ Você pode filtrar as informações exibidas no painel selecionando um ou todos 
 * Intervalo de tempo
 
 
+Os filtros personalizados que você configurar aparecerão no painel, além desses filtros padrão. Ao usar filtros:
+
+* *Os filtros de seleção múltipla* permitem selecionar vários valores simultaneamente para ampliar sua visão. Por exemplo, você pode selecionar vários projetos para visualizar métricas combinadas.
+* *Filtros de seleção única* restringem você a selecionar apenas um valor por vez, útil quando você precisa se concentrar em um recurso ou categoria específica.
+
+
 Após selecionar os filtros desejados, clique no ícone de atualização para atualizar as informações do painel.
 
 Para obter uma explicação das informações exibidas em um cartão, selecione o ícone de informações correspondente.
+
+
+
+== Ver detalhes do volume
+
+O painel oferece dois modos de visualização para ajudar você a analisar suas métricas de armazenamento: Total view e Volume view. Você pode alternar entre esses modos usando as guias disponíveis no painel.
+
+
+
+=== Visão total
+
+A visualização Total (padrão) exibe métricas agregadas em todos os volumes que correspondem aos filtros selecionados. Essa visualização fornece uma visão geral de alto nível do desempenho geral do seu armazenamento, mostrando métricas combinadas de capacidade, IOPS e throughput.
+
+
+
+=== Visualização de volume
+
+A visualização de Volume exibe o desempenho individual de volumes ao longo do tempo, mostrando os 10 principais volumes para cada métrica. Essa visualização ajuda você a identificar volumes específicos que estão impulsionando o uso de recursos e a observar seu comportamento durante o período selecionado.
+
+Para alternar para a visualização de volume, selecione a guia *Volume* no painel.
+
+
+
+==== Métricas de volume exibidas
+
+Ao selecionar a visualização de Volume, o painel exibe os 10 volumes principais do seu número total de volumes. * *Capacidade utilizada do volume*: mostra os volumes com a maior capacidade utilizada no momento. * *IOPS*: mostra os volumes com a maior média de IOPS durante o período selecionado. * *Taxa de transferência*: mostra os volumes com a maior taxa de transferência média durante o período selecionado.
+
+
+NOTE: O painel exibe apenas os 10 principais volumes para cada métrica. Se você tiver mais de 10 volumes, alguns volumes podem não ser exibidos na visualização detalhada.
+
+Quando os mesmos volumes aparecem nas métricas *Volume used capacity*, *IOPS* e *Throughput*, o painel usa uma codificação de cores consistente na legenda para facilitar o rastreamento de volumes específicos em diferentes métricas.
+
+O eixo horizontal exibe o intervalo de tempo, enquanto uma legenda mostra todos os volumes (até 10) representados no gráfico.
+
+
+
+==== Dados de volume interativos
+
+Você pode passar o cursor sobre qualquer linha de volume nos gráficos para visualizar informações detalhadas:
+
+*Capacidade de volume utilizada*: Exibe o nome do volume, a capacidade utilizada naquele ponto no tempo e a capacidade alocada.
+
+*IOPS*: exibe o nome do volume, a média de IOPS para o intervalo de tempo e o máximo de IOPS para o intervalo de tempo.
+
+*Taxa de transferência*: exibe o nome do volume, a taxa de transferência média para o intervalo de tempo e a taxa de transferência máxima para o intervalo de tempo.
+
+Esses dados interativos ajudam você a analisar padrões de desempenho de volume e identificar possíveis gargalos ou oportunidades de otimização.

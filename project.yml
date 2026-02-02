@@ -31,6 +31,10 @@ sidebar:
     entries:
     - title: Use o painel de controle
       url: "/task-configure-dashboard.html"
+  - title: Monitorar a latência do volume
+    entries:
+    - title: Monitorar a latência do volume
+      url: "/task-monitor-latency.html"
   - title: Utilize a integração com o Perforce
     entries:
     - title: Saiba mais sobre a integração com o Perforce.

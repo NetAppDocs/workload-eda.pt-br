@@ -351,17 +351,13 @@
   <block id="cc8b0535948da368f832027c19b7f853" category="list-text">Certifique-se de copiar o número de série da conta (960xxxx) usado acima para o campo de número de série. Isso acelerará o processamento da conta.</block>
   <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">A NetApp entrará em contato com você durante esse processo. Este é um exercício de integração único para novos usuários.</block>
   <block id="f335678326583cea28377216c5515221" category="paragraph">Após criar sua conta no site de suporte da NetApp , associe-a ao seu login do NetApp Console seguindo os passos descritos abaixo. <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
-  <block id="487644be42ec68bfbe1af8bedccf87d4" category="summary">Configure seu painel de controle EDA adicionando tags para coletar métricas.</block>
   <block id="b5ca39077f3b34df657d01b0e4e66348" category="doc">Use o painel de controle</block>
-  <block id="9f87c2937598d5a669f7fda9b2860b22" category="paragraph">Ao fazer login no EDA pela primeira vez, você pode usar o painel de controle para observar o uso do projeto em seus sistemas de arquivos e volumes FSx para ONTAP . O painel de controle inclui vários filtros padrão que você pode usar para personalizar as informações exibidas. Além disso, você pode criar e aplicar suas próprias tags da AWS para organizar e filtrar os dados de acordo com as necessidades específicas do seu negócio.</block>
-  <block id="9108e435212992e269c4a0e10c304297" category="paragraph">O painel de controle ajuda você a monitorar o uso do armazenamento, incluindo capacidade alocada, capacidade utilizada, taxa de transferência e IOPS.</block>
   <block id="00909736de459ef354dd54f7a12c7137" category="paragraph">As métricas do CloudWatch coletadas incluem:</block>
   <block id="83ec7827b9a51abd480f21f9797d1c3b" category="list-text">Capacidade provisionada: Métrica em nível de volume que representa a capacidade de armazenamento provisionada.</block>
   <block id="99051abc318cae9824d95692d1c95b25" category="list-text">Capacidade utilizada: Métrica em nível de volume que representa o armazenamento utilizado.</block>
   <block id="ff1cfca20a1660c53ade527b17be8ad8" category="list-text">Taxa de transferência média/máxima: Calculada como a média ou o valor máximo da soma de DataReadBytes e DataWriteBytes durante o período de tempo especificado.</block>
   <block id="a0932dae893409aa61370e810d740d59" category="list-text">IOPS médio/máximo: Calculado como a média ou o valor máximo da soma de DataReadOperations, DataWriteOperations e MetadataOperations durante o período de tempo especificado.</block>
   <block id="c4d073c70378b04dc94a31c6e002190c" category="section-title">Configure o painel de controle</block>
-  <block id="4a77707914ca5addc817ef4b8452e03d" category="paragraph">Para usar o painel de controle de forma eficaz, configure tags da AWS em seus volumes FSx para ONTAP com base em suas necessidades de negócios, por exemplo, tags que representam projetos ou unidades de negócios. Para mais detalhes, consulte <block ref="56431a7f0461e9258a1144a0e01a6b8d" category="inline-xref-macro-rx"></block>.</block>
   <block id="4c6f0009ac1f9c550c3c27ca47734a94" category="inline-link">O que são tags?</block>
   <block id="6ec564eeb8bbd7d65ea723d7377e4535" category="inline-link">Referência da API de marcação de grupos de recursos da AWS</block>
   <block id="3c533aef31dd27afb54ebf253685f3c2" category="paragraph">As tags da AWS são metadados para seus recursos da AWS. Elas ajudam você a categorizar seus recursos da AWS de diferentes maneiras, por exemplo, por projeto, aplicativo ou unidade de negócios. Para obter mais detalhes sobre a marcação, consulte<block ref="3a728828042c1a731e3aa740ed780475" category="inline-link-rx"></block> e <block ref="53b3c63786d21199a28ae32477919693" category="inline-link-rx"></block>.</block>
@@ -370,12 +366,10 @@
   <block id="40dded464250d8f5174e221d1ee142f9" category="paragraph">Seu painel de controle se torna uma ferramenta dinâmica para organizar, acompanhar custos e filtrar recursos com base nas necessidades da sua organização.</block>
   <block id="976e508c4d7059185077a486bc23c939" category="section-title">Configurar filtros personalizados</block>
   <block id="0de06b59453acb74b09edb405890d19b" category="paragraph">Se você ainda não configurou seu painel de controle, será solicitado automaticamente que o faça.</block>
-  <block id="b5aff8f837547a2440ebe2a08de996e4" category="list-text">Para cada filtro necessário, adicione um nome de rótulo de filtro e o nome da chave de tag da AWS que você deseja associar a ele.</block>
   <block id="24347b3ddf5a25cc9c27e54ae285ade1" category="list-text">Selecione *Aplicar*.</block>
   <block id="cd272c40b08a69d4fcdc74ed592a2f25" category="list-text">Para visualizar as alterações após aplicar tags ou filtros, selecione o ícone de atualização no painel. O painel dinâmico, configurado com os novos filtros, é exibido no painel de projetos EDA.</block>
   <block id="365caa3dff9ac22391eab30998fdad59" category="list-text">Para editar a configuração do painel posteriormente, selecione *Configurar*.</block>
   <block id="26949f06981e97a3e3cda29668de2aff" category="section-title">Filtrar o painel de controle</block>
-  <block id="6e25e66f3be3bae488d3ee4d44bfdd2d" category="paragraph">Você pode filtrar as informações exibidas no painel selecionando um ou todos os seguintes filtros padrão, bem como quaisquer filtros personalizados que você tenha criado:</block>
   <block id="2daf1cb573c2c61422faf64610cf9402" category="list-text">Credenciais</block>
   <block id="f447ac856e7e72435904956e3b15f433" category="list-text">Região</block>
   <block id="53b936091a984a22f4042eeb94499891" category="list-text">Sistema de arquivos</block>
@@ -404,7 +398,6 @@
   <block id="91ff6a222c07990103d82fb8831e3c69" category="summary">Descubra as novidades do Workload Factory para EDA.</block>
   <block id="8aa901901d7a7435a17fc1f732006316" category="doc">Novidades do NetApp Workload Factory para EDA</block>
   <block id="ddd57eb702782b0c009fb89b951edaae" category="paragraph">Descubra as novidades da funcionalidade EDA do Workload Factory.</block>
-  <block id="0ccb64fb4de18921b08df0c5dcb5549f" category="section-title">4 de janeiro de 2026</block>
   <block id="992efefab3dd15099f5eff3f904d8df4" category="section-title">5 de outubro de 2025</block>
   <block id="f6db487abe903d447c5070f569416c3a" category="section-title">16 de junho de 2025</block>
   <block id="dac96c84baa92faab0eb342df5283a1b" category="section-title">4 de maio de 2025</block>
@@ -430,4 +423,140 @@
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">O que há de novo</block>
   <block id="482723983a4f2af954e36ff41e567451" category="sidebar">Limitações conhecidas</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="sidebar">Avisos legais</block>
+  <block id="efc6f47d5e8620dbd993bbf5427fa876" category="doc">Filtragem aprimorada do painel com tags personalizáveis</block>
+  <block id="1c074117512c813d0d3c5474c6839792" category="paragraph">Agora você pode configurar até cinco filtros personalizados no painel do EDA com base em suas tags da AWS. Cada filtro personalizado inclui um nome de rótulo, uma chave de tag da AWS e um tipo de seleção (seleção única ou multi-seleção).</block>
+  <block id="a290a89777e8fd7db6061c83affdbda9" category="paragraph">A seleção múltipla permite selecionar vários valores simultaneamente, enquanto a seleção única restringe você a um valor por vez. Os filtros personalizados aparecem na ordem em que você os configura, facilitando a organização dos filtros mais usados.</block>
+  <block id="a9f4d955c73322ea2697149d48ca3230" category="paragraph">Se você não configurar filtros personalizados, os filtros padrão (sistema de arquivos, tipo de volume e intervalo de tempo) permanecerão disponíveis para que você possa continuar visualizando e interagindo com seus dashboards.</block>
+  <block id="7f599cf351ac708ac51a573f45f1adfe" category="inline-link">Saiba mais sobre configurar filtros personalizados</block>
+  <block id="b4d8b5d35eb5ad238c4bc40c7bfa5cc8" category="paragraph"><block ref="0fffea6d188f5a3a46b25be10dcf1dca" category="inline-link-rx"></block>.</block>
+  <block id="5908526b06383bf6b835d957813a0a5b" category="section-title">Visualização detalhada do volume para análise granular de desempenho</block>
+  <block id="be14699d8f808150c6e3ec8fd5f5fb6f" category="paragraph">O painel agora oferece dois modos de visualização: visualização total e visualização por volume. A visualização total exibe métricas agregadas de todos os volumes, enquanto a visualização por volume mostra o desempenho individual dos 10 principais volumes ao longo do tempo.</block>
+  <block id="6828b4aa70bf0499581d68bc0a737c8a" category="paragraph">Na visualização de Volume, dicas de ferramentas interativas ao passar o cursor fornecem informações detalhadas para cada volume, incluindo nome do volume, métricas e valores específicos de tempo. Quando os mesmos volumes aparecem em vários componentes, a codificação por cores consistente facilita o rastreamento de volumes específicos em diferentes métricas.</block>
+  <block id="b7259cf0b1b93b9f8f56fd85b8a2075f" category="inline-link">Saiba mais sobre como visualizar detalhes do volume</block>
+  <block id="3d218b60cf53ed75572aecfde4c1d233" category="paragraph"><block ref="fdc27d3397a23552fa2bc2b42dee0c76" category="inline-link-rx"></block>.</block>
+  <block id="a63dd8c708227f66adf2e93b1b973bfe" category="section-title">Análise de latência para monitoramento proativo de desempenho</block>
+  <block id="4eca5955b4d0f7b664a2f65c49306dcf" category="paragraph">A análise de latência permite monitorar a latência de leitura e gravação de volumes em seus sistemas de arquivos FSx for ONTAP. Você pode configurar limites de aviso e eventos críticos personalizáveis para identificar proativamente gargalos de desempenho antes que eles impactem suas cargas de trabalho de EDA.</block>
+  <block id="40a74d0e93037927ed8b742952444782" category="paragraph">A tabela de eventos de latência exibe todos os eventos de aviso e críticos, permitindo que você monitore o desempenho do volume e identifique os volumes que precisam de otimização.</block>
+  <block id="40599551b14b033049a0306f8d7e0da2" category="paragraph">Esse recurso requer credenciais da AWS e é acessível no menu Latency no painel EDA.</block>
+  <block id="195b656b2b34184ab7cb51ea0158eba0" category="inline-link">Saiba mais sobre análise de latência</block>
+  <block id="3589dd4e8f5f2cbdba29810271d0f1d9" category="paragraph"><block ref="6f22f53277ef02f84f5ed64bde49085d" category="inline-link-rx"></block>.</block>
+  <block id="6b1bfc4b2985b92dcf5662055b7cd336" category="inline-link-macro">Monitoramento de latência</block>
+  <block id="6932162a874668e2d1dc901452dbb1b8" category="list-text"><block ref="fecda44c58c462f47e8a148f1d0d4382" category="inline-link-macro-rx"></block>: monitora proativamente o desempenho da latência de leitura e gravação de volumes com limites configuráveis para avisos e eventos críticos, a fim de identificar possíveis gargalos de desempenho.</block>
+  <block id="7e565772caac09d981d6b3641bb20148" category="inline-link-macro">Saiba mais sobre monitoramento de latência</block>
+  <block id="d3e9e776c97e0f2d8388d6d741dd47a8" category="admonition">As credenciais da AWS também são necessárias para usar o recurso de monitoramento de latência, que coleta métricas do CloudWatch para análise de desempenho de volume. <block ref="123cec35459a259baaf9454185c7e6c4" category="inline-link-macro-rx"></block>.</block>
+  <block id="2106cf3366c1f8905dc8d0decf2ac6cc" category="summary">Configure seu painel de controle EDA adicionando tags para coletar métricas. Personalize filtros com opções de seleção única ou múltipla para atender às necessidades do seu negócio.</block>
+  <block id="f085cface8e84ac185b38370c5a4aead" category="paragraph">Ao fazer login no EDA pela primeira vez, você pode usar o painel para observar o uso do projeto em seus sistemas de arquivos FSx for ONTAP e volumes. O painel inclui vários filtros padrão que você pode usar para personalizar as informações exibidas. Além disso, você pode criar até cinco filtros personalizados com base em suas tags da AWS, com opções de seleção única ou múltipla, para organizar e filtrar os dados de acordo com as necessidades específicas do seu negócio.</block>
+  <block id="9918911ccf4f48662bd23b3fa6ea97a8" category="inline-link-macro">Monitorar a latência do volume</block>
+  <block id="c09e7b1ab90792168923158989ca6297" category="paragraph">O painel de controle ajuda você a monitorar o uso do armazenamento para capacidade alocada, capacidade utilizada, taxa de transferência e IOPS. Para monitoramento de desempenho de latência proativo, consulte <block ref="4d71518cae1e26b3714fb432b3fb2249" category="inline-link-macro-rx"></block>.</block>
+  <block id="3eeb776c775a0a186eaac0ae86ca4408" category="paragraph">Para usar o painel de controle de forma eficaz, configure até cinco tags da AWS em seus volumes FSx for ONTAP com base em suas necessidades de negócios, por exemplo, tags que representam projetos ou unidades de negócios. Para obter detalhes, consulte <block ref="56431a7f0461e9258a1144a0e01a6b8d" category="inline-xref-macro-rx"></block>.</block>
+  <block id="b915af974b3255995db1b551b1e1dcbb" category="paragraph">Você pode configurar até cinco filtros personalizados com base em suas tags da AWS. Cada filtro personalizado requer três componentes: um nome de rótulo de filtro, um nome de chave de tag da AWS e um tipo de seleção (seleção única ou múltipla). Se você não configurar nenhum filtro personalizado, os filtros padrão (sistema de arquivos, tipo de volume e intervalo de tempo) permanecem disponíveis para que você ainda possa visualizar e interagir com seus painéis.</block>
+  <block id="27e0e44d189c553eb00dc006b35029f5" category="list-text">Selecione *+ Add filters*.</block>
+  <block id="5678492274c56b0e9a6e36ba6f34b836" category="list-text">Para cada filtro personalizado que você deseja criar (até cinco), forneça o seguinte:</block>
+  <block id="7371329c5bc9fb1913a92db5445368eb" category="list-text">*Nome do rótulo do filtro*: o nome de exibição que aparece no painel.</block>
+  <block id="9dc66313c07505b9b6ee97b9490648d4" category="list-text">*AWS tag key name*: A chave da tag do recurso AWS que corresponde a este filtro.</block>
+  <block id="6245bc7faa3c897c2839919b1e0f6c5d" category="list-text">*Seleção múltipla*: escolha se este filtro permite seleção única ou múltipla. Quando você seleciona *Seleção múltipla*, pode selecionar vários valores para este filtro simultaneamente. A seleção única restringe você a selecionar apenas um valor por vez.</block>
+  <block id="0be6ab8a3d394d63c0aaea5444fc4d94" category="admonition">Os filtros aparecem no painel na ordem em que você os configurar. Considere organizar primeiro os filtros que você usa com mais frequência para facilitar o acesso.</block>
+  <block id="58812a046615ae0cede06aa76e867511" category="paragraph">Você pode excluir um filtro personalizado selecionando o ícone da lixeira ao lado desse filtro antes de aplicar suas alterações.</block>
+  <block id="7ad57d97a4e7251a593b560f3edd7c6c" category="paragraph">Você pode filtrar as informações exibidas no painel usando uma combinação de filtros padrão e quaisquer filtros personalizados que você criou.</block>
+  <block id="0893a6eb6fac2bd4489c23ad574e3e32" category="paragraph">Os seguintes filtros padrão estão sempre disponíveis:</block>
+  <block id="b6c5b00ab5f9877d11bf9e5b5bc8b2fa" category="paragraph">Os filtros personalizados que você configurar aparecerão no painel, além desses filtros padrão. Ao usar filtros:</block>
+  <block id="0d9da1f1a6c87419d9a59e59c2f60af2" category="list-text">*Os filtros de seleção múltipla* permitem selecionar vários valores simultaneamente para ampliar sua visão. Por exemplo, você pode selecionar vários projetos para visualizar métricas combinadas.</block>
+  <block id="2ad8dabd47e501a4ed1c3d01be491886" category="list-text">*Filtros de seleção única* restringem você a selecionar apenas um valor por vez, útil quando você precisa se concentrar em um recurso ou categoria específica.</block>
+  <block id="ec4fc4cb1b37373b785aaee6062cfec7" category="section-title">Ver detalhes do volume</block>
+  <block id="c42e01801b1f2ef2fbdf3f8841353b73" category="paragraph">O painel oferece dois modos de visualização para ajudar você a analisar suas métricas de armazenamento: Total view e Volume view. Você pode alternar entre esses modos usando as guias disponíveis no painel.</block>
+  <block id="ee855ba807a55874eb4b38814389078f" category="section-title">Visão total</block>
+  <block id="e7dd4c9a6d36b6512dda7f2c3e278b77" category="paragraph">A visualização Total (padrão) exibe métricas agregadas em todos os volumes que correspondem aos filtros selecionados. Essa visualização fornece uma visão geral de alto nível do desempenho geral do seu armazenamento, mostrando métricas combinadas de capacidade, IOPS e throughput.</block>
+  <block id="515b555dcf569c4cc1d2a938ae9822d3" category="section-title">Visualização de volume</block>
+  <block id="e3f5fd2f57f7a82a665af7de374483ac" category="paragraph">A visualização de Volume exibe o desempenho individual de volumes ao longo do tempo, mostrando os 10 principais volumes para cada métrica. Essa visualização ajuda você a identificar volumes específicos que estão impulsionando o uso de recursos e a observar seu comportamento durante o período selecionado.</block>
+  <block id="5753fce8315ebaa06a713e75985750bf" category="paragraph">Para alternar para a visualização de volume, selecione a guia *Volume* no painel.</block>
+  <block id="f768a8e9133dfc338015fd0d83ec2cf0" category="section-title">Métricas de volume exibidas</block>
+  <block id="2347e9819148413af6cc4e5827b02d4e" category="paragraph">Ao selecionar a visualização de Volume, o painel exibe os 10 volumes principais do seu número total de volumes. * *Capacidade utilizada do volume*: mostra os volumes com a maior capacidade utilizada no momento. * *IOPS*: mostra os volumes com a maior média de IOPS durante o período selecionado. * *Taxa de transferência*: mostra os volumes com a maior taxa de transferência média durante o período selecionado.</block>
+  <block id="286b672abb5d35bb05baef5e5758a310" category="admonition">O painel exibe apenas os 10 principais volumes para cada métrica. Se você tiver mais de 10 volumes, alguns volumes podem não ser exibidos na visualização detalhada.</block>
+  <block id="502ab59dcef25c014584999b381b739b" category="paragraph">Quando os mesmos volumes aparecem nas métricas *Volume used capacity*, *IOPS* e *Throughput*, o painel usa uma codificação de cores consistente na legenda para facilitar o rastreamento de volumes específicos em diferentes métricas.</block>
+  <block id="4745a2c999b128a25bda01aed19ab2f8" category="paragraph">O eixo horizontal exibe o intervalo de tempo, enquanto uma legenda mostra todos os volumes (até 10) representados no gráfico.</block>
+  <block id="90681f223ffce7f43af4ac6e8572f319" category="section-title">Dados de volume interativos</block>
+  <block id="409e7e820a2aec1df14db5a88edd443e" category="paragraph">Você pode passar o cursor sobre qualquer linha de volume nos gráficos para visualizar informações detalhadas:</block>
+  <block id="66098fe1f75297ccbc3e4c2332830104" category="paragraph">*Capacidade de volume utilizada*: Exibe o nome do volume, a capacidade utilizada naquele ponto no tempo e a capacidade alocada.</block>
+  <block id="748334bb99d46cf2ef3aa45e610baf24" category="paragraph">*IOPS*: exibe o nome do volume, a média de IOPS para o intervalo de tempo e o máximo de IOPS para o intervalo de tempo.</block>
+  <block id="04eeb8d03cf6b4755481c052a6e535e6" category="paragraph">*Taxa de transferência*: exibe o nome do volume, a taxa de transferência média para o intervalo de tempo e a taxa de transferência máxima para o intervalo de tempo.</block>
+  <block id="f2c7e3d31586c840e7c17c779b7d70dd" category="paragraph">Esses dados interativos ajudam você a analisar padrões de desempenho de volume e identificar possíveis gargalos ou oportunidades de otimização.</block>
+  <block id="300ec882ed0bc603a8bc31f188dc28e5" category="summary">Monitore e analise o desempenho da latência de volume com limites configuráveis para eventos de aviso e críticos, a fim de identificar proativamente gargalos de desempenho.</block>
+  <block id="90d997e137ee990e196229395af6d6a7" category="paragraph">Usando a análise de latência, você pode monitorar proativamente o desempenho do volume rastreando as métricas de latência de leitura e gravação em seus sistemas de arquivos FSx for ONTAP. Configure limites personalizáveis para eventos de aviso e críticos para identificar possíveis gargalos de desempenho antes que eles impactem suas cargas de trabalho de EDA.</block>
+  <block id="3b878279a04dc47d60932cb294d96259" category="section-title">Visão geral</block>
+  <block id="1c42660fdf55fec5341f109b1c18ae8c" category="paragraph">A análise de latência coleta e monitora as métricas do CloudWatch para operações de leitura e gravação de volumes. Quando tanto os limites de latência quanto de IOPS são ultrapassados para todos os pontos de dados dentro de um intervalo de tempo especificado, o sistema gera alertas que aparecem na tabela de eventos de latência. Isso permite que você:</block>
+  <block id="52840e6ea19e30e010425ac96fc1fd74" category="list-text">Identifique volumes que apresentam degradação de desempenho.</block>
+  <block id="8111593c4b9e675b40060181e91582b7" category="list-text">Diferencie entre problemas de desempenho de nível de alerta e de nível crítico.</block>
+  <block id="029070dac474b47b91825e694dd48f7e" category="list-text">Acompanhe as tendências de latência ao longo do tempo para otimizar as configurações de armazenamento.</block>
+  <block id="82bfba3efae839fe6bbe2de97d83c475" category="list-text">Tome medidas proativas antes que a latência afete o desempenho da carga de trabalho.</block>
+  <block id="b18d695fc7384219d11ff79654f49701" category="paragraph">Para usar a análise de latência, você precisa ter credenciais da AWS configuradas no Workload Factory. O recurso requer acesso às métricas do CloudWatch para todos os volumes do FSx for ONTAP associados às suas credenciais da AWS.</block>
+  <block id="196a1b1d4d7eff75b0b7bc0f6fa282e7" category="inline-link-macro">Adicionar credenciais da AWS</block>
+  <block id="70317e3abbdadfb99e6ea364d432bd9b" category="paragraph">Se você ainda não configurou as credenciais AWS, consulte <block ref="53eda59ec5ff13cb6e6660c47027e8c7" category="inline-link-macro-rx"></block>.</block>
+  <block id="b7a6e29a17f641a5bd663b0c27c433ed" category="section-title">Configurar limites de latência</block>
+  <block id="9b53289586841271ac6d175ca4a5af63" category="paragraph">Você pode configurar limites para eventos de aviso e críticos. Cada tipo de evento inclui limites separados para operações de leitura e gravação. O sistema avalia esses limites continuamente e gera alertas quando as condições são atendidas.</block>
+  <block id="2542d3fbcc77fe58daf4a8287e4dc4ae" category="admonition">Você deve definir limites para eventos críticos superiores aos limites para eventos de aviso para garantir a escalação adequada de alertas. Caso contrário, você não pode salvar sua configuração.</block>
+  <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">Sobre esta tarefa</block>
+  <block id="92aac57dc8699e8869b6e3f2aec6b360" category="paragraph">Para que um alerta seja acionado, tanto o limite de latência quanto o limite de IOPS devem ser ultrapassados para todos os pontos de dados dentro do intervalo de tempo especificado. Essa lógica de dupla condição ajuda a reduzir falsos positivos, garantindo que a alta latência seja mantida sob carga significativa.</block>
+  <block id="e1cf2ece0db166d8b4c6b87f20794e11" category="inline-image-macro">O ícone do menu hambúrguer</block>
+  <block id="c625174f1f2ee54505e8df5c7884aaa1" category="list-text">Selecione o menu <block ref="438b712f6e6afc173ce78a756adc207c" category="inline-image-macro-rx" type="image"></block> e depois selecione *EDA*.</block>
+  <block id="6522859d513a1a4996b48c2075e5629d" category="list-text">No menu EDA, selecione *Latência*.</block>
+  <block id="e98927daa3269d89ed40e1d00b9894f4" category="list-text">Na página de configuração de latência do EDA, configure os seguintes limites:</block>
+  <block id="6a92339b37a09c472028f07967682c85" category="list-text">*Eventos de aviso*</block>
+  <block id="7a9ff4c8c2260709d5b8ca3ea5720d48" category="list-text">*Limite de latência de leitura*: insira o limite de latência em milissegundos. Padrão: 6 ms.</block>
+  <block id="c7ffe38ce2716364ec13888fb0fb4d18" category="list-text">*Limite de IOPS de leitura*: insira o limite de IOPS em operações por segundo. Padrão: 100 ops/seg.</block>
+  <block id="a9c123b2457943cad2a4a7b1da9e2ba2" category="list-text">*Intervalo de tempo de leitura*: insira o intervalo de tempo em minutos (5-20). Padrão: 10 minutos.</block>
+  <block id="0bb2971cdc9904893b398e127f86ccc1" category="list-text">*Limite de latência de gravação*: Insira o limite de latência em milissegundos. Padrão: 8 ms.</block>
+  <block id="f1d2b429b535ce1659d20f6a98f239da" category="list-text">*Limite de IOPS de gravação*: insira o limite de IOPS em operações por segundo. Padrão: 100 ops/seg.</block>
+  <block id="a0274640a4f41ca07311c67d74f332b1" category="list-text">*Write time range*: Digite o intervalo de tempo em minutos (5-20). Padrão: 10 minutos.</block>
+  <block id="a3ca3437ce0a7bbf111f75af4d05ea72" category="list-text">*Eventos críticos*</block>
+  <block id="fe225c18ccd35d621ab2e58cf79459b5" category="list-text">*Limite de latência de leitura*: Insira o limite de latência em milissegundos. Padrão: 12 ms.</block>
+  <block id="84da8d5b9264494d5cd9cb035bc28120" category="list-text">*Limite de latência de gravação*: Insira o limite de latência em milissegundos. Padrão: 15 ms.</block>
+  <block id="0073a211209725d1fd56c6533d4ffec3" category="paragraph">O Workload Factory começa a coletar métricas de latência para todos os volumes do FSx for ONTAP associados às suas credenciais da AWS. As métricas são coletadas pelo menos a cada 20 minutos. A tabela de eventos de latência exibe quaisquer volumes que ultrapassem os limites configurados.</block>
+  <block id="6bc0e94d709a00317b3fdd4f3958342b" category="section-title">Entendendo alertas</block>
+  <block id="c00d3202c1a4245d5310c03fe4c4d124" category="paragraph">O recurso de análise de latência usa alarmes do CloudWatch para monitorar o desempenho do volume. Compreender como os alertas são acionados ajuda você a configurar limites apropriados e interpretar os resultados.</block>
+  <block id="ee34286f143c9ac572df816e88226163" category="section-title">Métricas coletadas</block>
+  <block id="bea060c037959de7378c9c2f91ea4219" category="paragraph">O sistema coleta as seguintes métricas do CloudWatch para cada volume:</block>
+  <block id="9115f34400f66fb673aa39683fefc0a8" category="list-text">*Limite de latência de leitura*: Calculado como 1000 * m2/(m1+0.000001), onde m1 = DataReadOperations e m2 = DataReadOperationTime</block>
+  <block id="507575c143ec3020fe407125ed3df334" category="list-text">*Limite de latência de escrita*: Calculado como 1000 * m2/(m1+0.000001), onde m1 = DataWriteOperations e m2 = DataWriteOperationTime</block>
+  <block id="6c2de48345c28d8092d96aca583778d0" category="section-title">Condições de ativação do alerta</block>
+  <block id="9242656254a25093b3f3351379ea0f02" category="paragraph">Um alerta é acionado quando todas as seguintes condições são atendidas:</block>
+  <block id="186a1bcf007367f6bc6fa82ec4719e16" category="list-text">O limite de latência foi excedido para o tipo de operação (leitura ou gravação).</block>
+  <block id="e276786b9c415526db7d13f4aa5efadd" category="list-text">O limite de IOPS foi excedido para o tipo de operação.</block>
+  <block id="d4f2d389a3d4d575b8158ca4417bf9a5" category="list-text">Ambas as condições persistem para todos os pontos de dados dentro do intervalo de tempo configurado.</block>
+  <block id="6efa4b954c442dd4f15a0f58f1b0bd86" category="paragraph">Por exemplo, com os limites de aviso padrão, um alerta de leitura é acionado somente se a latência de leitura exceder 6 ms E o IOPS de leitura exceder 100 ops/seg para todos os pontos de dados dentro de um período de 10 minutos.</block>
+  <block id="e0b18d5b04f677d427e5a029d591d7a9" category="section-title">Gravidade do evento</block>
+  <block id="c5dada127d514b30222d50c180808dff" category="list-text">*Eventos de aviso*: Indicam latência elevada que pode necessitar de atenção.</block>
+  <block id="3b1132558500e795d2918a031b3533ea" category="list-text">*Eventos críticos*: indicam latência severa que requer investigação imediata.</block>
+  <block id="a0136d636bd452e02818b34b1fb9eb98" category="section-title">Visualizar eventos de latência</block>
+  <block id="7965c28e3a946fcfe26f8d31449a72e3" category="paragraph">A tabela de eventos de latência exibe todos os eventos de aviso e críticos detectados nas últimas 72 horas. Use esta tabela para monitorar o desempenho do volume e identificar os volumes que requerem otimização.</block>
+  <block id="0f68b904e33d9ac04605aecc958bcf52" category="list-title">Informações adicionais</block>
+  <block id="0fd27ce965f59d9ce188afda7be707f7" category="list-text">Apenas a violação mais recente para cada volume é exibida na tabela. Se um volume sofrer múltiplas violações, apenas o evento mais recente é exibido.</block>
+  <block id="7776f517a75d578f349901d6f0886405" category="list-text">Os eventos são removidos automaticamente após 72 horas.</block>
+  <block id="99789473cc53d4c5f2666a4ab79ebb39" category="list-text">A tabela exibe um máximo de 200 eventos. Eventos mais antigos são removidos à medida que novos eventos são adicionados.</block>
+  <block id="fa25e0e326e38037315b4df99a68a595" category="list-text">Na aba *Latência*, visualize a tabela de eventos de latência.</block>
+  <block id="dcc9848cbc440e33ab31099e592f3548" category="list-text">Analise as informações de cada evento incluindo:</block>
+  <block id="93051970a8383738704f4809fd35779f" category="list-text">*Gravidade*: Indica se o evento é Critical ou Warning.</block>
+  <block id="9d0418bddad0434b22eddfa9e6ac70b3" category="list-text">*Nome do volume*: o nome do volume afetado.</block>
+  <block id="3970adb265372ae157b79f5cf32c4654" category="list-text">*Volume ID*: O ID do volume afetado.</block>
+  <block id="94785a36456605abe135e07954560b83" category="list-text">*Sistema de arquivos*: O sistema de arquivos FSx for ONTAP que contém o volume.</block>
+  <block id="fe78c594fbd3ab20c9638e8c15888f03" category="list-text">*Hora detectada*: Quando a violação foi detectada</block>
+  <block id="f24df78eef3360387dd1a4f2d6a0fdb0" category="list-text">*Latência mediana*: O valor da latência mediana durante o período da violação.</block>
+  <block id="ffdc22229e20f79439c83c1406c5988f" category="list-text">Para classificar a tabela, selecione qualquer cabeçalho de coluna. Por padrão, eventos críticos aparecem primeiro classificados por tempo, seguidos por eventos de aviso classificados por tempo.</block>
+  <block id="c010e7ccfe39dff8710b56fb1e570258" category="list-text">Para descartar um ou mais eventos, ao lado de cada evento selecione *Descartar*.</block>
+  <block id="4592e1df7d97ccf7061a86a746d9261d" category="list-text">Para adicionar colunas à tabela, selecione o ícone de coluna, escolha as colunas e selecione *Apply*.</block>
+  <block id="01bd639bef6ec9a56687ee7ffd9f246c" category="section-title">Gerenciar configuração de latência</block>
+  <block id="7851fb52b1039fde0650c3e8173c2a5a" category="paragraph">Após a configuração inicial, você pode editar seus limites.</block>
+  <block id="6fe6ef1cbd27d3257ff9500aab5f9ab9" category="list-text">Na página *Latência*, selecione *Editar*.</block>
+  <block id="d53bdccd3ec334ddfd63d2269906352a" category="list-text">Modifique qualquer um dos valores de limite conforme necessário.</block>
+  <block id="247a926ff070f20efece2fd2ed4162c3" category="admonition">Certifique-se de que os limites críticos permaneçam acima dos limites de alerta. O sistema exibe um erro se você configurar limites críticos abaixo dos limites de alerta.</block>
+  <block id="d3152a664d12079fbf89a50fcb166ef3" category="list-text">Selecione *Apply* para salvar suas alterações.</block>
+  <block id="c2ffe02d76c4f089648f1647b43e4ee5" category="section-title">Melhores práticas</block>
+  <block id="9034aebe9b693f759faa32d33c7d1358" category="paragraph">Considere estas recomendações ao configurar e usar a análise de latência:</block>
+  <block id="6a17347e669ad40689359f41fee3efc9" category="list-text">*Defina limites realistas*: Configure limites com base nos requisitos da sua carga de trabalho. Os valores padrão fornecem um ponto de partida mas podem precisar de ajuste para o seu ambiente específico.</block>
+  <block id="8d2a6ec04c3428e17318eec752e34640" category="list-text">*Comece com limites de alerta*: use eventos de alerta para estabelecer expectativas de desempenho básicas antes de ajustar os limites críticos.</block>
+  <block id="1f3a99c8bf0d4110ea6d8f943c76ad49" category="list-text">*Considere cuidadosamente os intervalos de tempo*: Intervalos de tempo mais curtos (5-10 minutos) detectam problemas mais rapidamente, mas podem gerar mais alertas. Intervalos de tempo mais longos (15-20 minutos) reduzem falsos positivos, mas podem atrasar a detecção.</block>
+  <block id="10c6a588ad4a1a320036ec18537a9783" category="list-text">*Monitore tendências*: analise regularmente a tabela de eventos de latência para identificar padrões ou problemas recorrentes que possam indicar problemas de configuração subjacentes.</block>
+  <block id="582145492bc6491a13bd3c8e766df7f4" category="list-text">*Coordene os limites de IOPS e latência*: A lógica de dupla condição significa que ambos devem ser excedidos. Definir limites de IOPS muito altos pode impedir alertas mesmo quando a latência for problemática.</block>
+  <block id="829d4cdd3177ddf6591982d99aa444ab" category="list-text">*Revisar eventos rejeitados*: revise periodicamente por que os eventos foram rejeitados para identificar oportunidades de ajuste de limites ou melhorias na infraestrutura.</block>
+  <block id="8d2488f820b40da5c2d7dfd912588e9a" category="section-title">1 de fevereiro de 2026</block>
+  <block id="2c421bc29b0b255dff7d2788d0d1a127" category="section-title">4 de janeiro de 2026</block>
 </blocks>

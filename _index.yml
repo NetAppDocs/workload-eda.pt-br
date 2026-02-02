@@ -17,6 +17,10 @@ indexpage:
     links:
     - title: Use o painel de controle
       url: "/task-configure-dashboard.html"
+  - title: Monitorar a latência do volume
+    links:
+    - title: Monitorar a latência do volume
+      url: "/task-monitor-latency.html"
   - title: Utilize a integração com o Perforce
     links:
     - title: Saiba mais sobre a integração com o Perforce.
