@@ -13,14 +13,18 @@ indexpage:
       url: "/learn-eda.html"
     - title: Início rápido
       url: "/quick-start-eda.html"
-  - title: Utilize o painel de controle do projeto
+  - title: Visão geral do storage EDA
     links:
-    - title: Use o painel de controle
-      url: "/task-configure-dashboard.html"
-  - title: Monitorar a latência do volume
+    - title: Gerencie operações de storage EDA
+      url: "/task-use-overview-dashboard.html"
+  - title: Análise de latência do FSx
     links:
-    - title: Monitorar a latência do volume
+    - title: Monitorar latência do volume FSx
       url: "/task-monitor-latency.html"
+  - title: Análise de uso do projeto
+    links:
+    - title: Analisar o uso de storage do projeto
+      url: "/task-configure-dashboard.html"
   - title: Utilize a integração com o Perforce
     links:
     - title: Saiba mais sobre a integração com o Perforce.
