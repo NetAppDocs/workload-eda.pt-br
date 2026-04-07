@@ -17,10 +17,10 @@ Login e conta do Workload Factory:: Você precisará de https://docs.netapp.com/
 Credenciais e permissões da AWS:: Você precisa adicionar as credenciais da AWS ao Workload Factory com permissões de leitura/gravação, o que significa que você usará o Workload Factory no modo de leitura/gravação para EDA.
 
 
-As permissões de modo _básico_ e modo _somente leitura_ não são suportadas no momento.
+Os modos _Basic_ e _Read-only_ não são suportados no momento.
 
 
-NOTE: As credenciais da AWS também são necessárias para usar o recurso de monitoramento de latência, que coleta métricas do CloudWatch para análise de desempenho de volume. link:task-monitor-latency.html["Saiba mais sobre monitoramento de latência"].
+NOTE: As credenciais da AWS também são necessárias para usar o recurso de monitoramento de latência, que coleta métricas do CloudWatch para análise de desempenho de volume. Para habilitar a análise opcional com agente de IA para cenários de latência complexos, você também deve fornecer um ARN de modelo do Amazon Bedrock. link:task-monitor-latency.html["Saiba mais sobre monitoramento de latência"].
 
 https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aprenda como adicionar credenciais da AWS ao Workload Factory."^]
 
