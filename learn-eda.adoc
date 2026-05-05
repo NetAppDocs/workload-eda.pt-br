@@ -4,7 +4,7 @@ permalink: learn-eda.html
 keywords: software builders, development, benefits, eda, electronic design automation 
 summary: O NetApp Workload Factory para EDA ajuda você a otimizar o desempenho de uso do FSx para ONTAP . 
 ---
-= Saiba mais sobre o NetApp Workload Factory para EDA.
+= Saiba mais sobre o Workload Factory para EDA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -21,6 +21,7 @@ Oferece o seguinte:
 
 * link:task-use-overview-dashboard.html["Painel de visão geral"]: oferece uma visão centralizada do cluster para ajudar você a monitorar a integridade, a capacidade e a taxa de transferência do cluster FSx for ONTAP, determinar onde colocar novos volumes, tomar decisões informadas sobre o dimensionamento da capacidade e da taxa de transferência, e receber recomendações automatizadas de capacidade.
 * link:task-configure-dashboard.html["Painel do projeto"]: oferece uma visão centralizada do consumo de storage em seus sistemas de arquivos FSx for ONTAP para ajudar você a planejar, avaliar custos e coletar informações sobre o uso de storage em seus projetos.
-* link:task-monitor-latency.html["Análise de latência do FSx"]: monitora proativamente o desempenho da latência de leitura e gravação de volumes com limites configuráveis para avisos e eventos críticos. Inclui análise básica automatizada usando métricas do ONTAP QoS delay center e análise opcional com agente de IA para cenários complexos que exigem identificação mais aprofundada da causa raiz.
+* link:task-monitor-latency.html["Monitorar a latência do volume"]: monitora proativamente o desempenho da latência de leitura e gravação de volumes com limites configuráveis para alertas e eventos críticos. Receba notificações por e-mail ou SNS quando eventos forem detectados. Inclui análise básica automatizada usando métricas do ONTAP QoS delay center e análise opcional com agente de IA para cenários complexos que exigem identificação mais aprofundada da causa raiz.
+* link:task-analyze-latency-trends.html["Analisar tendências de latência"]: use o gráfico de latência interativo para visualizar o comportamento da latência ao longo do tempo, identificar padrões, entender se os problemas de desempenho são recorrentes ou isolados e tomar decisões baseadas em dados sobre a remediação.
 * link:learn-eda-workloads.html["CI/CD"]: Simplifica e reduz o tempo de compilação de software, aproveitando os recursos de clonagem de volumes do FSx para ONTAP .
 

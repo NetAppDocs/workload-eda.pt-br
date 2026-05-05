@@ -4,7 +4,7 @@ permalink: support-registration.html
 keywords: support registration, register for support, support, nss account, add nss account 
 summary: Antes de abrir um chamado de suporte com o suporte técnico da NetApp , você precisa adicionar uma conta do NetApp Support Site ao Workload Factory e, em seguida, registrar-se para receber suporte. 
 ---
-= Registre-se para obter suporte para o NetApp Workload Factory para EDA.
+= Registre-se para obter suporte para Workload Factory para EDA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

@@ -4,7 +4,7 @@ permalink: task-configure-dashboard.html
 keywords: configure, dashboard, AWS tags, CloudWatch, FSx for ONTAP, Workload Factory, EDA, electronic design automation, volume details, top volumes, capacity utilization, throughput utilization, IOPS utilization 
 summary: Configure o painel de controle do projeto EDA adicionando tags para coletar métricas. Personalize os filtros com opções de seleção única ou múltipla para atender às necessidades do seu negócio. 
 ---
-= Utilize o painel de controle do projeto
+= Use o painel de controle do projeto no Workload Factory para EDA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

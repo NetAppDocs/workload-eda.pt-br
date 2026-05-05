@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-monitor-latency.html 
 keywords: latency analysis, CloudWatch alarms, volume latency, read latency, write latency, critical events, warning events, latency thresholds, IOPS thresholds, latency monitoring, FSx for ONTAP, root cause analysis, QoS delay center, automated analysis, latency troubleshooting, ai latency analysis, latency events table 
-summary: Monitore e analise o desempenho da latência de volume com limites configuráveis para eventos de aviso e críticos. Use análise básica automatizada para identificar e resolver proativamente gargalos de desempenho. 
+summary: Monitore o desempenho da latência de volume com limites configuráveis para eventos de aviso e críticos. Use análise básica automatizada e análise com agente de IA para identificar e resolver proativamente gargalos de desempenho. 
 ---
-= Monitorar a latência do volume em cargas de trabalho EDA
+= Monitore a latência do volume no Workload Factory para EDA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -17,11 +17,11 @@ Como administrador de TI ou DevOps engineer gerenciando cargas de trabalho EDA, 
 
 == Visão geral
 
-A análise de latência coleta métricas do CloudWatch para operações de leitura e gravação em todos os volumes FSx for ONTAP associados às suas credenciais da AWS. Um alerta é gerado quando tanto o limite de latência quanto o limite de IOPS são ultrapassados para todos os pontos de dados dentro do intervalo de tempo configurado. Essa lógica de dupla condição reduz falsos positivos ao garantir que a latência elevada seja sustentada sob carga real.
+A análise de latência coleta métricas do CloudWatch para operações de leitura e gravação em todos os volumes FSx for ONTAP associados às suas credenciais da AWS. Um alerta é gerado quando tanto o limite de latência quanto o limite de IOPS são ultrapassados para todos os pontos de dados dentro do intervalo de tempo configurado. Isso reduz falsos positivos ao garantir que a latência elevada seja sustentada sob carga real. Você pode ver todos os eventos detectados e, se tiver configurado notificações, receberá notificações por e-mail ou pelo Amazon SNS com detalhes sobre os volumes afetados.
 
-Quando um evento é detectado, o Workload Factory executa uma análise básica usando as métricas do centro de atraso de QoS do ONTAP para identificar o principal contribuinte para a latência (por exemplo, FlexCache, pool de capacidade, limites de QoS, disco, dados, cluster ou outros subsistemas).
+Quando um evento é detectado, o Workload Factory executa uma análise básica usando as métricas do centro de atraso de QoS do ONTAP para identificar o principal contribuinte para a latência (por exemplo, FlexCache, pool de capacidade, limites de QoS, disco, dados, cluster ou outros subsistemas). Você pode então link:task-analyze-latency-trends.html["analisar tendências de latência"] usando um gráfico interativo.
 
-Para cenários de dados e clusters, você pode opcionalmente invocar a análise do agente de IA no painel de análise de latência para obter uma explicação detalhada da causa raiz, uma lista dos clientes EC2 afetados e as etapas de correção recomendadas.
+Para cenários de dados e clusters, você pode opcionalmente executar a análise do agente de IA para obter uma explicação detalhada da causa raiz, uma lista dos clientes EC2 afetados e etapas de correção recomendadas.
 
 
 
@@ -38,7 +38,7 @@ Se você ainda não configurou as credenciais AWS, consulte link:https://docs.ne
 
 --
 FSx para sistema de arquivos ONTAP:: Você precisa de pelo menos um FSx for ONTAP sistema de arquivos com volumes implantados em seu ambiente AWS. O recurso de monitoramento de latência coleta automaticamente métricas para todos os volumes associados às suas credenciais AWS configuradas.
-Link para FSx for ONTAP:: Para visualizar informações básicas de análise na tabela de eventos de latência e no painel de análise, você deve associar um link ao sistema de arquivos FSx for ONTAP. Sem um link, os eventos ainda podem ser detectados, mas a análise fornece informações limitadas. Se nenhum link já estiver associado, selecione *Associar link* em EDA, escolha se deseja criar um novo link ou associar um link existente e, em seguida, selecione *Continuar* para acessar automaticamente a página de criação de link em Storage workloads.
+Link para FSx for ONTAP:: Para visualizar informações básicas de análise, você deve associar um link ao sistema de arquivos FSx for ONTAP. Sem um link, eventos ainda podem ser detectados, mas a análise fornece informações limitadas. Se nenhum link já estiver associado, selecione *Associar link* em EDA, escolha se deseja criar um novo link ou associar um link existente e, em seguida, selecione *Continuar* para ir automaticamente para a página de criação de link em Storage workloads.
 +
 --
 Para obter instruções sobre como criar e associar links, consulte link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Criar um link"^].
@@ -49,16 +49,17 @@ ARN do modelo Amazon Bedrock (opcional):: Para usar o recurso opcional de análi
 --
 Para obter mais detalhes, consulte link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/requirements-knowledge-base.html#basic-genai-requirements["Requisitos básicos do GenAI"^].
 
-Se você não configurar um ARN de modelo Bedrock, ainda poderá usar o monitoramento de latência e a análise básica automatizada. A análise com agentes de IA não estará disponível.
+Se você não configurar um ARN de modelo Bedrock, ainda poderá usar o monitoramento de latência e a análise básica automatizada, mas a análise com agentes de IA não estará disponível.
 
 --
+Configuração de notificações (opcional):: Para receber notificações por e-mail ou Amazon SNS quando eventos de latência forem detectados, configure as preferências de notificação nas configurações do Workload Factory. Consulte <<Configurar notificações de latência>> para obter mais detalhes.
 
 
 
 
 == Entendendo alertas
 
-O recurso de análise de latência usa alarmes do CloudWatch para monitorar o desempenho do volume. Compreender como os alertas são acionados ajuda você a configurar limites apropriados e interpretar os resultados.
+A análise de latência utiliza CloudWatch alarms para monitorar o desempenho do volume. Compreender como os alertas são acionados ajuda a configurar limites adequados e interpretar os resultados.
 
 
 
@@ -95,7 +96,7 @@ Por exemplo, com os limites de aviso padrão, um alerta de leitura é acionado s
 
 == Configurar limites de latência
 
-Configure limites de aviso e críticos para operações de leitura e gravação. O sistema avalia os limites continuamente e gera alertas quando as condições são atendidas.
+Você pode configurar limites de aviso e críticos para operações de leitura e gravação. O sistema avalia os limites continuamente e gera alertas quando as condições são atendidas.
 
 
 NOTE: Você deve definir limites para eventos críticos superiores aos limites para eventos de aviso para garantir a escalação adequada de alertas. Caso contrário, você não pode salvar sua configuração.
@@ -132,7 +133,7 @@ NOTE: Você deve definir limites para eventos críticos superiores aos limites p
 
 
 .Resultado
-O Workload Factory começa a coletar métricas de latência para todos os volumes do FSx for ONTAP associados às suas credenciais da AWS. As métricas são coletadas pelo menos a cada 20 minutos. A tabela de eventos de latência exibe quaisquer volumes que ultrapassem os limites configurados.
+O Workload Factory começa a coletar métricas de latência para todos os volumes FSx for ONTAP associados às suas credenciais da AWS. As métricas são coletadas pelo menos a cada 20 minutos. Quaisquer volumes que ultrapassarem os limites configurados serão exibidos.
 
 
 
@@ -140,15 +141,14 @@ O Workload Factory começa a coletar métricas de latência para todos os volume
 
 A tabela de eventos de latência fornece uma visão centralizada de todos os eventos de aviso e críticos detectados nas últimas 72 horas.
 
-* Apenas a violação mais recente para cada volume é exibida na tabela. Se um volume sofrer múltiplas violações, apenas o evento mais recente é exibido.
+* Apenas a violação mais recente para cada volume é exibida. Se um volume sofrer múltiplas violações, apenas o evento mais recente será exibido.
 * Os eventos são removidos automaticamente após 72 horas.
-* A tabela exibe um máximo de 200 eventos. Eventos mais antigos são removidos à medida que novos eventos são adicionados.
-* Os eventos aparecem na tabela mesmo que não haja um link associado ao sistema de arquivos. Um link é necessário para visualizar detalhes básicos de análise e executar análise com agente de IA.
+* São exibidos no máximo 200 eventos. Os eventos mais antigos são removidos à medida que novos eventos são adicionados.
+* Os eventos são exibidos mesmo que nenhum link esteja associado ao sistema de arquivos. Um link é necessário para visualizar detalhes básicos de análise e executar a análise do agente de IA.
 
 
 .Passos
-. Na aba *Latência*, visualize a tabela de eventos de latência.
-. Analise as informações de cada evento incluindo:
+. Na aba *Latência*, revise as informações de cada evento, incluindo:
 +
 ** *Gravidade*: Indica se o evento é Crítico ou de Alerta
 ** *Nome do volume*: O nome do volume afetado
@@ -159,17 +159,18 @@ A tabela de eventos de latência fornece uma visão centralizada de todos os eve
 ** *Hora detectada*: Quando a violação foi detectada
 
 
-. Para visualizar os detalhes de um evento de latência, selecione o evento na coluna *Gravidade* da tabela de eventos de latência. Isso abrirá um painel de análise de latência para esse evento.
-. Para classificar a tabela, selecione qualquer cabeçalho de coluna. Por padrão, eventos críticos aparecem primeiro classificados por tempo, seguidos por eventos de aviso classificados por tempo.
+. Para visualizar os detalhes de um evento de latência, selecione o evento na coluna *Gravidade*. Isso abrirá um painel de análise de latência para esse evento.
+. Para classificar a tabela, selecione qualquer cabeçalho de coluna. Por padrão, os eventos críticos são exibidos primeiro, classificados por horário, seguidos pelos eventos de aviso, também classificados por horário.
 . Para descartar um ou mais eventos, ao lado de cada evento selecione image:icon-action.png["O ícone do menu de ações"]*Descartar*.
 . Para adicionar colunas à tabela, selecione image:column-icon.png["O ícone da coluna"], escolha as colunas e selecione *Aplicar*.
+. Para analisar as tendências de latência ao longo do tempo, selecione um evento para abrir o painel de análise de latência. Use a guia *Ao longo do tempo* para visualizar o gráfico de latência interativo. Veja link:task-analyze-latency-trends.html["Analisar tendências de latência"] para mais detalhes.
 
 
 
 
-== Compreendendo a análise básica
+== Analisar um evento de latência
 
-A análise básica ajuda você a identificar rapidamente a causa raiz dos problemas de latência sem investigação manual. Quando um evento de latência é detectado, o Workload Factory realiza automaticamente uma análise básica usando as métricas de delay do centro de QoS do ONTAP. A análise identifica qual componente está causando a latência e fornece uma breve descrição no painel de análise de latência.
+A análise básica ajuda você a identificar rapidamente a causa raiz dos problemas de latência sem investigação manual. Quando um evento de latência é detectado, o Workload Factory realiza automaticamente uma análise básica usando as métricas do centro de atraso do ONTAP QoS. A análise identifica qual componente está causando a latência e fornece uma breve descrição.
 
 
 NOTE: Pode haver pequenas discrepâncias entre os valores de latência da análise de QoS do ONTAP e os dados do CloudWatch devido a diferentes metodologias de coleta. A análise básica utiliza dados do ONTAP para identificação da causa raiz.
@@ -178,7 +179,17 @@ NOTE: Pode haver pequenas discrepâncias entre os valores de latência da análi
 
 === Painel de análise de latência
 
-Selecionar um evento de latência na coluna *Gravidade* da tabela de eventos de latência abre um painel de análise de latência para esse evento.
+Selecione um evento de latência na coluna *Gravidade* para abrir o painel de análise de latência desse evento. O painel inclui guias que fornecem diferentes visualizações do evento de latência:
+
+* *Visão geral*: Exibe os resultados da análise básica mostrando qual componente está causando a latência
+* *Ao longo do tempo*: Exibe um gráfico de latência interativo com dados históricos
+
+
+
+
+==== Visão geral
+
+A aba *Visão geral* exibe os resultados da análise básica automatizada, identificando qual componente está causando a latência:
 
 * *FlexCache*: latência das operações FlexCache
 * *Pool de capacidade*: Latência das operações do pool de capacidade
@@ -190,7 +201,15 @@ Selecionar um evento de latência na coluna *Gravidade* da tabela de eventos de 
 * *Outros*: Latência de outros subsistemas, como NVRAM e rede
 
 
-Se um ARN de modelo do Amazon Bedrock estiver configurado, o painel também incluirá uma opção para executar análises de agentes de IA para cenários de dados e clusters. Se o Bedrock não estiver configurado, o painel exibirá um link para a página de configuração de cargas de trabalho de storage do sistema de arquivos onde você pode configurar o acesso ao Bedrock.
+Se um ARN de modelo do Amazon Bedrock estiver configurado, a guia *Visão geral* também inclui uma opção para executar análise de agente de IA para cenários de dados e clusters. Se o Bedrock não estiver configurado, a guia exibe um link para a página de configuração de cargas de trabalho de armazenamento do sistema de arquivos específico onde você pode configurar o acesso ao Bedrock.
+
+
+
+==== Ao longo do tempo
+
+A guia *Ao longo do tempo* exibe um gráfico de latência interativo mostrando as métricas de latência do CloudWatch ao longo do tempo para o volume afetado. O gráfico mostra a latência de leitura ou gravação, dependendo de qual tipo de alarme acionou o evento. Você pode selecionar diferentes intervalos de tempo (1H, 3H, 12H, 24H, 72H) para visualizar o comportamento da latência em diferentes períodos.
+
+Para obter instruções detalhadas sobre como usar o gráfico, consulte link:task-analyze-latency-trends.html["Analisar tendências de latência"].
 
 
 
@@ -199,7 +218,7 @@ Se um ARN de modelo do Amazon Bedrock estiver configurado, o painel também incl
 Embora a análise básica identifique a origem da latência, cenários complexos envolvendo dados ou componentes de cluster geralmente exigem uma investigação mais aprofundada para determinar a causa raiz específica e as possíveis medidas corretivas. A análise por agentes de IA proporciona esse nível mais profundo de solução de problemas, identificando questões como volumes excessivos, configurações não otimizadas ou requisitos de escalabilidade horizontal que a análise básica não consegue detectar.
 
 .Antes de começar
-Você precisa ter configurado um ARN de modelo do Amazon Bedrock nas configurações do Workload Factory.
+Configure o ARN do modelo Amazon Bedrock nas configurações do Workload Factory, consulte link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/requirements-knowledge-base.html#basic-genai-requirements["Requisitos básicos do GenAI"^].
 
 .Sobre esta tarefa
 Ao executar a análise do agente de IA, o sistema atualiza automaticamente os dados básicos de análise e os utiliza como entrada para o agente de IA. O agente de IA avalia o cenário de latência e fornece:
@@ -219,19 +238,13 @@ O agente de IA segue as diretrizes básicas de análise para identificar cenári
 
 .Passos
 . Na aba *Latência*, localize o evento que deseja analisar.
-. Na coluna *Gravidade* da tabela de eventos de latência, selecione um evento de latência para abrir um painel de análise para esse evento.
+. Na coluna *Gravidade*, selecione um evento de latência para abrir um painel de análise para esse evento.
 +
-Se nenhum link estiver associado ao sistema de arquivos, uma mensagem será exibida solicitando que você associe um link ao sistema de arquivos afetado. Selecione a mensagem para ser redirecionado para a página de configuração de link para esse sistema de arquivos. Uma dica de ferramenta explica o redirecionamento e observa que associar um link e configurar o acesso do Bedrock (recomendado) permite a análise completa de eventos.
+Se nenhum link estiver associado ao sistema de arquivos, uma mensagem será exibida solicitando que você associe um link ao sistema de arquivos afetado. Selecione a mensagem para ser redirecionado para a página de configuração de link para esse sistema de arquivos.
 
-. No painel de análise, revise os resultados da análise básica para entender a origem da latência.
-. Se a fonte de latência for identificada como dados ou cluster, selecione *Analisar*.
-. Analise os resultados da análise do agente de IA, que incluem:
-+
-** Explicação da causa raiz
-** Lista de clientes EC2 afetados
-** Possíveis medidas de remediação
-
-
+. Consulte a aba *Visão geral* para entender os resultados básicos da análise e identificar a origem da latência.
+. Se a fonte de latência for identificada como dados ou cluster, selecione *Analisar* para executar a análise do agente de IA.
+. Analise os resultados da análise do agente de IA.
 . Implemente as etapas de correção recomendadas para resolver o problema de latência.
 . Após a correção, monitore a tabela de eventos de latência para verificar se o problema foi resolvido.
 
@@ -254,6 +267,32 @@ NOTE: Certifique-se de que os limites críticos permaneçam acima dos limites de
 
 
 
+== Configurar notificações de latência
+
+Você pode configurar notificações por e-mail ou Amazon SNS para receber alertas quando eventos de latência forem detectados. As notificações são enviadas sempre que um volume ultrapassa os limites configurados, fornecendo consciência em tempo real sobre problemas de desempenho. Para ativar as notificações, consulte link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html#wf-console-email-notifications["Configurar as configurações de notificação"].
+
+As notificações de latência são enviadas por sistema de arquivos. Quando um ou mais volumes em um sistema de arquivos ultrapassam os limites de latência, você recebe uma única notificação listando todos os volumes afetados.
+
+
+NOTE: Se mais de 10 volumes forem afetados, o e-mail exibirá os 10 primeiros volumes e indicará quantos volumes adicionais são afetados. Você pode visualizar todos os volumes afetados no console do Workload Factory.
+
+As notificações incluem:
+
+* Detalhes do sistema de arquivos
+* Lista de volumes com limites ultrapassados
+* Gravidade do evento (Aviso ou Crítico)
+* Valores de latência e comparações de limiar
+* Link direto para a página de latência para investigação
+
+
+Canais de notificação:
+
+* *E-mail*: Enviado para os endereços de e-mail configurados nas suas configurações de notificação do Workload Factory
+* *Amazon SNS*: Publicado no tópico SNS configurado para integração com outros sistemas
+
+
+
+
 == Melhores práticas
 
 Considere estas recomendações ao configurar e usar a análise de latência:
@@ -266,3 +305,5 @@ Considere estas recomendações ao configurar e usar a análise de latência:
 * *Revisar eventos rejeitados*: revise periodicamente por que os eventos foram rejeitados para identificar oportunidades de ajuste de limites ou melhorias na infraestrutura.
 * *Use a análise de agentes de IA estrategicamente*: Execute a análise de agentes de IA para cenários de dados e clusters onde a análise básica a recomenda. A análise de agentes de IA fornece insights mais profundos para problemas de desempenho complexos que exigem solução de problemas detalhada.
 
+
+Para obter as melhores práticas sobre como analisar tendências de latência, consulte link:task-analyze-latency-trends.html#graph-interpretation["Interpretação de gráficos"].
