@@ -17,7 +17,7 @@ Após detectar um evento de latência, você pode usar o gráfico interativo par
 
 == Antes de começar
 
-Você precisa ter link:task-monitor-latency.html["monitoramento de latência configurado"] e pelo menos um evento de latência detectado.
+Você precisa ter link:task-configure-latency-monitoring.html["monitoramento de latência configurado"] e pelo menos um evento de latência detectado.
 
 
 

@@ -42,25 +42,35 @@ link:requirements-eda.html["Saiba mais sobre os requisitos de EDA"^].
 Ative o painel Visão geral para monitorar a integridade, a capacidade e a taxa de transferência dos seus clusters FSx for ONTAP. Aceite a solicitação de consentimento para permitir que o Workload Factory comece a coletar métricas do CloudWatch.
 
 [role="quick-margin-para"]
-link:task-use-overview-dashboard.html["Aprenda como ativar o painel de visão geral"^].
+link:task-activate-overview-dashboard.html["Aprenda como ativar o painel de Overview"^].
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]Configurar o painel de controle do projeto
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]Configurar o painel de Projetos
 [role="quick-margin-para"]
-Configure o painel de controle do projeto para monitorar a integridade do sistema, o desempenho e o uso de storage, permitindo que você otimize seu ambiente EDA de forma eficaz.
+Configure o painel de controle de Projetos para monitorar a integridade do sistema, o desempenho e o uso de storage, permitindo que você otimize seu ambiente EDA de forma eficaz.
 
 [role="quick-margin-para"]
-link:task-configure-dashboard.html["Aprenda a configurar o painel de controle do projeto"^].
+link:task-configure-project-dashboard.html["Aprenda a configurar o painel de controle de Projetos"^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"]Configurar FSx para análise de latência do ONTAP
 [role="quick-margin-para"]
 Defina limites de latência para identificar e resolver proativamente problemas de desempenho antes que eles afetem o tempo de execução da simulação. Configure alertas de aviso e críticos, configure notificações por e-mail ou SNS para receber alertas em tempo real, aproveite a análise básica automatizada e, opcionalmente, habilite a análise de agente de IA para cenários complexos configurando um ARN de modelo do Amazon Bedrock.
 
 [role="quick-margin-para"]
-link:task-monitor-latency.html["Aprenda como configurar o monitoramento de latência"^]. Após a detecção de eventos, você pode link:task-analyze-latency-trends.html["analisar tendências de latência"^] usar o gráfico interativo.
+link:task-configure-latency-monitoring.html["Aprenda como configurar o monitoramento de latência"^]. Após a detecção de eventos, você pode link:task-analyze-latency-trends.html["analisar tendências de latência"^] usar o gráfico interativo.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["Sete"] Integrar com outros serviços
 [role="quick-margin-para"]
-Integre o EDA com outros serviços, como um portal de serviços ou o Perforce Helix Core, usando a API REST do Workload Factory.
+Integre o EDA com outros serviços, como um portal de serviços como serviço ou o Perforce Helix Core, usando a API REST.
 
 [role="quick-margin-para"]
 link:integrate-perforce.html["Aprenda como integrar EDA com Perforce."^].
+
+
+
+== Qual o próximo passo?
+
+* link:task-configure-latency-monitoring.html["Configurar o monitoramento de latência para FSx para ONTAP"]
+* link:task-configure-project-dashboard.html["Configurar o dashboard de Projects"]
+* link:learn-eda-workloads.html["Saiba mais sobre cargas de trabalho de EDA"]
+* link:get-help-eda.html["Obtenha ajuda com EDA"]
+

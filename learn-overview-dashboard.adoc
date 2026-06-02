@@ -1,0 +1,137 @@
+---
+sidebar: sidebar 
+permalink: learn-overview-dashboard.html 
+keywords: cluster overview, cluster dashboard, FSx for ONTAP, cluster health, EMS events, latency events, SSD management, capacity automation, capacity recommendations, decision points 
+summary: Aprenda como o painel Visão Geral do Workload Factory para EDA ajuda você a monitorar a integridade, a capacidade e a taxa de transferência do cluster FSx for ONTAP em escala. 
+---
+= Saiba mais sobre o painel de Visão Geral no Workload Factory para EDA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+O painel de Visão Geral fornece uma visão centralizada para administradores de TI que gerenciam cargas de trabalho EDA em vários sistemas de arquivos FSx for ONTAP. Use-o para avaliar rapidamente a integridade e o uso do cluster, decidir onde alocar novos volumes ou trabalhos, identificar candidatos para movimentação de volumes ou SVMs e determinar quando dimensionar a capacidade ou a taxa de transferência.
+
+
+
+== Visão geral
+
+O painel Visão geral coleta métricas do CloudWatch para todos os sistemas de arquivos FSx for ONTAP associados às suas credenciais AWS configuradas.
+
+Inclui:
+
+* *Estado de integridade do cluster*: Informações resumidas na parte superior que destacam eventos de latência, utilização de SSD e recomendações de capacidade, e eventos do ONTAP EMS em seus sistemas de arquivos.
+* *Tabela de clusters*: Uma tabela detalhada e pesquisável que mostra métricas de uso e desempenho para cada cluster, com suporte para filtragem, classificação, paginação e exportação em CSV.
+
+
+Isso te ajuda a:
+
+* Adicione novos volumes e reequilibre as cargas de trabalho
+* Planejar a capacidade ou o dimensionamento da taxa de transferência
+* Monitore a saúde do cluster em escala
+* Tome decisões informadas sobre a colocação do volume
+* Identificar clusters que se aproximam dos limites de capacidade
+
+
+
+
+== Componentes do dashboard
+
+
+
+=== Estado de saúde do cluster
+
+O status de integridade do cluster fornece um panorama da atividade em seus sistemas de arquivos filtrados. Essas informações são exibidas somente quando pelo menos um link FSx for ONTAP está associado aos seus sistemas de arquivos.
+
+O estado de saúde inclui as seguintes áreas:
+
+*Latência*:: Exibe o número de eventos de latência detectados nos sistemas de arquivos em escopo. Você só pode visualizar informações de latência se tiver ativado o monitoramento de latência.
+*gerenciamento de capacidade de SSD*:: Exibe o número de sistemas de arquivos com uso de SSD acima de 80% e o número de sistemas de arquivos com recomendações de capacidade ativas. Isso ajuda você a identificar rapidamente sistemas de arquivos que podem precisar de atenção em relação à capacidade.
+*Eventos ONTAP*:: Exibe o número de eventos EMS detectados, categorizados por Capacidade, Disponibilidade e proteção, e Segurança e outros.
+
+
+
+
+=== Tabela de clusters
+
+A tabela de clusters fornece uma visão detalhada de cada sistema de arquivos FSx for ONTAP, filtrada pela sua região ativa e pelas seleções da conta AWS. Os dados são coletados a partir de métricas do CloudWatch.
+
+Utilize a tabela para:
+
+* Identificar sistemas de arquivos próximos do limite de capacidade (coluna de uso de SSD)
+* Compare a demanda de throughput com o throughput provisionado por SKU (coluna P99 de utilização do throughput)
+* Acompanhe métricas de desempenho em vários clusters
+* Verifique o status da configuração do link (coluna Link associado) - A validade da conexão é verificada diariamente
+* Selecione vários clusters para atualizações de parâmetros em massa
+
+
+
+
+== Gerenciamento de capacidade de SSD
+
+O painel de Visão Geral oferece gerenciamento inteligente de capacidade de SSD.
+
+
+
+=== Modos de gerenciamento
+
+*Automatizar*:: O Workload Factory aumenta automaticamente a capacidade do SSD com base em limites predefinidos e padrões de utilização. O sistema gerencia o dimensionamento da capacidade sem intervenção manual. Isso é ideal para ambientes onde o gerenciamento automatizado é preferido.
+*Recomendar*:: O Workload Factory analisa seus padrões de utilização de SSD e fornece recomendações para aumento de capacidade. Você revisa e aplica as recomendações manualmente. Isso lhe dá controle total sobre as decisões de capacidade enquanto se beneficia da análise automatizada.
+*Nenhum*:: Nenhuma recomendação de capacidade ou ação automatizada é executada. Isso é útil quando você deseja gerenciar a capacidade manualmente sem a ajuda do sistema.
+
+
+
+
+=== Recomendações de capacidade
+
+Quando o Workload Factory está no modo Automatizar ou Recomendar, o sistema executa automaticamente um algoritmo de recomendação de capacidade para cada sistema de arquivos FSx for ONTAP. O algoritmo realiza uma verificação a cada 24 horas e identifica quando ajustes na capacidade do SSD são recomendados.
+
+Quando uma recomendação for identificada:
+
+* Você recebe uma notificação imediata com base nas suas configurações de notificação do Workload Factory
+* É possível identificar sistemas de arquivos com recomendações filtrando a tabela Clusters pelas colunas Last SSD increase timestamp ou Last SSD increase description
+* O número total de sistemas de arquivos com recomendações ativas é exibido
+
+
+A recomendação explica a alteração sugerida e o raciocínio por trás dela, como: _Recomendamos aumentar o tamanho do SSD com base no padrão de utilização do SSD do seu sistema de arquivos._
+
+
+
+=== Parâmetros de gerenciamento de SSD
+
+Os parâmetros controlam como o sistema de gerenciamento de capacidade analisa e age de acordo com o uso do seu SSD:
+
+*Limiar* (10-90%):: A porcentagem de uso do SSD que aciona recomendações de capacidade ou ações de automação. Por exemplo, um limite de 80% significa que recomendações ou ações ocorrem quando o uso do SSD atinge 80%. Disponível nos modos Recommend e Automate.
+*Retrospectiva* (1-200 horas):: O período de tempo usado para analisar os padrões históricos de uso do SSD. Um período de análise mais longo fornece mais contexto histórico para as decisões de capacidade. Disponível apenas no modo Automate.
+*Adiante* (1-200 horas):: O período de tempo usado para projetar as necessidades futuras de capacidade. Um período de previsão mais longo planeja mais adiante no futuro para o crescimento da capacidade. Disponível apenas no modo Automate.
+
+
+Você pode configurar esses parâmetros individualmente para cada sistema de arquivos ou aplicar configurações consistentes em vários sistemas de arquivos usando a edição em massa.
+
+
+
+=== Entendendo os pontos de decisão de capacidade
+
+O gráfico de utilização do SSD exibe pontos de decisão que indicam quando as recomendações de capacidade foram geradas ou quando ações de automação foram executadas. Esses indicadores visuais ajudam você a entender o comportamento do algoritmo de gerenciamento de capacidade ao longo do tempo.
+
+*Pontos de decisão para recomendação*:: Aparecem quando o algoritmo de recomendação de capacidade identifica que é necessária capacidade adicional de SSD. Esses pontos podem ocorrer a cada 30 minutos se a capacidade de SSD não tiver sido aumentada. O gráfico exibe todos os pontos de decisão quando possível ou os consolida se o intervalo de tempo tornar os pontos individuais muito densos.
+*Pontos de decisão de automação*:: Aparecem quando o sistema de automação tenta aumentar a capacidade de SSD. Esses pontos indicam se a ação de automação foi bem-sucedida ou falhou.
+
+
+Utilize pontos de decisão com o gráfico histórico de uso de SSD para:
+
+* Entenda com que frequência são necessários ajustes de capacidade
+* Avalie se o modo de automação ou o modo de recomendação se adapta melhor aos seus padrões de carga de trabalho
+* Identificar restrições de capacidade recorrentes
+* Planeje as necessidades futuras de capacidade com base nas tendências de crescimento
+* Solucionar problemas em tentativas de automação malsucedidas
+
+
+
+
+== Informações relacionadas
+
+* link:task-activate-overview-dashboard.html["Ative o painel de visão geral"]
+* link:task-use-overview-dashboard.html["Use o painel de visão geral"]
+

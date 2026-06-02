@@ -55,4 +55,4 @@ O nome padrão para o clone é o nome do projeto com um sufixo contendo a data e
 
 
 .Resultado
-O Workload Factory cria um novo clone do projeto, e o clone aparece como um novo projeto na página Projetos.
+O Workload Factory cria um novo clone do projeto, e o clone aparece como um novo projeto na página Projects.
