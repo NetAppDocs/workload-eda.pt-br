@@ -11,7 +11,7 @@ summary: Use o painel de controle de Projetos para monitorar o uso de armazename
 
 
 [role="lead"]
-Use o painel de controle de Projetos para monitorar o uso de armazenamento em seus sistemas de arquivos e volumes do FSx for ONTAP. Filtre os dados por projetos, equipes ou aplicativos e analise o desempenho agregado e individual de cada volume para tomar decisões informadas sobre planejamento de capacidade e otimização de recursos.
+Use o painel de controle de Projetos para monitorar o uso de storage em seus sistemas de arquivos e volumes do FSx for ONTAP. Filtre os dados por projeto, equipe ou aplicativo. Visualize o desempenho geral e por volume para ajudar a planejar a capacidade e usar os recursos de forma mais eficiente.
 
 
 
@@ -23,7 +23,7 @@ Você deve ter link:task-configure-project-dashboard.html["filtros personalizado
 
 == Filtrar o painel de controle
 
-A filtragem ajuda você a se concentrar em subconjuntos específicos de seus recursos de storage, facilitando a análise de tendências, a identificação de problemas e a geração de relatórios para as partes interessadas. Ao combinar vários filtros, você pode responder a perguntas específicas de negócios como "Quanto storage minha equipe de projeto ASIC está usando?" ou "Quais volumes na região US-West têm o maior IOPS?"
+A filtragem permite que você se concentre em grupos específicos de recursos de storage. Isso facilita a identificação de tendências, a detecção de problemas e a criação de relatórios para as partes interessadas. Ao usar vários filtros em conjunto, você pode responder a perguntas específicas, como: "Quanto storage a equipe do projeto ASIC está usando?" ou "Quais volumes na região US-West têm o maior número de IOPS?"
 
 .Sobre esta tarefa
 Você pode filtrar as informações exibidas no painel usando uma combinação de filtros padrão e quaisquer filtros personalizados que você tenha configurado.
@@ -46,16 +46,16 @@ Você pode filtrar as informações exibidas no painel usando uma combinação d
 
 == Ver detalhes do volume
 
-Compreender tanto o desempenho agregado quanto o individual do volume ajuda você a tomar decisões informadas sobre o planejamento de capacidade e a otimização de desempenho. A visão Total mostra as tendências gerais, enquanto a visão de Volume ajuda você a identificar volumes específicos que podem precisar de atenção, otimização ou recursos adicionais.
+Analisar o desempenho do volume total e dos volumes individuais ajuda você a planejar a capacidade e melhorar o desempenho. A visualização Total mostra as tendências gerais. A visualização de Volume ajuda você a encontrar volumes específicos que podem precisar de atenção, ajuste ou mais recursos.
 
 
 
 === Visualizar métricas de volume agregadas
 
-A visualização Total exibe métricas agregadas de todos os volumes que correspondem aos filtros selecionados.
+A visualização Total mostra métricas combinadas de todos os volumes que correspondem aos seus filtros.
 
 .Passos
-. Na aba *Projeto*, certifique-se de que a aba *Total* esteja selecionada (esta é a visualização padrão).
+. Abra a aba **Projeto** e certifique-se de que a aba **Total** esteja selecionada. Esta é a visualização padrão.
 . Analise as métricas exibidas:
 +
 ** Capacidade combinada em todos os volumes
@@ -63,17 +63,17 @@ A visualização Total exibe métricas agregadas de todos os volumes que corresp
 ** Taxa de transferência agregada
 
 
-. Utilize esta visualização para compreender as tendências gerais e planejar as necessidades futuras de capacidade.
+. Use esta visualização para observar tendências e planejar quanta capacidade você precisará no futuro.
 
 
 
 
 === Veja o desempenho de volume individual
 
-A visualização de volume exibe o desempenho individual de cada volume ao longo do tempo, mostrando os 10 principais volumes para cada métrica.
+A visualização de Volume mostra como cada volume está performando ao longo do tempo. Ela destaca os 10 principais volumes para cada métrica.
 
 .Passos
-. Na aba *Projeto*, selecione a aba *Volume*.
+. Na aba **Projeto**, selecione a aba **Volume**.
 . Analise as métricas do volume:
 +
 ** *Capacidade de volume utilizada*: Mostra os volumes com a maior capacidade atualmente em uso
@@ -81,7 +81,7 @@ A visualização de volume exibe o desempenho individual de cada volume ao longo
 ** *Taxa de transferência*: Exibe os volumes com a maior taxa de transferência média durante o período selecionado
 +
 
-NOTE: O painel exibe apenas os 10 principais volumes para cada métrica. Se você tiver mais de 10 volumes, alguns volumes podem não ser exibidos na visualização detalhada.
+NOTE: Se você tiver mais de 10 volumes, o restante não aparecerá na visualização detalhada.
 
 
 
@@ -92,16 +92,16 @@ NOTE: O painel exibe apenas os 10 principais volumes para cada métrica. Se voc�
 ** *Taxa de transferência*: Nome do volume, taxa de transferência média para o intervalo de tempo e taxa de transferência máxima para o intervalo de tempo
 
 
-. Use a legenda para identificar volumes específicos. Quando os mesmos volumes aparecem em várias métricas, o painel usa uma codificação de cores consistente para facilitar o rastreamento dos volumes.
+. Use a legenda para identificar cada volume. Os mesmos volumes usam as mesmas cores em todas as métricas para que você possa rastreá-los facilmente.
 
 
 .Resultado
-Esses dados interativos ajudam você a:
+Utilize esses dados para:
 
-* Analisar padrões de desempenho de volume
-* Identificar possíveis gargalos
-* Identificar volumes que possam precisar de redimensionamento
-* Identifique quais projetos ou cargas de trabalho específicos estão consumindo mais recursos
+* Analisar padrões de uso
+* Identifique possíveis gargalos
+* Encontre volumes que possam precisar ser redimensionados
+* Veja quais projetos ou cargas de trabalho utilizam mais recursos
 
 
 
@@ -110,12 +110,12 @@ Esses dados interativos ajudam você a:
 
 Considere estas recomendações ao usar o painel de controle de Projects:
 
-* *Monitoramento regular*: Verifique o painel de controle regularmente para identificar tendências antes que elas se tornem problemas.
-* *Combine filtros estrategicamente*: Use vários filtros em conjunto para responder a perguntas específicas de negócios sobre uso de recursos.
-* *Comparar visualizações*: Use as visualizações Total e Volume juntas—Total para planejamento e Volume para solução de problemas.
-* *Acompanhe ao longo do tempo*: Utilize diferentes intervalos de tempo para entender se os padrões de desempenho são variações normais ou indicam uma tendência.
-* *Linhas de base do documento*: Anote os níveis normais de desempenho dos seus volumes para que você possa identificar rapidamente anomalias.
-* *Aja com base nas informações*: Use os dados de desempenho de volume para tomar decisões proativas sobre alocação, dimensionamento adequado ou otimização antes que os problemas afetem as cargas de trabalho.
+* Verifique o painel regularmente para identificar padrões antes que eles se transformem em problemas.
+* Utilize vários filtros simultaneamente para responder a perguntas específicas sobre como os recursos estão sendo usados.
+* Analise ambas as perspectivas: use Total para planejar a capacidade e Volume para encontrar e corrigir problemas.
+* Altere o intervalo de tempo para verificar se as mudanças são normais ou fazem parte de uma tendência crescente.
+* Registre os níveis normais de desempenho para que seja mais fácil identificar comportamentos incomuns posteriormente.
+* Utilize o que você aprende com os dados para ajustar recursos, redimensionar volumes ou melhorar o desempenho antes que as cargas de trabalho sejam afetadas.
 
 
 

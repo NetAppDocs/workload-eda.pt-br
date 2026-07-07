@@ -11,29 +11,33 @@ summary: Use o gráfico interativo de latência para analisar as tendências de 
 
 
 [role="lead"]
-Após detectar um evento de latência, você pode usar o gráfico interativo para analisar o comportamento da latência do volume ao longo do tempo. Isso ajuda a identificar padrões, entender se os problemas de desempenho são recorrentes ou isolados e tomar decisões baseadas em dados sobre a remediação.
+Após a detecção de um evento de latência, utilize o gráfico interativo para observar como a latência e o volume variam ao longo do tempo. Isso ajuda você a identificar padrões, verificar se o problema ocorre com frequência ou apenas uma vez e decidir como corrigi-lo com base nos dados.
 
 
 
 == Antes de começar
 
-Você precisa ter link:task-configure-latency-monitoring.html["monitoramento de latência configurado"] e pelo menos um evento de latência detectado.
+Você precisa ter link:task-configure-latency-monitoring.html["monitoramento de latência configurado"] e pelo menos um evento de latência detectado. Você pode visualizar gráficos de desempenho se tiver credenciais da AWS. Para ver a discriminação dos componentes, você precisa de um link.
 
 
 
 == Analisar tendências de latência
 
-O gráfico de latência fornece uma representação visual do comportamento da latência do volume ao longo do tempo.
+A aba *Ao longo do tempo* fornece gráficos de desempenho para ajudar você a analisar o comportamento do volume: latência, IOPS e throughput.
 
 .Sobre esta tarefa
-O gráfico de latência exibe os dados de latência do CloudWatch para o volume afetado. O gráfico mostra automaticamente a latência de leitura ou de gravação com base em qual alarme acionou o evento. Você pode ajustar o intervalo de tempo para visualizar o comportamento da latência em diferentes períodos.
+Os gráficos mostram as métricas do CloudWatch para o volume afetado. Todos os gráficos usam a mesma linha do tempo. Eles exibem automaticamente métricas de leitura ou gravação com base em qual alarme disparou o evento.
 
-Inclui:
+Você pode alterar o intervalo de tempo para visualizar o desempenho em diferentes períodos. Você também pode alternar entre Todas, Leitura, Gravação ou Metadados.
 
-* *Linha de métrica de latência*: Mostra os valores reais de latência (em milissegundos) coletados do CloudWatch ao longo do tempo
-* *Linhas de limite*: Linhas horizontais tracejadas que indicam seus limites de aviso e críticos configurados
-* *Indicadores de violação*: Marcadores visuais que mostram quando e quantas vezes os limites foram excedidos durante o período
-* *Detalhes da violação*: Para cada violação, visualize o valor da latência mediana, a porcentagem acima do limite, os dados do centro de atraso de QoS e o horário de detecção
+A visualização inclui:
+
+* *Gráfico de latência*: Mostra os valores reais de latência (em milissegundos) coletados do CloudWatch ao longo do tempo, com linhas de limite e indicadores de violação.
+* *Gráfico de IOPS*: Mostra a latência real em milissegundos do CloudWatch ao longo do tempo. As linhas de limite marcam os limites definidos e os marcadores mostram quando esses limites foram excedidos. Também mostra as operações por segundo com uma linha de limite e marcadores para violações anteriores. A atividade de leitura mostra DataReadOperations e a atividade de gravação mostra DataWriteOperations.
+* *Gráfico de taxa de transferência*: Mostra as taxas de transferência de dados. Para eventos de leitura, exibe DataReadBytes. Para eventos de gravação, exibe DataWriteBytes. Se **Metadados** estiver selecionado no filtro, o gráfico de taxa de transferência não exibirá dados.
+* *Linhas de limite*: Linhas horizontais tracejadas mostram os limites de aviso e críticos que você definiu nos gráficos de latência e IOPS.
+* *Indicadores de violação*: Marcadores visuais que mostram quando os limites foram excedidos e quantas vezes durante o período.
+* *Detalhes da violação*: Para cada violação, visualize o atraso mediano, a porcentagem acima do limite, os dados do centro de atraso de QoS e o horário em que foi detectada.
 
 
 .Passos
@@ -42,43 +46,41 @@ Inclui:
 O painel de análise de latência é aberto.
 
 . Selecione a aba *Ao longo do tempo*.
-. Analise a visualização gráfica padrão que mostra os dados de latência das últimas 3 horas.
-. Altere o intervalo de tempo para analisar diferentes períodos e identificar padrões.
-. Observe a linha de tendência da latência em relação às linhas de limiar.
-. Analise os indicadores de violação no gráfico:
-+
-Quando os limites são ultrapassados várias vezes durante o período de tempo exibido, os marcadores de violação indicam quando os limites foram excedidos.
-
-. Para visualizar os detalhes da violação, passe o cursor sobre um indicador de violação ou selecione-o.
+. Analise a visualização padrão, que mostra gráficos de desempenho para latência, IOPS e throughput nas últimas 3 horas.
+. Opcionalmente, use o filtro *Tipo* para alternar entre Todas, Leitura, Gravação ou Metadados. O padrão corresponde ao tipo de evento (Leitura para eventos de leitura, Gravação para eventos de gravação).
+. Altere o intervalo de tempo para revisar outros períodos e procurar padrões.
+. Confira as linhas de tendência para latência, IOPS e taxa de transferência. Os gráficos de IOPS e latência incluem linhas de limite para comparação.
+. Procure por indicadores de violação nos gráficos. Esses marcadores aparecem quando os limites são excedidos várias vezes durante o período selecionado.
+. Para ver mais detalhes, passe o cursor sobre ou selecione um indicador de violação.
 . Analise o resumo da contagem de violações:
 +
-O gráfico exibe o número total de violações de aviso ou críticas detectadas durante o período selecionado.
+O gráfico mostra o número total de violações de advertência ou críticas durante o período selecionado.
 
 . Utilize as informações do gráfico para:
 +
-** Determine se os problemas de latência são isolados ou recorrentes
-** Identificar padrões de horário do dia que se correlacionam com alta latência
-** Avalie se os picos de latência são breves ou sustentados
-** Correlacione eventos de latência com padrões de carga de trabalho ou alterações no sistema
+** Veja se os problemas de latência acontecem uma vez ou se ocorrem repetidamente
+** Identifique os horários do dia em que a latência é maior
+** Determine se os picos de latência são de curta ou longa duração
+** Compare eventos de latência com padrões de carga de trabalho ou alterações do sistema
 
 
 
 
 .Resultado
-Você obtém uma visão abrangente do comportamento da latência de volume ao longo do tempo, ajudando você a tomar decisões informadas sobre se é necessária uma correção imediata, se os limites precisam ser ajustados ou se os problemas de infraestrutura subjacentes precisam ser investigados.
+Você pode ver como a latência do volume muda ao longo do tempo. Isso ajuda você a decidir se deve tomar alguma providência agora, alterar os limites de alerta ou verificar se há problemas no sistema.
 
 
-NOTE: O gráfico de latência mostra os dados de métricas do CloudWatch, que podem diferir ligeiramente dos dados do centro de atraso QoS do ONTAP devido a diferentes metodologias de coleta. Ambas as fontes de dados são fornecidas para uma análise abrangente.
+NOTE: O gráfico de latência utiliza as métricas do CloudWatch. Essas podem ser ligeiramente diferentes dos dados do centro de atraso QoS do ONTAP, pois são coletadas de maneiras diferentes. Ambos são mostrados para fornecer uma visão mais completa.
 
 
 
 == Interpretação de gráficos
 
-Considere estas recomendações ao analisar as tendências de latência:
+Utilize estas dicas ao analisar as alterações no tempo de resposta:
 
-* *Utilize vários períodos de tempo*: Analise o gráfico em diferentes períodos para distinguir entre picos isolados e degradação contínua do desempenho. Comece com a visualização de 24H para contexto, depois amplie para períodos mais curtos para analisar incidentes específicos ou expanda para 72H para identificar padrões diários.
-* *Compare os limites visualmente*: Use as linhas de limite no gráfico para avaliar se os valores de aviso e crítico que você configurou são adequados para seus padrões de carga de trabalho. Se a latência se aproximar do limite com frequência, mas não o ultrapassar, considere se o limite está definido muito alto. Se você observar muitas ultrapassagens breves do limite que não impactam as operações, seu limite pode estar muito sensível.
-* *Identifique padrões diários*: Use as visualizações de 24H e 72H para identificar padrões ao longo do dia. Se picos de latência ocorrerem em horários previsíveis, você pode agendar proativamente operações que consomem muitos recursos durante períodos de menor movimento ou adicionar capacidade para lidar com picos de carga.
-* *Diferenciar tipos de picos*: Picos breves e acentuados indicam problemas transitórios (como uma disputa temporária por recursos), enquanto latência elevada sustentada sugere problemas sistêmicos (como restrições de capacidade ou problemas de configuração). Cada um requer abordagens de correção diferentes.
-* *Monitore as tendências após as alterações*: Após ajustar os limites, adicionar capacidade ou alterar as configurações, monitore o gráfico por pelo menos 72 horas para confirmar se as alterações tiveram o efeito desejado.
+* *Utilize vários períodos de tempo*: Observe os gráficos em diferentes intervalos de tempo para distinguir entre picos breves e desacelerações contínuas. Comece com a visualização de 24 horas para obter contexto geral. Em seguida, amplie para períodos mais curtos para examinar incidentes específicos ou mude para a visualização de 72 horas para identificar padrões diários.
+* *Compare os limites visualmente*: Use as linhas de limite no gráfico para verificar se suas configurações de aviso e crítico se adequam à sua carga de trabalho. Se a latência frequentemente se aproxima do limite, mas não o ultrapassa, o limite pode estar muito alto. Se você observar muitos picos curtos que ultrapassam o limite, mas não afetam as operações, o limite pode estar muito sensível.
+* *Identifique padrões diários*: Use as visualizações de 24 e 72 horas para identificar padrões ao longo do dia. Se picos de latência ocorrerem nos mesmos horários, agende tarefas pesadas para períodos de menor movimento ou adicione mais capacidade para horários de pico.
+* *Diferencie os tipos de picos*: Picos curtos geralmente indicam problemas temporários, como breves disputas por recursos. Latência que permanece alta ao longo do tempo aponta para problemas mais profundos no sistema, como capacidade limitada ou problemas de configuração. Cada situação precisa de uma solução diferente.
+* *Monitore as tendências após as alterações*: Após ajustar os limites, adicionar capacidade ou alterar as configurações, monitore o gráfico por pelo menos 72 horas para garantir que as alterações funcionaram.
 

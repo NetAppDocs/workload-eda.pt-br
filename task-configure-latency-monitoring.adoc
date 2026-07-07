@@ -11,7 +11,7 @@ summary: Configure os limites de monitoramento de latência e as configurações
 
 
 [role="lead"]
-Configure limites de aviso e críticos para latência de leitura e gravação para monitorar o desempenho do volume FSx for ONTAP. Configure notificações opcionais por e-mail ou Amazon SNS para receber alertas em tempo real quando eventos de latência forem detectados.
+Defina limites de aviso e críticos para latência de leitura e escrita para monitorar o desempenho do volume FSx for ONTAP. Você também pode ativar alertas por e-mail ou Amazon SNS para receber notificações em tempo real quando ocorrerem problemas de latência.
 
 
 
@@ -33,13 +33,13 @@ Se você ainda não configurou as credenciais AWS, consulte link:https://docs.ne
 
 === FSx para sistema de arquivos ONTAP
 
-Você precisa de pelo menos um FSx for ONTAP sistema de arquivos com volumes implantados em seu ambiente AWS. O recurso de monitoramento de latência coleta automaticamente métricas para todos os volumes associados às suas credenciais AWS configuradas.
+Você precisa de pelo menos um FSx for ONTAP sistema de arquivos com volumes implantados em seu ambiente AWS.
 
 
 
 === Link para FSx for ONTAP
 
-Para visualizar informações básicas de análise, você deve associar um link ao sistema de arquivos FSx for ONTAP. Sem um link, eventos ainda podem ser detectados, mas a análise fornece informações limitadas. Se nenhum link já estiver associado, selecione *Associar link* em EDA, escolha se deseja criar um novo link ou associar um link existente e, em seguida, selecione *Continuar* para ir automaticamente para a página de criação de link em Storage workloads.
+Para visualizar a decomposição de componentes na análise básica, você deve associar um link ao sistema de arquivos FSx for ONTAP. Sem um link, você ainda pode visualizar os gráficos de latência, IOPS e taxa de transferência. Se nenhum link já estiver associado, selecione *Associar link* em EDA, escolha se deseja criar um novo link ou associar um link existente e, em seguida, selecione *Continuar* para ir automaticamente para a página de criação de link em Storage workloads.
 
 Para obter instruções sobre como criar e associar links, consulte link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Criar um link"^].
 
@@ -47,11 +47,9 @@ Para obter instruções sobre como criar e associar links, consulte link:https:/
 
 === ARN do modelo Amazon Bedrock (opcional)
 
-Para usar o recurso opcional de análise por agente de IA, você deve fornecer um ARN de modelo do Amazon Bedrock nas configurações do Workload Factory.
+(Opcional) Para usar a análise de IA, forneça um ARN de modelo do Amazon Bedrock nas configurações do Workload Factory. Sem ele, você ainda pode usar o monitoramento de latência e a análise básica.
 
 Para obter mais detalhes, consulte link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/requirements-knowledge-base.html#basic-genai-requirements["Requisitos básicos do GenAI"^].
-
-Se você não configurar um ARN de modelo Bedrock, ainda poderá usar o monitoramento de latência e a análise básica automatizada, mas a análise com agentes de IA não estará disponível.
 
 
 
@@ -63,10 +61,10 @@ Para receber notificações por e-mail ou Amazon SNS quando eventos de latência
 
 == Configurar limites de latência
 
-Configure limites de aviso e críticos para operações de leitura e gravação. O sistema avalia os limites continuamente e gera alertas quando as condições são atendidas.
+Defina limites de aviso e críticos para leitura e gravação. O sistema verifica esses limites continuamente e envia um alerta quando eles são atingidos.
 
 
-NOTE: Você deve definir limites para eventos críticos superiores aos limites para eventos de aviso para garantir a escalação adequada de alertas. Caso contrário, você não pode salvar sua configuração.
+NOTE: Defina o limite de eventos críticos acima do limite de aviso. Caso contrário, você não poderá salvar a configuração.
 
 
 NOTE: Os limites de latência definidos no EDA aplicam-se a toda a sua conta por padrão. Você também pode definir limites de latência de volume individuais nas cargas de trabalho de Armazenamento Geral, e essas configurações de volume terão prioridade para esse volume. A atualização dos limites de nível de conta no EDA não alterará nenhuma configuração de nível de volume.
@@ -87,18 +85,18 @@ NOTE: Os limites de latência definidos no EDA aplicam-se a toda a sua conta por
 
 
 .Resultado
-O Workload Factory começa a coletar métricas de latência para todos os volumes FSx for ONTAP associados às suas credenciais da AWS. As métricas são coletadas pelo menos a cada 20 minutos. Quaisquer volumes que ultrapassarem os limites configurados serão exibidos na tabela de eventos de latência.
+O Workload Factory coleta métricas de latência para todos os volumes FSx for ONTAP vinculados às suas credenciais da AWS. Ele reúne essas métricas pelo menos a cada 20 minutos. Os volumes que excedem os limites definidos aparecem na tabela de eventos de latência.
 
 
 
 == Configurar notificações de latência
 
-Configure notificações por e-mail ou Amazon SNS para receber alertas quando eventos de latência forem detectados. As notificações são enviadas sempre que um volume ultrapassa os limites configurados, proporcionando conhecimento em tempo real sobre problemas de desempenho.
+Configure notificações por e-mail ou Amazon SNS para receber alertas quando alta latência for detectada. Você receberá uma notificação sempre que um volume exceder os limites que você definiu, assim você saberá imediatamente se houver um problema de desempenho.
 
 As notificações de latência são enviadas por sistema de arquivos. Quando um ou mais volumes em um sistema de arquivos ultrapassam os limites de latência, você recebe uma única notificação listando todos os volumes afetados.
 
 
-NOTE: Se mais de 10 volumes forem afetados, o e-mail exibirá os 10 primeiros volumes e indicará quantos volumes adicionais são afetados. Você pode visualizar todos os volumes afetados no console do Workload Factory.
+NOTE: Se mais de 10 volumes forem afetados, o e-mail exibirá os 10 primeiros volumes e mostrará quantos volumes adicionais são afetados. Você pode visualizar todos os volumes afetados no console do Workload Factory.
 
 Canais de notificação:
 
@@ -112,14 +110,14 @@ Para ativar as notificações, consulte link:https://docs.netapp.com/us-en/workl
 
 == Gerenciar configuração de latência
 
-Após a configuração inicial, você pode editar seus limites conforme necessário.
+Após a configuração, você pode alterar seus limites a qualquer momento.
 
 .Passos
 . Na página *Latência*, selecione *Editar*.
 . Modifique qualquer um dos valores de limite conforme necessário.
 +
 
-NOTE: Certifique-se de que os limites críticos permaneçam acima dos limites de alerta. O sistema exibe um erro se você configurar limites críticos abaixo dos limites de alerta.
+NOTE: Defina o limite crítico acima do limite de aviso. Se você definir o limite crítico abaixo do limite de aviso, o sistema exibirá um erro.
 
 . Selecione *Apply* para salvar suas alterações.
 
@@ -130,11 +128,11 @@ NOTE: Certifique-se de que os limites críticos permaneçam acima dos limites de
 
 Considere estas recomendações ao configurar o monitoramento de latência:
 
-* *Defina limites realistas*: Configure limites com base nos requisitos da sua carga de trabalho. Os valores padrão fornecem um ponto de partida mas podem precisar de ajuste para o seu ambiente específico.
-* *Comece com limites de alerta*: use eventos de alerta para estabelecer expectativas de desempenho básicas antes de ajustar os limites críticos.
-* *Considere cuidadosamente os intervalos de tempo*: Intervalos de tempo mais curtos (5-10 minutos) detectam problemas mais rapidamente, mas podem gerar mais alertas. Intervalos de tempo mais longos (15-20 minutos) reduzem falsos positivos, mas podem atrasar a detecção.
-* *Coordene os limites de IOPS e latência*: A lógica de dupla condição significa que ambos devem ser excedidos. Definir limites de IOPS muito altos pode impedir alertas mesmo quando a latência for problemática.
-* *Revisar eventos rejeitados*: revise periodicamente por que os eventos foram rejeitados para identificar oportunidades de ajuste de limites ou melhorias na infraestrutura.
+* *Defina limites realistas*: Defina limites que correspondam à sua carga de trabalho. Os valores padrão são um ponto de partida, mas você pode precisar ajustá-los de acordo com o seu ambiente.
+* *Comece com os limites de aviso*: Analise primeiro os alertas de aviso para entender o desempenho normal e depois defina os limites críticos.
+* *Considere cuidadosamente os intervalos de tempo*: Intervalos curtos (5-10 minutos) detectam problemas mais rapidamente, mas podem gerar mais alertas. Intervalos mais longos (15-20 minutos) reduzem alarmes falsos, mas podem detectar problemas mais tarde.
+* *Coordene os limites de IOPS e latência*: Ambas as condições devem ser atendidas. Se o limite de IOPS estiver definido muito alto, o sistema pode não enviar um alerta mesmo quando a latência estiver alta.
+* *Revisar eventos descartados*: revise regularmente por que os eventos foram descartados para verificar se os limites devem ser ajustados ou se os sistemas devem ser aprimorados.
 
 
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Avisos legais para o NetApp Workload Factory para EDA
+= Avisos legais para Workload Factory for EDA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

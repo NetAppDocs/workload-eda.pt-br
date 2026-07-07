@@ -11,7 +11,7 @@ summary: Ative o painel Visão geral para começar a coletar métricas do CloudW
 
 
 [role="lead"]
-Ative o painel de Visão Geral para começar a coletar métricas do CloudWatch para seus sistemas de arquivos FSx for ONTAP. Uma vez ativado, o painel fornece monitoramento centralizado da integridade, capacidade e taxa de transferência do cluster.
+Ative o painel Visão geral para começar a coletar métricas do CloudWatch para seus sistemas de arquivos FSx for ONTAP. O painel permite que você veja a integridade do cluster, a capacidade e a taxa de transferência em um só lugar.
 
 
 
@@ -33,10 +33,10 @@ Se você ainda não configurou as credenciais AWS, consulte link:https://docs.ne
 
 == Ative o dashboard
 
-Após o Workload Factory confirmar as credenciais com permissões de visualização, você deve ativar o painel para começar a coletar métricas do CloudWatch para seus sistemas de arquivos FSx for ONTAP.
+Após o Workload Factory verificar as credenciais com permissões de visualização, ative o painel para começar a coletar métricas do CloudWatch para seus sistemas de arquivos FSx for ONTAP.
 
 
-NOTE: A coleta de métricas pode levar algum tempo após você fornecer consentimento. O painel notifica você enquanto a coleta inicial está em andamento.
+NOTE: Após você dar seu consentimento, a coleta de métricas pode levar algum tempo. O painel de controle notificará você enquanto a primeira coleta estiver em andamento.
 
 .Passos
 . Faça login usando um dos seguintes métodos: link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
@@ -48,7 +48,7 @@ NOTE: A coleta de métricas pode levar algum tempo após você fornecer consenti
 
 
 .Resultado
-O Workload Factory começa a coletar métricas do CloudWatch para todos os sistemas de arquivos FSx for ONTAP associados às suas credenciais AWS configuradas. O painel é preenchido conforme as métricas ficam disponíveis. Uma notificação é exibida se a coleta ainda estiver em andamento.
+O Workload Factory começa a coletar métricas do CloudWatch para todos os sistemas de arquivos FSx for ONTAP vinculados às suas credenciais da AWS. O painel é preenchido conforme as métricas ficam disponíveis. Uma notificação aparece enquanto a coleta de dados ainda está em andamento.
 
 
 

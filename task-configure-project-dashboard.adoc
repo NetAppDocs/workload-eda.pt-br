@@ -11,25 +11,25 @@ summary: Configure filtros personalizados para o painel de controle de Projetos 
 
 
 [role="lead"]
-Configure filtros personalizados para o painel de Projetos para organizar métricas de acordo com a estrutura da sua empresa, como projetos, equipes ou centros de custo. Isso ajuda você a monitorar os custos com precisão, identificar quais recursos consomem mais capacidade e tomar decisões mais embasadas sobre alocação e planejamento orçamentário. Ao alinhar os filtros com a forma como sua organização opera, você pode acessar rapidamente dados relevantes e melhorar a eficiência no planejamento de capacidade, no acompanhamento de custos e no monitoramento de desempenho.
+Configure filtros personalizados no painel de Projetos para organizar os dados de uma forma que corresponda ao funcionamento da sua empresa, como por projeto, equipe ou centro de custos. Isso facilita ver claramente os custos, identificar quais recursos usam mais capacidade e tomar melhores decisões sobre orçamentos e equipe. Quando os filtros correspondem à estrutura da sua organização, você pode encontrar rapidamente os dados de que precisa e gerenciar a capacidade, os custos e o desempenho com mais eficiência.
 
 
 
 == Antes de começar
 
-Para usar filtros personalizados de forma eficaz, configure tags da AWS em seus volumes do FSx para ONTAP com base em suas necessidades de negócios — por exemplo, tags que representam projetos, equipes ou unidades de negócios.
+Para usar filtros personalizados, adicione tags da AWS aos seus volumes FSx for ONTAP de acordo com suas necessidades, como tags para projetos, equipes ou unidades de negócios.
 
 
 
 == Configurar filtros personalizados
 
 
-NOTE: Somente o primeiro usuário administrador a acessar o painel de controle de Projetos pode configurar, adicionar ou excluir filtros personalizados. Todos os outros usuários, incluindo administradores subsequentes, têm acesso somente leitura aos filtros.
+NOTE: Somente o primeiro administrador que acessar o painel de controle de Projetos pode criar, alterar ou excluir filtros personalizados. Todos os outros usuários, incluindo outros administradores, só podem visualizar os filtros.
 
 .Sobre esta tarefa
-Você pode configurar até cinco filtros personalizados com base em suas tags da AWS. Cada filtro personalizado requer três componentes: um nome de rótulo de filtro, um nome de chave de tag da AWS e um tipo de seleção (seleção única ou múltipla).
+Você pode configurar até cinco filtros personalizados usando suas tags da AWS. Cada filtro precisa do seguinte: um rótulo de filtro, uma chave de tag da AWS e um tipo de seleção (única ou múltipla).
 
-Se você não configurar nenhum filtro personalizado, os filtros padrão (sistema de arquivos, tipo de volume e intervalo de tempo) permanecem disponíveis para que você ainda possa visualizar e interagir com seus painéis.
+Se você não configurar nenhum filtro personalizado, os filtros padrão, sistema de arquivos, tipo de volume e intervalo de tempo, continuarão disponíveis, assim você pode continuar visualizando e usando seus painéis.
 
 .Passos
 . Faça login usando um dos seguintes métodos: link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiências de console"^].
@@ -46,7 +46,7 @@ Se você ainda não configurou seu painel de controle, será solicitado automati
 ** Tipo de seleção (seleção única ou múltipla)
 +
 
-NOTE: Os filtros aparecem no painel na ordem em que você os configurar. Considere organizar primeiro os filtros que você usa com mais frequência para facilitar o acesso.
+NOTE: Os filtros aparecem no painel na ordem em que você os definiu. Coloque os filtros que você usa com mais frequência no topo para facilitar o acesso.
 
 
 
@@ -59,7 +59,7 @@ Você pode excluir um filtro personalizado selecionando o ícone da lixeira ao l
 
 
 .Resultado
-Ao aplicar essas tags, o Workload Factory começa a coletar e exibir as métricas CloudWatch. Seu painel se torna uma ferramenta dinâmica para organizar, acompanhar custos e filtrar recursos com base nas necessidades da sua organização.
+Ao aplicar essas tags, o Workload Factory começa a coletar e exibir as métricas do CloudWatch. Seu painel de controle então ajuda você a organizar recursos, acompanhar custos e filtrar itens de acordo com suas necessidades.
 
 
 

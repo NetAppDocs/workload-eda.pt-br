@@ -1,10 +1,10 @@
-= Filtragem aprimorada do painel com tags personalizáveis
+= Filtragem aprimorada do painel com tags personalizáveis em cargas de trabalho EDA
 :allow-uri-read: 
 
 
 
 
-=== Filtragem aprimorada do painel com tags personalizáveis
+=== Filtragem aprimorada do painel com tags personalizáveis em cargas de trabalho EDA
 
 Agora você pode configurar até cinco filtros personalizados no painel do EDA com base em suas tags da AWS. Cada filtro personalizado inclui um nome de rótulo, uma chave de tag da AWS e um tipo de seleção (seleção única ou multi-seleção).
 

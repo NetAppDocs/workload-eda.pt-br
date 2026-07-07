@@ -20,7 +20,7 @@ Credenciais e permissões da AWS:: Você precisa adicionar as credenciais da AWS
 Os modos _Basic_ e _Read-only_ não são suportados no momento.
 
 
-NOTE: As credenciais da AWS também são necessárias para usar o recurso de monitoramento de latência, que coleta métricas do CloudWatch para análise de desempenho de volume. Para receber notificações de eventos de latência, configure as preferências de notificação nas configurações do Workload Factory. Para habilitar a análise opcional com agente de IA para cenários de latência complexos, você também deve fornecer um ARN de modelo do Amazon Bedrock. link:learn-latency-monitoring.html["Saiba mais sobre monitoramento de latência"].
+NOTE: As credenciais da AWS também são necessárias para usar o recurso de monitoramento de latência, que coleta métricas do CloudWatch para análise de desempenho de volume. Para receber notificações de eventos de latência, configure as preferências de notificação nas configurações do Workload Factory. Para habilitar a análise opcional de IA para cenários de latência complexos, você também deve fornecer um ARN de modelo do Amazon Bedrock. link:learn-latency-monitoring.html["Saiba mais sobre monitoramento de latência"].
 
 https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aprenda como adicionar credenciais da AWS ao Workload Factory."^]
 

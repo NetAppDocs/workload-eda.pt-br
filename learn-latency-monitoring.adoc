@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: learn-latency-monitoring.html 
 keywords: latency analysis, CloudWatch alarms, volume latency, read latency, write latency, critical events, warning events, latency thresholds, IOPS thresholds, latency monitoring, FSx for ONTAP, root cause analysis, QoS delay center, automated analysis 
-summary: Aprenda como o monitoramento de latência no Workload Factory for EDA ajuda você a detectar e analisar problemas de desempenho com volumes FSx for ONTAP usando análise básica automatizada e análise opcional com agente de IA. 
+summary: Aprenda como o monitoramento de latência no Workload Factory for EDA ajuda você a detectar e analisar problemas de desempenho com volumes FSx for ONTAP usando análise básica automatizada e análise opcional de IA. 
 ---
 = Saiba mais sobre o monitoramento de latência no Workload Factory para EDA
 :allow-uri-read: 
@@ -11,21 +11,21 @@ summary: Aprenda como o monitoramento de latência no Workload Factory for EDA a
 
 
 [role="lead"]
-O monitoramento de latência no Workload Factory for EDA ajuda você a identificar e resolver proativamente gargalos de desempenho em seus volumes FSx for ONTAP. O sistema monitora a latência de leitura e gravação usando métricas do CloudWatch e fornece análises automatizadas para ajudar você a entender a causa raiz dos problemas de desempenho.
+O monitoramento de latência no Workload Factory for EDA ajuda você a encontrar e corrigir lentidão no desempenho dos seus volumes FSx for ONTAP. Ele rastreia a latência de leitura e gravação usando as métricas do CloudWatch e analisa automaticamente os dados para ajudar a identificar a causa dos problemas de desempenho.
 
 
 
 == Como funciona o monitoramento de latência
 
-A análise de latência coleta métricas do CloudWatch para operações de leitura e gravação em todos os volumes do FSx for ONTAP associados às suas credenciais da AWS. O sistema avalia continuamente essas métricas em relação a limites configuráveis para detectar problemas de desempenho precocemente.
+A análise de latência coleta métricas do CloudWatch para atividade de leitura e gravação em todos os volumes FSx for ONTAP conectados à sua conta AWS. Ela verifica continuamente essas métricas em relação aos limites definidos para detectar problemas de desempenho precocemente.
 
-Quando um evento de latência é detectado, o Workload Factory realiza automaticamente uma análise básica usando as métricas do centro de atraso do QoS do ONTAP para identificar o principal contribuinte para a latência. Para cenários mais complexos envolvendo dados ou componentes de cluster, você pode opcionalmente executar uma análise com agente de IA para obter explicações detalhadas sobre a causa raiz, listas de clientes afetados e etapas específicas de correção.
+Se a latência aumentar, o Workload Factory analisa automaticamente as métricas de latência de QoS do ONTAP para identificar a principal causa da lentidão. Para problemas mais complexos envolvendo dados ou componentes do cluster, você pode executar uma análise opcional de IA que fornece a provável causa raiz, identifica os clientes afetados e sugere etapas para resolver o problema.
 
 
 
 === Geração de alertas
 
-Um alerta é gerado quando tanto o limite de latência quanto o limite de IOPS são ultrapassados para todos os pontos de dados dentro do intervalo de tempo configurado. Essa abordagem de dupla condição reduz falsos positivos, garantindo que a latência seja mantida sob carga real.
+Um alerta é acionado somente quando estas condições são verdadeiras durante todo o intervalo de tempo selecionado: a latência permanece acima do limite definido e o IOPS permanece acima do limite definido. Exigir ambas reduz alarmes falsos, garantindo que a alta latência ocorra enquanto o sistema está lidando com carga de trabalho real.
 
 Você pode configurar limites separados para:
 
@@ -35,7 +35,7 @@ Você pode configurar limites separados para:
 * Gravidade crítica
 
 
-Todos os eventos detectados aparecem na tabela de eventos de latência e, se você tiver configurado notificações, receberá notificações por e-mail ou pelo Amazon SNS com detalhes sobre os volumes afetados.
+Todos os eventos detectados aparecem na tabela de eventos de latência. Se as notificações estiverem configuradas, você também receberá um e-mail ou uma mensagem do Amazon SNS com detalhes sobre os volumes afetados.
 
 
 
@@ -84,27 +84,28 @@ O Workload Factory oferece dois níveis de análise para ajudar você a solucion
 
 === Análise básica
 
-Quando um evento de latência é detectado, o Workload Factory executa automaticamente uma análise básica usando as métricas do centro de atraso do QoS do ONTAP para identificar qual componente está causando a latência (por exemplo, FlexCache, pool de capacidade, limites de QoS, disco, dados, cluster ou outros subsistemas). Essa análise fornece uma identificação rápida da fonte da latência sem a necessidade de investigação manual.
-
-A análise básica está disponível para todos os eventos de latência quando você associa um link ao sistema de arquivos FSx for ONTAP. Sem um link, os eventos ainda podem ser detectados, mas a análise fornece informações limitadas.
+Quando ocorre um evento de latência, o Workload Factory executa automaticamente uma análise básica para encontrar a causa. Ele usa as métricas de centro de atraso de QoS do ONTAP para ver qual componente é responsável pela lentidão, como FlexCache, o pool de capacidade, os limites de QoS, os discos, os dados, o cluster ou outro subsistema. Isso identifica rapidamente a origem da latência sem exigir investigação manual.
 
 
-NOTE: Pode haver pequenas discrepâncias entre os valores de latência da análise de QoS do ONTAP e os dados do CloudWatch devido a diferentes metodologias de coleta. A análise básica utiliza dados do ONTAP para identificação da causa raiz.
+NOTE: Você só poderá visualizar a análise detalhada dos componentes quando houver um link associado ao sistema de arquivos FSx for ONTAP. Caso não haja link, você ainda poderá visualizar gráficos de latência, IOPS e taxa de transferência.
+
+
+NOTE: Os valores de latência da análise de QoS do ONTAP e do CloudWatch podem diferir ligeiramente porque eles coletam dados de maneiras diferentes. A análise básica usa dados do ONTAP para identificar a causa raiz.
 
 
 
-=== Análise de agente de IA
+=== Análise AI
 
-Embora a análise básica identifique a origem da latência, cenários complexos envolvendo dados ou componentes de cluster geralmente exigem uma investigação mais aprofundada. A análise por agentes de IA proporciona esse nível mais profundo de solução de problemas, identificando questões como volumes excessivos, configurações não otimizadas ou requisitos de com escalabilidade horizontal que a análise básica não consegue detectar.
+Embora uma análise básica possa identificar a origem da latência, situações mais complexas envolvendo dados ou componentes de cluster geralmente exigem uma investigação mais aprofundada. A análise por IA proporciona essa solução de problemas mais detalhada, encontrando problemas como volumes sobrecarregados, configuração inadequada ou a necessidade de adicionar mais capacidade, problemas que uma análise básica pode não detectar.
 
-Ao executar a análise do agente de IA, o sistema fornece:
+Ao executar a análise de IA, o sistema fornece:
 
 * *Possível causa raiz*: Explicação detalhada do que está causando o problema de latência
 * *Clientes afetados*: Lista de nomes de instâncias EC2 impactadas pela latência
 * *Possíveis medidas corretivas*: Duas ou mais ações específicas para resolver o problema
 
 
-A análise com agentes de IA requer um ARN de modelo do Amazon Bedrock configurado nas suas configurações do Workload Factory. Se o Bedrock não estiver configurado, você ainda poderá usar o monitoramento de latência e a análise básica automatizada.
+A análise de IA requer um ARN de modelo do Amazon Bedrock nas configurações do Workload Factory. Se o Bedrock não estiver configurado, você ainda pode usar o monitoramento de latência e a análise automatizada básica.
 
 
 
