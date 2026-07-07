@@ -91,7 +91,11 @@ O Workload Factory coleta métricas de latência para todos os volumes FSx for O
 
 == Configurar notificações de latência
 
-Configure notificações por e-mail ou Amazon SNS para receber alertas quando alta latência for detectada. Você receberá uma notificação sempre que um volume exceder os limites que você definiu, assim você saberá imediatamente se houver um problema de desempenho.
+Configure notificações por e-mail ou Amazon SNS para receber alertas quando for detectada alta latência. Você pode controlar a frequência das notificações com duas opções:
+
+* *Lembre-me todos os dias (Recomendado)*: receba notificações quando ocorrer uma nova violação em qualquer sistema de arquivos. Após enviar uma notificação para um sistema de arquivos, aguarde 24 horas antes de enviar outra notificação para o mesmo sistema de arquivos.
+* *Notifique em qualquer violação de latência (a cada 20 minutos)*: receba uma notificação quando uma violação for detectada, no máximo uma vez a cada 20 minutos.
+
 
 As notificações de latência são enviadas por sistema de arquivos. Quando um ou mais volumes em um sistema de arquivos ultrapassam os limites de latência, você recebe uma única notificação listando todos os volumes afetados.
 

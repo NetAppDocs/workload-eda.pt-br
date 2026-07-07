@@ -35,7 +35,7 @@ Você pode configurar limites separados para:
 * Gravidade crítica
 
 
-Todos os eventos detectados aparecem na tabela de eventos de latência. Se as notificações estiverem configuradas, você também receberá um e-mail ou uma mensagem do Amazon SNS com detalhes sobre os volumes afetados.
+Todos os eventos detectados aparecem na tabela de eventos de latência. Se as notificações estiverem configuradas, você também receberá um e-mail ou uma mensagem do Amazon SNS com detalhes sobre os volumes afetados. Você pode controlar com que frequência recebe notificações: diariamente por sistema de arquivos ou a cada 20 minutos.
 
 
 
