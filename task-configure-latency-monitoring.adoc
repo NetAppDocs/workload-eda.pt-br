@@ -15,12 +15,14 @@ Defina limites de aviso e críticos para latência de leitura e escrita para mon
 
 
 
+[[before-you-begin]]
 == Antes de começar
 
 Certifique-se de atender aos seguintes requisitos antes de configurar o monitoramento de latência.
 
 
 
+[[aws-credentials-and-permissions]]
 === Credenciais e permissões da AWS
 
 Você deve adicionar as credenciais da AWS ao Workload Factory com permissões de leitura/gravação. O recurso de monitoramento de latência requer acesso às métricas do CloudWatch para todos os volumes do FSx for ONTAP associados às suas credenciais da AWS.
@@ -31,12 +33,14 @@ Se você ainda não configurou as credenciais AWS, consulte link:https://docs.ne
 
 
 
+[[fsx-for-ontap-file-system]]
 === FSx para sistema de arquivos ONTAP
 
 Você precisa de pelo menos um FSx for ONTAP sistema de arquivos com volumes implantados em seu ambiente AWS.
 
 
 
+[[link-to-fsx-for-ontap]]
 === Link para FSx for ONTAP
 
 Para visualizar a decomposição de componentes na análise básica, você deve associar um link ao sistema de arquivos FSx for ONTAP. Sem um link, você ainda pode visualizar os gráficos de latência, IOPS e taxa de transferência. Se nenhum link já estiver associado, selecione *Associar link* em EDA, escolha se deseja criar um novo link ou associar um link existente e, em seguida, selecione *Continuar* para ir automaticamente para a página de criação de link em Storage workloads.
@@ -45,6 +49,7 @@ Para obter instruções sobre como criar e associar links, consulte link:https:/
 
 
 
+[[amazon-bedrock-model-arn-optional]]
 === ARN do modelo Amazon Bedrock (opcional)
 
 (Opcional) Para usar a análise de IA, forneça um ARN de modelo do Amazon Bedrock nas configurações do Workload Factory. Sem ele, você ainda pode usar o monitoramento de latência e a análise básica.
@@ -53,12 +58,14 @@ Para obter mais detalhes, consulte link:https://docs.netapp.com/us-en/workload-g
 
 
 
+[[notification-configuration-optional]]
 === Configuração de notificações (opcional)
 
 Para receber notificações por e-mail ou Amazon SNS quando eventos de latência forem detectados, configure as preferências de notificação nas configurações do Workload Factory. Consulte <<Configurar notificações de latência>> para obter mais detalhes.
 
 
 
+[[configure-latency-thresholds]]
 == Configurar limites de latência
 
 Defina limites de aviso e críticos para leitura e gravação. O sistema verifica esses limites continuamente e envia um alerta quando eles são atingidos.
@@ -89,6 +96,7 @@ O Workload Factory coleta métricas de latência para todos os volumes FSx for O
 
 
 
+[[configure-latency-notifications]]
 == Configurar notificações de latência
 
 Configure notificações por e-mail ou Amazon SNS para receber alertas quando for detectada alta latência. Você pode controlar a frequência das notificações com duas opções:
@@ -112,6 +120,7 @@ Para ativar as notificações, consulte link:https://docs.netapp.com/us-en/workl
 
 
 
+[[manage-latency-configuration]]
 == Gerenciar configuração de latência
 
 Após a configuração, você pode alterar seus limites a qualquer momento.
@@ -128,6 +137,7 @@ NOTE: Defina o limite crítico acima do limite de aviso. Se você definir o limi
 
 
 
+[[best-practices]]
 == Melhores práticas
 
 Considere estas recomendações ao configurar o monitoramento de latência:
@@ -141,6 +151,7 @@ Considere estas recomendações ao configurar o monitoramento de latência:
 
 
 
+[[related-information]]
 == Informações relacionadas
 
 * link:learn-latency-monitoring.html["Saiba mais sobre monitoramento de latência"]

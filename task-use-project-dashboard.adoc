@@ -15,12 +15,14 @@ Use o painel de controle de Projetos para monitorar o uso de storage em seus sis
 
 
 
+[[before-you-begin]]
 == Antes de começar
 
 Você deve ter link:task-configure-project-dashboard.html["filtros personalizados configurados"] para o painel de Projetos. Se você ainda não configurou filtros personalizados, pode usar os filtros padrão (sistema de arquivos, tipo de volume e intervalo de tempo).
 
 
 
+[[filter-the-dashboard]]
 == Filtrar o painel de controle
 
 A filtragem permite que você se concentre em grupos específicos de recursos de storage. Isso facilita a identificação de tendências, a detecção de problemas e a criação de relatórios para as partes interessadas. Ao usar vários filtros em conjunto, você pode responder a perguntas específicas, como: "Quanto storage a equipe do projeto ASIC está usando?" ou "Quais volumes na região US-West têm o maior número de IOPS?"
@@ -44,12 +46,14 @@ Você pode filtrar as informações exibidas no painel usando uma combinação d
 
 
 
+[[view-volume-details]]
 == Ver detalhes do volume
 
 Analisar o desempenho do volume total e dos volumes individuais ajuda você a planejar a capacidade e melhorar o desempenho. A visualização Total mostra as tendências gerais. A visualização de Volume ajuda você a encontrar volumes específicos que podem precisar de atenção, ajuste ou mais recursos.
 
 
 
+[[view-aggregated-volume-metrics]]
 === Visualizar métricas de volume agregadas
 
 A visualização Total mostra métricas combinadas de todos os volumes que correspondem aos seus filtros.
@@ -68,6 +72,7 @@ A visualização Total mostra métricas combinadas de todos os volumes que corre
 
 
 
+[[view-individual-volume-performance]]
 === Veja o desempenho de volume individual
 
 A visualização de Volume mostra como cada volume está performando ao longo do tempo. Ela destaca os 10 principais volumes para cada métrica.
@@ -106,6 +111,7 @@ Utilize esses dados para:
 
 
 
+[[best-practices]]
 == Melhores práticas
 
 Considere estas recomendações ao usar o painel de controle de Projects:
@@ -120,6 +126,7 @@ Considere estas recomendações ao usar o painel de controle de Projects:
 
 
 
+[[related-information]]
 == Informações relacionadas
 
 * link:learn-project-dashboard.html["Saiba mais sobre o painel de controle de Projects"]

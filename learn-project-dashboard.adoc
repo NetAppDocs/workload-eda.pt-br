@@ -15,6 +15,7 @@ O painel de controle de Projetos permite que administradores de TI e gerentes de
 
 
 
+[[how-the-projects-dashboard-works]]
 == Como funciona o painel de controle de Projects
 
 O painel de Projetos exibe as métricas do CloudWatch para todos os volumes do FSx for ONTAP vinculados às suas credenciais da AWS. Você pode criar até cinco filtros usando tags da AWS para organizar e visualizar os dados por projeto, equipe, aplicativo ou outras categorias.
@@ -32,6 +33,7 @@ Para monitoramento de desempenho de latência proativo, consulte link:learn-late
 
 
 
+[[cloudwatch-metrics-collected]]
 === CloudWatch métricas coletadas
 
 O painel de controle coleta e exibe as seguintes métricas do CloudWatch:
@@ -44,6 +46,7 @@ O painel de controle coleta e exibe as seguintes métricas do CloudWatch:
 
 
 
+[[custom-filters]]
 == Filtros personalizados
 
 Os filtros personalizados ajudam você a organizar os dados do painel de controle de acordo com a forma como sua organização funciona. Defina filtros por projeto, equipe ou centro de custos para que você possa encontrar rapidamente os dados de que precisa sem precisar vasculhar informações não relacionadas. Isso torna mais fácil planejar a capacidade, acompanhar os custos e monitorar o desempenho.
@@ -59,6 +62,7 @@ Se você não configurar nenhum filtro personalizado, os filtros padrão — sis
 
 
 
+[[aws-tags]]
 === Tags da AWS
 
 As tags da AWS são metadados para seus recursos da AWS. Elas ajudam você a categorizar seus recursos da AWS de diferentes maneiras, por exemplo, por projeto, aplicação ou unidade de negócios.
@@ -69,12 +73,14 @@ Para mais detalhes sobre tags, consulte https://docs.aws.amazon.com/whitepapers/
 
 
 
+[[volume-details]]
 == Detalhes do volume
 
 O painel de controle oferece modos de visualização para ajudar você a analisar suas métricas de storage em diferentes níveis de detalhe.
 
 
 
+[[total-view]]
 === Visão total
 
 A visualização Total (padrão) mostra métricas combinadas de todos os volumes que correspondem aos filtros selecionados. Ela oferece uma visão geral rápida do desempenho geral do armazenamento, incluindo capacidade total, IOPS e taxa de transferência.
@@ -88,6 +94,7 @@ Use esta visualização para:
 
 
 
+[[volume-view]]
 === Visualização de volume
 
 A visualização de volumes mostra o desempenho de volumes individuais ao longo do tempo. Ela exibe os 10 principais volumes para cada métrica. Isso ajuda você a ver quais volumes usam mais recursos e como eles se comportam durante o período selecionado.
@@ -133,6 +140,7 @@ Ao passar o cursor sobre qualquer linha de volume nos gráficos, você pode visu
 
 
 
+[[related-information]]
 == Informações relacionadas
 
 * link:task-configure-project-dashboard.html["Configurar o dashboard de Projects"]

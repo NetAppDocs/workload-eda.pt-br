@@ -15,6 +15,7 @@ Você pode gerenciar projetos EDA para controlar como seu código e artefatos s�
 
 
 
+[[create-a-project]]
 == Criar um projeto
 
 Você pode criar um novo projeto EDA para aproveitar os recursos de proteção de dados do seu FSx for ONTAP sistema de arquivos para seu código e artefatos. .Etapas
@@ -70,6 +71,7 @@ O projeto foi criado e aparece na lista de projetos na página Projetos.
 
 
 
+[[view-existing-projects]]
 == Veja os projetos existentes
 
 Você pode visualizar os projetos existentes criados no NetApp Workload Factory para EDA seguindo estes passos.
@@ -84,6 +86,7 @@ Você pode visualizar os projetos existentes criados no NetApp Workload Factory 
 
 
 
+[[edit-a-project]]
 == Editar um projeto
 
 Você pode editar as configurações de um projeto a qualquer momento.
@@ -100,6 +103,7 @@ Você pode editar as configurações de um projeto a qualquer momento.
 
 
 
+[[view-a-projects-workspaces]]
 == Veja os espaços de trabalho de um projeto
 
 Um clone ou instantâneo de um projeto é conhecido como espaço de trabalho. Ao criar um espaço de trabalho, ele será mantido enquanto a política de operação do projeto permitir. Você pode visualizar os espaços de trabalho existentes para um projeto seguindo estes passos.
@@ -116,6 +120,7 @@ Um clone ou instantâneo de um projeto é conhecido como espaço de trabalho. Ao
 
 
 
+[[delete-a-project]]
 == Excluir um projeto
 
 Você pode excluir um projeto quando ele não for mais necessário, seguindo estes passos.

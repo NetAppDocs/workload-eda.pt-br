@@ -15,12 +15,14 @@ Configure filtros personalizados no painel de Projetos para organizar os dados d
 
 
 
+[[before-you-begin]]
 == Antes de começar
 
 Para usar filtros personalizados, adicione tags da AWS aos seus volumes FSx for ONTAP de acordo com suas necessidades, como tags para projetos, equipes ou unidades de negócios.
 
 
 
+[[configure-custom-filters]]
 == Configurar filtros personalizados
 
 
@@ -63,6 +65,7 @@ Ao aplicar essas tags, o Workload Factory começa a coletar e exibir as métrica
 
 
 
+[[related-information]]
 == Informações relacionadas
 
 * link:learn-project-dashboard.html["Saiba mais sobre o painel de controle de Projects"]

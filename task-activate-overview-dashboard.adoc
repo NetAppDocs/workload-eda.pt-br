@@ -15,12 +15,14 @@ Ative o painel Visão geral para começar a coletar métricas do CloudWatch para
 
 
 
+[[before-you-begin]]
 == Antes de começar
 
 Certifique-se de atender aos seguintes requisitos antes de ativar o dashboard.
 
 
 
+[[aws-credentials-with-view-permissions]]
 === Credenciais da AWS com permissões de visualização
 
 Você deve configurar as credenciais da AWS no Workload Factory com pelo menos permissões de leitura (visualização) para General Storage. Credenciais _básicas_ não são suportadas.
@@ -31,6 +33,7 @@ Se você ainda não configurou as credenciais AWS, consulte link:https://docs.ne
 
 
 
+[[activate-the-dashboard]]
 == Ative o dashboard
 
 Após o Workload Factory verificar as credenciais com permissões de visualização, ative o painel para começar a coletar métricas do CloudWatch para seus sistemas de arquivos FSx for ONTAP.
@@ -52,6 +55,7 @@ O Workload Factory começa a coletar métricas do CloudWatch para todos os siste
 
 
 
+[[next-steps]]
 == Próximos passos
 
 Após ativar o dashboard, você pode:
@@ -63,6 +67,7 @@ Após ativar o dashboard, você pode:
 
 
 
+[[related-information]]
 == Informações relacionadas
 
 * link:learn-overview-dashboard.html["Saiba mais sobre o painel de visão geral"]

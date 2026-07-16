@@ -15,12 +15,14 @@ Use o painel Visão geral para verificar a integridade e a capacidade dos seus s
 
 
 
+[[before-you-begin]]
 == Antes de começar
 
 Você precisa ter link:task-activate-overview-dashboard.html["ativou o painel de Visão geral"] antes de poder usá-lo para monitorar seus sistemas de arquivos.
 
 
 
+[[filter-the-dashboard]]
 == Filtrar o painel de controle
 
 Use os filtros na parte superior do painel para visualizar sistemas de arquivos específicos. Os filtros se aplicam às seções de latência, utilização, eventos ONTAP e à tabela de clusters.
@@ -41,6 +43,7 @@ Use os filtros na parte superior do painel para visualizar sistemas de arquivos 
 
 
 
+[[view-cluster-health-status]]
 == Visualizar o estado de saúde do cluster
 
 Na parte superior do painel, você vê um resumo da integridade e da atividade dos sistemas de arquivos que você selecionou. Isso aparece somente quando pelo menos um link FSx for ONTAP está conectado aos seus sistemas de arquivos.
@@ -72,6 +75,7 @@ O cartão de visualização de eventos do ONTAP exibe o número de eventos EMS p
 
 
 
+[[view-and-apply-capacity-recommendations]]
 == Veja e aplique as recomendações de capacidade
 
 O Workload Factory executa automaticamente uma recomendação de capacidade para cada sistema de arquivos FSx for ONTAP. Você pode encontrar sistemas de arquivos com recomendações filtrando a tabela Clusters.
@@ -98,6 +102,7 @@ O gráfico também exibe os pontos de decisão de recomendação e os pontos de 
 
 
 
+[[change-ssd-management-mode]]
 == Alterar o modo de gerenciamento do SSD
 
 Para cada sistema de arquivos, escolha como a capacidade do SSD é gerenciada: receba recomendações manuais ou permita o dimensionamento automático.
@@ -134,6 +139,7 @@ O sistema de arquivos alterna imediatamente para o novo modo. Se você escolher 
 
 
 
+[[bulk-edit-ssd-management-parameters]]
 == Editar em massa os parâmetros de gerenciamento de SSD
 
 Altere as configurações de capacidade do SSD para vários sistemas de arquivos ao mesmo tempo, assim as mesmas configurações serão aplicadas em todos os seus clusters.
@@ -166,6 +172,7 @@ Os parâmetros são atualizados para todos os sistemas de arquivos selecionados.
 
 
 
+[[analyze-capacity-trends-and-decision-points]]
 == Analisar tendências de capacidade e pontos de decisão
 
 Use o gráfico de utilização do SSD para ver como o uso do storage muda ao longo do tempo e identificar padrões.
@@ -195,6 +202,7 @@ Os pontos de decisão no gráfico indicam quando:
 
 
 
+[[use-the-clusters-table]]
 == Use a tabela de clusters
 
 A tabela de clusters fornece uma visão detalhada de cada sistema de arquivos FSx for ONTAP com métricas de desempenho e uso.
@@ -215,6 +223,7 @@ Passe o cursor sobre os cabeçalhos das colunas de throughput para obter detalhe
 
 
 
+[[best-practices]]
 == Melhores práticas
 
 Considere estas recomendações ao usar o painel de Overview:
@@ -230,6 +239,7 @@ Considere estas recomendações ao usar o painel de Overview:
 
 
 
+[[related-information]]
 == Informações relacionadas
 
 * link:learn-overview-dashboard.html["Saiba mais sobre o painel de visão geral"]

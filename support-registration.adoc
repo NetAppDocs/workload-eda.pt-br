@@ -21,6 +21,7 @@ link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/start/concept-fs
 
 
 
+[[support-registration-overview]]
 == Visão geral do registro de suporte
 
 O registro da sua assinatura de suporte com ID de conta (seu número de série de 20 dígitos 960xxxxxxxxx, localizado na página Recursos de Suporte no NetApp Console) serve como seu ID de assinatura de suporte único. Cada assinatura de suporte em nível de conta NetApp deve ser registrada.
@@ -29,12 +30,14 @@ O cadastro habilita funcionalidades como abertura de chamados de suporte e gera�
 
 
 
+[[register-your-account-for-netapp-support]]
 == Registre sua conta para obter suporte da NetApp.
 
 Para se cadastrar no suporte e ativar o direito ao suporte, um usuário da sua conta deve associar uma conta do Site de Suporte da NetApp ao seu login do NetApp Console . A forma de se cadastrar para obter suporte da NetApp depende de você já possuir uma conta no NetApp Support Site (NSS).
 
 
 
+[[existing-customer-with-an-nss-account]]
 === Cliente existente com uma conta NSS
 
 Se você é cliente da NetApp e possui uma conta NSS, basta se cadastrar para obter suporte através do NetApp Console.
@@ -61,6 +64,7 @@ Observe que outros usuários do NetApp Console não verão esse mesmo status de 
 
 
 
+[[existing-customer-but-no-nss-account]]
 === Cliente existente, mas sem conta NSS
 
 Se você já é cliente da NetApp com licenças e números de série, mas não possui uma conta NSS, você precisa criar uma conta NSS e associá-la ao seu login do NetApp Console .
@@ -77,6 +81,7 @@ Se você já é cliente da NetApp com licenças e números de série, mas não p
 
 
 
+[[brand-new-to-netapp]]
 === Novidade na NetApp
 
 Se você é novo na NetApp e não tem uma conta NSS, siga cada etapa abaixo.
