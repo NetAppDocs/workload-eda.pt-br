@@ -25,11 +25,10 @@ Você deve ter link:task-configure-latency-monitoring.html["monitoramento de lat
 [[view-volumes-with-latency-above-threshold]]
 == Visualizar volumes com latência acima do limite
 
-A tabela "Volumes com latência acima do limite" mostra os volumes que ultrapassaram o limite de latência de aviso ou crítico nas últimas 72 horas.
+A tabela "Volumes com latência acima do limite" mostra os volumes que ultrapassaram o limite de latência de aviso ou crítico.
 
 .Sobre esta tarefa
 * Apenas a violação mais recente para cada volume é exibida. Violações anteriores para o mesmo volume não são exibidas.
-* Os eventos são removidos automaticamente após 72 horas.
 * São exibidos no máximo 200 eventos. Os eventos mais antigos são removidos à medida que novos eventos são adicionados.
 * Os eventos aparecem mesmo sem um link de sistema de arquivos. Um link é necessário para visualizar detalhes básicos de análise ou executar análise de IA.
 
@@ -51,8 +50,10 @@ A tabela "Volumes com latência acima do limite" mostra os volumes que ultrapass
 [[analyze-a-latency-event]]
 == Analisar um evento de latência
 
-.Antes de começar
-Configure o ARN do modelo Amazon Bedrock nas configurações do Workload Factory, consulte link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/requirements-knowledge-base.html#basic-genai-requirements["Requisitos básicos do GenAI"^].
+A análise de latência ajuda você a encontrar rapidamente o que está causando lentidão sem precisar investigar manualmente.
+
+
+NOTE: Para usar a análise de IA, você precisa ter a IA gerenciada pela NetApp ativada. Para obter mais informações, consulte link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["Gerencie recursos de IA"^].
 
 A análise básica ajuda você a encontrar rapidamente o que está causando lentidão sem precisar investigar manualmente.
 
@@ -63,7 +64,7 @@ A análise básica ajuda você a encontrar rapidamente o que está causando lent
 
 Selecione um evento de latência na coluna *Gravidade* para abrir o painel de análise de latência desse evento. O painel inclui guias que fornecem diferentes visualizações do evento de latência.
 
-Se um ARN de modelo do Amazon Bedrock estiver configurado, você pode executar análises de IA em cenários de dados e clusters. Se o Bedrock não estiver configurado, um link para a página de configuração de Storage Workloads desse sistema de arquivos será fornecido, onde você pode configurar o acesso ao Bedrock.
+A disponibilidade da análise de IA depende da configuração da sua conta. Se a IA gerenciada pela NetApp estiver ativada, você pode executar a análise de IA sem precisar configurar o Bedrock. A análise de IA fica indisponível se o limite de crédito mensal for atingido ou se o seu administrador desativar os recursos de IA.
 
 * *Básico*: Exibe os resultados de uma análise automática. Se estiver vinculado ao sistema de arquivos, exibe um detalhamento dos componentes e mostra qual deles está causando a latência. Se não houver vínculo, você será solicitado a adicionar um. Um gráfico interativo de latência das métricas do CloudWatch para o volume afetado é exibido. Ele exibe métricas de leitura ou gravação, dependendo de qual alarme disparou o evento. Você pode escolher diferentes intervalos de tempo e usar um filtro para visualizar todas, leitura, gravação ou operações de metadados.
 * *Análise por IA*: mostra uma investigação mais aprofundada para determinar a causa raiz específica e as possíveis etapas de remediação.
@@ -80,7 +81,7 @@ Para obter instruções detalhadas sobre como usar os gráficos, consulte link:t
 . Na aba *Latência*, localize o evento que deseja analisar.
 . Na coluna *Gravidade*, selecione um evento de latência para abrir um painel de análise para esse evento.
 . Revise a guia *Básico*. Se um link estiver conectado, abra a análise detalhada do componente para ver de onde vem o atraso. Se nenhum link estiver conectado, selecione o prompt para conectar um e assim você poderá analisar os componentes.
-. Na aba *Análise de IA*, selecione *Analisar* para visualizar os resultados de uma investigação mais aprofundada, como possíveis problemas de dados ou de cluster. Isso ajuda a determinar a causa raiz específica e possíveis etapas de correção.
+. Na aba *Análise de IA*, selecione *Analisar* (quando disponível) para visualizar os resultados de uma investigação mais aprofundada, como possíveis problemas de dados ou de cluster. Isso ajuda a determinar a causa raiz específica e as possíveis etapas de correção.
 +
 Revise os resultados incluindo:
 

@@ -13,6 +13,8 @@ indexpage:
       url: "/learn-eda.html"
     - title: Início rápido
       url: "/quick-start-eda.html"
+    - title: Requisitos
+      url: "/requirements-eda.html"
   - title: Visão geral do storage EDA
     links:
     - title: Saiba mais sobre o painel de visão geral
@@ -41,8 +43,6 @@ indexpage:
     links:
     - title: Saiba mais sobre a integração com o Perforce.
       url: "/learn-eda-workloads.html"
-    - title: Requisitos
-      url: "/requirements-eda.html"
     - title: Automatize com o Codebox
       url: "/automate-codebox.html"
   - title: Conhecimento e suporte

@@ -383,7 +383,6 @@
   <block id="3589dd4e8f5f2cbdba29810271d0f1d9" category="paragraph"><block ref="6f22f53277ef02f84f5ed64bde49085d" category="inline-link-rx"></block>.</block>
   <block id="7e565772caac09d981d6b3641bb20148" category="inline-link-macro">Saiba mais sobre monitoramento de latência</block>
   <block id="9918911ccf4f48662bd23b3fa6ea97a8" category="inline-link-macro">Monitorar a latência do volume</block>
-  <block id="27e0e44d189c553eb00dc006b35029f5" category="list-text">Selecione *+ Add filters*.</block>
   <block id="58812a046615ae0cede06aa76e867511" category="paragraph">Você pode excluir um filtro personalizado selecionando o ícone da lixeira ao lado desse filtro antes de aplicar suas alterações.</block>
   <block id="ec4fc4cb1b37373b785aaee6062cfec7" category="section-title">Ver detalhes do volume</block>
   <block id="ee855ba807a55874eb4b38814389078f" category="section-title">Visão total</block>
@@ -410,7 +409,6 @@
   <block id="d4f2d389a3d4d575b8158ca4417bf9a5" category="list-text">Ambas as condições persistem para todos os pontos de dados dentro do intervalo de tempo configurado.</block>
   <block id="6efa4b954c442dd4f15a0f58f1b0bd86" category="paragraph">Por exemplo, com os limites de aviso padrão, um alerta de leitura é acionado somente se a latência de leitura exceder 6 ms E o IOPS de leitura exceder 100 ops/seg para todos os pontos de dados dentro de um período de 10 minutos.</block>
   <block id="e0b18d5b04f677d427e5a029d591d7a9" category="section-title">Gravidade do evento</block>
-  <block id="7776f517a75d578f349901d6f0886405" category="list-text">Os eventos são removidos automaticamente após 72 horas.</block>
   <block id="01bd639bef6ec9a56687ee7ffd9f246c" category="section-title">Gerenciar configuração de latência</block>
   <block id="6fe6ef1cbd27d3257ff9500aab5f9ab9" category="list-text">Na página *Latência*, selecione *Editar*.</block>
   <block id="d53bdccd3ec334ddfd63d2269906352a" category="list-text">Modifique qualquer um dos valores de limite conforme necessário.</block>
@@ -438,7 +436,6 @@
   <block id="c4909262f33027f9d6430abfd14a7941" category="list-text">Você deve adicionar as credenciais da AWS ao Workload Factory com permissões de leitura/gravação. O recurso de monitoramento de latência requer acesso às métricas do CloudWatch para todos os volumes do FSx for ONTAP associados às suas credenciais da AWS.</block>
   <block id="d65de0ffa05b31f0beebf22d3e28dbde" category="list-text">Link para FSx for ONTAP</block>
   <block id="8997880c88dd70fe80799ee97bb7ac0c" category="inline-link-macro">Criar um link</block>
-  <block id="e631d9996b49ecdb5d4d4146db562c6d" category="paragraph">Para obter instruções sobre como criar e associar links, consulte <block ref="27f80dd01569e18971f783f257cc7294" category="inline-link-macro-rx"></block>.</block>
   <block id="bf7cc54e388f0b806386888989c37589" category="list-text">Credenciais da AWS com permissões de visualização</block>
   <block id="2daabc6822724771970f17e8ae6a4cee" category="list-text">Selecione a guia *Visão geral*.</block>
   <block id="a2fbf7fa6f022aa585757c4d6cf5cfbe" category="list-text">Se nenhuma credencial com permissões de visualização for detectada, selecione *Add credentials* e siga as instruções para configurar as credenciais da AWS com permissões de visualização. Em seguida, retorne à guia *Overview*.</block>
@@ -471,9 +468,6 @@
   <block id="208586cd32a8a0d00042653ba4659b8e" category="paragraph">Ative o painel Visão geral para monitorar a integridade, a capacidade e a taxa de transferência dos seus clusters FSx for ONTAP. Aceite a solicitação de consentimento para permitir que o Workload Factory comece a coletar métricas do CloudWatch.</block>
   <block id="92b8944386b41a864c3b42d0a5f178da" category="paragraph">Os modos _Basic_ e _Read-only_ não são suportados no momento.</block>
   <block id="14148bac5b7c3663c54f10f09a5bd49a" category="paragraph">As permissões de modo _Basic_ e modo _Read-only_ não são suportadas para monitoramento de latência.</block>
-  <block id="289fde61867c520c9e1b763ec58e4782" category="list-text">ARN do modelo Amazon Bedrock (opcional)</block>
-  <block id="a6390dd71ac213c8926f4e003361b1c7" category="inline-link-macro">Requisitos básicos do GenAI</block>
-  <block id="544f338acee9a38350cfd4ac8846e75e" category="paragraph">Para obter mais detalhes, consulte <block ref="6c761e19260aabd782369cde93c2b1c4" category="inline-link-macro-rx"></block>.</block>
   <block id="cb9b360ea843c63638883c1cd17f136a" category="list-text">*Eventos de aviso*: Indicam latência elevada que pode precisar de atenção</block>
   <block id="a76142b21bf8fd3e217700ad47520a99" category="list-text">*Eventos críticos*: Indicam latência grave que requer investigação imediata</block>
   <block id="85af8e40cac423345858be0210476d20" category="list-text">Selecione a guia *Latência*.</block>
@@ -486,16 +480,10 @@
   <block id="102e5bfcdb00d2737ee47f8cfa62267e" category="list-text">*Clientes afetados*: Lista de nomes de instâncias EC2 impactadas pela latência</block>
   <block id="97a2c1af5741eeecb9eaa5c7c36521b7" category="list-text">*Possíveis medidas corretivas*: Duas ou mais ações específicas para resolver o problema</block>
   <block id="e38b13dd2c91516a7427e9ddddaee80a" category="list-text">Na aba *Latência*, localize o evento que deseja analisar.</block>
-  <block id="c3feff18acbe4e3addd9196da0c369bc" category="list-text">Você deve configurar as credenciais da AWS no Workload Factory com pelo menos permissões de leitura (visualização) para General Storage. Credenciais _básicas_ não são suportadas.</block>
   <block id="927108002b8d97b63eeefcd5cc76ff99" category="paragraph">Se você não configurou credenciais com permissões de visualização, você será redirecionado para a página de configuração de credenciais da AWS ao abrir a guia Overview.</block>
   <block id="148a662b6f742683655df7c4b27aab64" category="list-text">Ative o dashboard</block>
   <block id="5626a4ecac9741d9b0e61d578ebf1561" category="paragraph">Ao atualizar as seleções de filtro, todas as informações são atualizadas para mostrar apenas os sistemas de arquivos correspondentes.</block>
-  <block id="adf40a5c785aaeef6afc57401dfa0da4" category="section-title">Recomendações de capacidade</block>
-  <block id="9cc0347665febc5bdecbb8b62b56caef" category="section-title">Veja e aplique as recomendações de capacidade</block>
-  <block id="95f6a08d0f924200d8aedf875fe0d26f" category="list-text">Analise a recomendação de SSD e o gráfico de capacidade.</block>
   <block id="a91263358447ff86f00508073a54103c" category="paragraph">A recomendação explica a alteração sugerida e o raciocínio por trás dela. Por exemplo: _Recomendamos aumentar o tamanho do SSD com base no padrão de utilização do SSD do seu sistema de arquivos._</block>
-  <block id="9a5f604071695fc8c90fa884731bdf90" category="paragraph">O gráfico apresenta o uso atual do SSD juntamente com as tendências históricas e mostra como o algoritmo de recomendação de capacidade teria ajustado a capacidade ao longo do tempo.</block>
-  <block id="75982876f75909a704866c60073481a4" category="list-text">No canto superior direito do gráfico, selecione o intervalo de tempo para alterar o período exibido. O padrão é uma semana.</block>
   <block id="6f600db4b9fe06680f2ac280db49796a" category="section-title">6 de abril de 2026</block>
   <block id="97c13014b9e16335b445d04850fb955f" category="doc">Notificações por e-mail e SNS para eventos de latência</block>
   <block id="c31a2fa4340e87df74fd4add6857d037" category="paragraph">Agora você pode receber notificações automáticas quando eventos de latência forem detectados em seus volumes FSx for ONTAP. Configure notificações por e-mail ou Amazon SNS nas configurações do Workload Factory para receber alertas em tempo real quando os volumes ultrapassarem os limites de latência configurados.</block>
@@ -522,7 +510,6 @@
   <block id="1ecd985fc0693d958ad07611d2deb457" category="list-text">*Credenciais*: Selecione as credenciais da Amazon AWS que deseja usar. O EDA utiliza essas credenciais para descobrir sistemas de arquivos FSx for ONTAP que você pode usar com este projeto e para criar clones e snapshots de projetos.</block>
   <block id="060b67e800a6d9a85b502dd348d56951" category="list-text">*Região*: Selecione a região em que este sistema de arquivos FSx para ONTAP reside.</block>
   <block id="e79582136788303ae03dfadcec648921" category="list-text">*FSx for ONTAP file system*: Selecione um FSx for ONTAP file system para usar com este projeto.</block>
-  <block id="f84de4f2f9588a1f1267bf2c1f67bba6" category="paragraph">Você só pode selecionar sistemas de arquivos que estejam configurados com um link.<block ref="69ba18be3e95c1116b4fd108f5c6f03b" category="inline-link-rx"></block>.</block>
   <block id="d336a06e84d74c4a2d8a59e458f6a7c1" category="summary">Comece a usar o Workload Factory para EDA configurando seu ambiente, ativando os painéis de monitoramento e configurando a análise de latência.</block>
   <block id="2edaf9b54abbf5ae956607d1cce3419f" category="doc">Guia rápido do Workload Factory para EDA</block>
   <block id="0595b103e9174c24b7fffa0491687cc5" category="paragraph">Comece a usar o Workload Factory para EDA configurando seu ambiente, ativando os painéis de monitoramento e configurando a análise de latência para otimizar o desempenho do FSx para ONTAP em suas cargas de trabalho de EDA.</block>
@@ -530,7 +517,6 @@
   <block id="e92f1fd565b0115330969e68f1df5c93" category="inline-link-macro">analisar tendências de latência</block>
   <block id="b888e1d990c199d358b31e27c7359f42" category="doc">Workload Factory para requisitos de EDA</block>
   <block id="656ff150d41fa1c0fc581a7d9317539b" category="list-text">Você precisará de pelo menos um volume no sistema de arquivos com a seguinte configuração:</block>
-  <block id="203f7d7dafc1c11f2f80c2510b54a471" category="list-text">O sistema de arquivos deve ser configurado com um link.<block ref="69ba18be3e95c1116b4fd108f5c6f03b" category="inline-link-rx"></block>.</block>
   <block id="5aef21820caef7c0f864852459c0e5f6" category="doc">Registre-se para obter suporte para Workload Factory para EDA</block>
   <block id="7710e3af23bbd50fdc1e743685f0d33f" category="doc">Analise as tendências de latência para EDA no Workload Factory</block>
   <block id="a84cf3e93039b68c477a75d0719fe3b4" category="inline-link-macro">monitoramento de latência configurado</block>
@@ -544,7 +530,6 @@
   <block id="391d5001f0e7f63a7def2cbcdfbf9795" category="list-text">Para visualizar os detalhes de um evento de latência, selecione o evento na coluna *Gravidade*. Isso abrirá um painel de análise de latência para esse evento.</block>
   <block id="256e5511799cf87e5ea3d5686def55a5" category="list-text">Para classificar a tabela, selecione qualquer cabeçalho de coluna. Por padrão, os eventos críticos são exibidos primeiro, classificados por horário, seguidos pelos eventos de aviso, também classificados por horário.</block>
   <block id="5bf8d268567f0e7ee71b32158e4a1593" category="section-title">Analisar um evento de latência</block>
-  <block id="46a6c0f7d8d51bac15ceada497addbb0" category="paragraph">Configure o ARN do modelo Amazon Bedrock nas configurações do Workload Factory, consulte <block ref="6c761e19260aabd782369cde93c2b1c4" category="inline-link-macro-rx"></block>.</block>
   <block id="2f4239783073f0a94706e2317e78bba8" category="list-text">Na coluna *Gravidade*, selecione um evento de latência para abrir um painel de análise para esse evento.</block>
   <block id="42ca2768ba0de807a5ef846dc69d0aad" category="section-title">Configurar notificações de latência</block>
   <block id="b113e6e3f414df97faffdf304f96cdea" category="inline-link-macro">Configurar as configurações de notificação</block>
@@ -616,8 +601,6 @@
   <block id="97c702b452a6c71f4f36f5402b29d8fd" category="section-title">Componentes do dashboard</block>
   <block id="c273f90bb18e2d345cad42a75c13525e" category="paragraph">O estado de saúde inclui as seguintes áreas:</block>
   <block id="eea2274bcc20c5ab5c322a30dcee6258" category="list-text">*Latência*</block>
-  <block id="e0b6d15d08b6ac1bf0c9ca66512009b1" category="list-text">*gerenciamento de capacidade de SSD*</block>
-  <block id="fae1127ef684baae2da0861b0a98b91c" category="list-text">Exibe o número de sistemas de arquivos com uso de SSD acima de 80% e o número de sistemas de arquivos com recomendações de capacidade ativas. Isso ajuda você a identificar rapidamente sistemas de arquivos que podem precisar de atenção em relação à capacidade.</block>
   <block id="0e2625311ccf9f45cca827ce6c0e4bca" category="list-text">*Eventos ONTAP*</block>
   <block id="d7977f08ca83e47fe2459a0029ea1287" category="list-text">Exibe o número de eventos EMS detectados, categorizados por Capacidade, Disponibilidade e proteção, e Segurança e outros.</block>
   <block id="79b87402abbc633ab610924741eb4961" category="paragraph">A tabela de clusters fornece uma visão detalhada de cada sistema de arquivos FSx for ONTAP, filtrada pela sua região ativa e pelas seleções da conta AWS. Os dados são coletados a partir de métricas do CloudWatch.</block>
@@ -635,7 +618,6 @@
   <block id="797016fdf74902992680096f55a3d63c" category="list-text">*Limiar* (10-90%)</block>
   <block id="7eb5fa704b3019bd0f6cd3883bbcf786" category="list-text">*Retrospectiva* (1-200 horas)</block>
   <block id="9a4103f7e6d7d850b63cbe6a386c5186" category="list-text">O período de tempo usado para analisar os padrões históricos de uso do SSD. Um período de análise mais longo fornece mais contexto histórico para as decisões de capacidade. Disponível apenas no modo Automate.</block>
-  <block id="8d3fdec3e987ae5a2aa90e14c81ac557" category="list-text">*Adiante* (1-200 horas)</block>
   <block id="00e09bedfec925ddc5d5fb54c9e8dd7b" category="list-text">O período de tempo usado para projetar as necessidades futuras de capacidade. Um período de previsão mais longo planeja mais adiante no futuro para o crescimento da capacidade. Disponível apenas no modo Automate.</block>
   <block id="fa0b4e3f4266abe4ec93e3058cfcd2aa" category="section-title">Entendendo os pontos de decisão de capacidade</block>
   <block id="c27f88e562f3ed3c4000570673348297" category="list-text">*Pontos de decisão para recomendação*</block>
@@ -706,7 +688,6 @@
   <block id="cce78dc6ebbec7385a01f2146d6d01c8" category="section-title">Próximos passos</block>
   <block id="b7b10c1304f383232f064dc193d3492b" category="paragraph">Após ativar o dashboard, você pode:</block>
   <block id="84dbb7b1eccc71ff5f71a7198ff13b68" category="list-text"><block ref="2cfa6ed38cd9b96055529b98595c7f05" category="inline-link-macro-rx"></block>para monitorar a saúde e a capacidade do cluster</block>
-  <block id="fdc13b7c9d56bd2522e96ae8d5d9ee87" category="list-text">Configurar os modos de gerenciamento de capacidade de SSD (Automatizar, Recomendar ou Nenhum)</block>
   <block id="f872ab9156293273da8e58555b68ca2e" category="list-text">Configure filtros para focar em regiões específicas ou contas AWS</block>
   <block id="526ad94042b150fca39290f6bef86a67" category="inline-link-macro">Saiba mais sobre o painel de visão geral</block>
   <block id="91b5f8f96066d41fb5057458a69d5f81" category="list-text"><block ref="91b5f8f96066d41fb5057458a69d5f81" category="inline-link-macro-rx"></block></block>
@@ -726,7 +707,6 @@
   <block id="763302f8ff688c0c89f9b68730bab872" category="list-text">Limiares de IOPS para cada</block>
   <block id="8c7f651901d697c87ca383001e86c18c" category="list-text">Intervalos de tempo para avaliação</block>
   <block id="4bb380b53ae6059a8ca9f7c119e77bff" category="list-text">Selecione *Aplicar* para salvar sua configuração.</block>
-  <block id="8fdf6d96070c398324fc1f3cd8bb44f5" category="paragraph">Para ativar as notificações, consulte <block ref="760d5a248a4ffda4abc117648b19c119" category="inline-link-macro-rx"></block>.</block>
   <block id="07ba6f406b4506df814952c513441ef3" category="paragraph">Considere estas recomendações ao configurar o monitoramento de latência:</block>
   <block id="408435491d63d2438d80b5935f332ff0" category="summary">Configure filtros personalizados para o painel de controle de Projetos para organizar métricas de acordo com a estrutura da sua empresa, como projetos, equipes ou aplicativos.</block>
   <block id="5d29144fbe1ed49d08e42f38228178d9" category="doc">Configure o painel de controle de Projetos no Workload Factory para EDA</block>
@@ -738,7 +718,6 @@
   <block id="00b3890321528a91a32d0f48642d4b03" category="list-text">Para visualizar as alterações após aplicar tags ou filtros, selecione o ícone de atualização no painel.</block>
   <block id="57ba2727dd56ad729929975ac4544628" category="inline-link-macro">Saiba mais sobre o painel de controle de Projects</block>
   <block id="393c0c1ecdbc9253df9e2224ce340393" category="list-text"><block ref="393c0c1ecdbc9253df9e2224ce340393" category="inline-link-macro-rx"></block></block>
-  <block id="830b8c7d4b87c3891c9850421339be6d" category="summary">Use o painel Visão geral para monitorar a integridade do cluster, visualizar recomendações de capacidade, gerenciar configurações de capacidade de SSD e analisar tendências de desempenho em seus sistemas de arquivos FSx for ONTAP.</block>
   <block id="79181b2c6ed46060150e77e4602bc886" category="doc">Utilize o painel de Visão Geral no Workload Factory para EDA</block>
   <block id="f4d32e19fbe53c2c3a060145a3cb089e" category="inline-link-macro">ativou o painel de Visão geral</block>
   <block id="b989d81a69fe7883dca4d1012f53d338" category="paragraph">Você precisa ter <block ref="38c0848a99095f730ae7166b7cd5884e" category="inline-link-macro-rx"></block> antes de poder usá-lo para monitorar seus sistemas de arquivos.</block>
@@ -749,7 +728,6 @@
   <block id="fb3123e7d905f809c3bdf82e3ceca6af" category="section-title">Visualizar o estado de saúde do cluster</block>
   <block id="7da261fafbc98c685b2c0c780ccdbcf1" category="paragraph">O estado de saúde do cluster inclui as seguintes áreas principais:</block>
   <block id="ac97fe213f96cc9db6b4ee38d70f798b" category="list-text">*Latência*: Número de eventos de latência detectados</block>
-  <block id="250cb0358f46fe26f5f0eaa93ff565d5" category="list-text">*Modo de capacidade do SSD*: status de utilização do SSD e sistemas de arquivos com recomendações de capacidade ativa</block>
   <block id="a51f6183fddbec434723cff9a6cb22f0" category="list-text">*Eventos ONTAP*: Número de eventos EMS por categoria (Capacidade, Disponibilidade e proteção, Segurança e outros)</block>
   <block id="c569953f651916e8d6fb2a2e26996486" category="list-text">Verifique o estado de integridade do cluster na parte superior do painel de controle.</block>
   <block id="45cd3072594a40004f1648f957b11b4f" category="list-text">Para visualizar eventos de latência:</block>
@@ -759,38 +737,19 @@
   <block id="fc28c48860928b711f31c63cbbeac8d0" category="list-text">Para visualizar eventos do ONTAP para seus sistemas de arquivos FSx for ONTAP, selecione *Revisar*.</block>
   <block id="b89294c44923d00aeca4413b78b17341" category="inline-link-macro">Documentação do ONTAP CLI</block>
   <block id="1c9d8ee06541dbbb5c46a2f2dcb0188e" category="paragraph">O cartão de visualização de eventos do ONTAP exibe o número de eventos EMS por categoria (Capacidade, Disponibilidade e proteção, e Segurança e outros). Para obter uma lista completa dos eventos EMS monitorados, consulte <block ref="95232132a00f2412cfd89d25359e73da" category="inline-link-macro-rx"></block>.</block>
-  <block id="d33ac222baabd8a5273563fe2a419ee3" category="list-text">Na tabela *Clusters*, filtre pelas colunas *Last SSD increase timestamp* ou *Last SSD increase description*.</block>
-  <block id="a218720ad1764a3566691dfa57178ccf" category="paragraph">Os sistemas de arquivos com recomendações de capacidade aparecem no topo da tabela.</block>
-  <block id="ec249c58f3b3eb7688626779c92fc2ea" category="list-text">Selecione o nome de um sistema de arquivos na tabela para abri-lo e visualizar as recomendações.</block>
   <block id="76a0ca3e805dbf2778413ce26855f65b" category="paragraph">O gráfico também exibe os pontos de decisão de recomendação e os pontos de decisão de automação (se o modo de automação estiver ativado). Passe o cursor sobre qualquer ponto de decisão para ver detalhes sobre a recomendação de capacidade ou a ação de automação naquele momento.</block>
   <block id="37b5b20fd94de2275a255ae79e7ac8f0" category="list-text">Para aplicar a recomendação, siga as orientações fornecidas na mensagem de recomendação.</block>
   <block id="95138c66b91ee03084dfba9068536d5e" category="section-title">Alterar o modo de gerenciamento do SSD</block>
-  <block id="75bea9328c43d21648ead08a87bf10a7" category="paragraph">Os modos de gerenciamento de SSD incluem:</block>
-  <block id="0691cfb7cd3c9ba639721e8f1009e52f" category="list-text">*Automatizar*: aumentar automaticamente a capacidade do SSD com base em limites predefinidos</block>
-  <block id="c0b8684a43b1fa6e9f8f11645a25c575" category="list-text">*Nenhum*: Sem recomendações de capacidade ou ações automatizadas</block>
-  <block id="1265c45931617f8276c61e909a9ca008" category="paragraph">Se você selecionar o modo Automatizar, poderá configurar os parâmetros Limiar, Retrospectiva e Previsão, que controlam como o sistema de gerenciamento de capacidade analisa o uso do seu SSD e toma decisões de automação. Se selecionar o modo Recomendar, poderá configurar apenas o parâmetro Limiar.</block>
-  <block id="aabee2ded4098c6bf74ef47a9d869f14" category="list-text">*Limite* (10-90%): a porcentagem de utilização do SSD que aciona recomendações de capacidade ou ações de automação</block>
-  <block id="e2ac4d7ef432e15e5c103e31a0b2f9cf" category="list-text">*Período de observação* (1-200 horas): período utilizado para analisar padrões históricos de uso de SSD</block>
-  <block id="773c50099421b3183829965f31e9419f" category="list-text">*À frente* (1 a 200 horas): período utilizado para projetar as necessidades futuras de capacidade</block>
   <block id="6d8ccfb06da581a2d86feacefa3b4869" category="inline-image-macro">o ícone do menu de ações</block>
   <block id="c9eecdb0eb0ca75174ea4d40e628f365" category="list-text">Na tabela Clusters, encontre o nome do sistema de arquivos. Ao lado, abra <block ref="db26b5e8c520e1d883813594c799d7f7" category="inline-image-macro-rx" type="image"></block> e selecione *Alterar gerenciamento de capacidade de SSD*.</block>
   <block id="b689124bbd04a08329d8f616990fa06d" category="list-text">Escolha o modo de sua preferência:</block>
-  <block id="627b9e640f1785bd7be5aff9d8741dbb" category="list-text">*Nenhum*: desativar gerenciamento de capacidade</block>
-  <block id="496444b8d58f48ae9fb24aa5598a769e" category="list-text">*Recomendação*: defina o parâmetro Limiar para análise de recomendação</block>
-  <block id="e997410074a60221c4db923d26db9751" category="list-text">*Automatizar*: defina os parâmetros de limiar, retrospectiva e previsão para dimensionamento automático da capacidade</block>
-  <block id="3dea2cb2632e143a32d4bed1ffd3f529" category="section-title">Editar em massa os parâmetros de gerenciamento de SSD</block>
-  <block id="52a98bdb03909a35ffb977120e61a393" category="paragraph">Ao selecionar vários sistemas de arquivos para edição em lote:</block>
   <block id="cc009bfb1b3b40af528a54a164d8b953" category="list-text">Na aba *Visão geral*, selecione os sistemas de arquivos que deseja editar na tabela.</block>
   <block id="8cd7391e66f29fd726ffdf9a59961f54" category="admonition">Você pode selecionar sistemas de arquivos individuais ou usar a caixa de seleção do cabeçalho para selecionar todos os sistemas de arquivos visíveis.</block>
-  <block id="b1d2239c82d829e54a9ea5651662da17" category="list-text">Selecione *Alterar gerenciamento de capacidade de SSD* acima da tabela.</block>
   <block id="b97c770bb654f2ef0b93eb759a99c159" category="list-text">Escolha o modo de sua preferência.</block>
-  <block id="c3c051399d43b90a41f5b4085ef45788" category="list-text">Na caixa de diálogo de edição, ajuste os parâmetros Limiar, Retrocesso e Adiantamento conforme necessário.</block>
   <block id="43c2e4748a7a87eb44a6cb86329b0750" category="paragraph">Cada campo de parâmetro inclui uma dica de ferramenta que descreve sua finalidade e intervalo válido. A caixa de diálogo indica os valores atuais ou os valores padrão com base na sua seleção.</block>
   <block id="3f254e874f94d9cc6daffdbea2c76012" category="list-text">Selecione *Aplicar* para aplicar as alterações a todos os sistemas de arquivos selecionados.</block>
-  <block id="87163b97740368f6147eaa72bca1608a" category="paragraph">Os parâmetros são atualizados para todos os sistemas de arquivos selecionados. Os sistemas de arquivos nos modos Recomendar ou Automatizar utilizam os novos parâmetros imediatamente para análise de capacidade e tomada de decisão.</block>
   <block id="84a7874f129070a914f70dd3d70a6716" category="section-title">Analisar tendências de capacidade e pontos de decisão</block>
   <block id="4dbca2bab9fb0222adee0d079e0d2127" category="paragraph">Os pontos de decisão no gráfico indicam quando:</block>
-  <block id="0db031b7f1f975d91c716c7b47a4eaf3" category="list-text">*Pontos de decisão de recomendação*: O algoritmo de recomendação de capacidade identificou que é necessária capacidade adicional de SSD. Esses pontos podem ocorrer a cada 30 minutos se a capacidade de SSD não for aumentada.</block>
   <block id="322cceacdd52c951c88a1d93df7f0dd8" category="list-text">Na guia *Visão geral*, selecione um nome de sistema de arquivos na tabela.</block>
   <block id="c7967065af6ac7703ee14f60f2812ccb" category="list-text">Analise o gráfico de utilização do SSD, que mostra as tendências históricas de capacidade.</block>
   <block id="6f6089a81e1a8064861733b4969654d6" category="list-text">Selecione diferentes intervalos de tempo para visualizar o comportamento da capacidade em vários períodos.</block>
@@ -805,7 +764,6 @@
   <block id="5d9b4714a7a0165dd3acdabe8fbfec83" category="paragraph">Passe o cursor sobre os cabeçalhos das colunas de throughput para obter detalhes do cálculo.</block>
   <block id="c5fbe288f3a29e2574124940a06509ca" category="list-text">Para personalizar as colunas, selecione o ícone de configurações de coluna e escolha quais colunas exibir.</block>
   <block id="35b3a35f3ecc34588b8e96f244fd4a40" category="list-text">Para exportar os dados, selecione o ícone de exportação para baixar um arquivo CSV.</block>
-  <block id="97edac0f494f26b7cf4c816f6bb1ae11" category="list-text">Para realizar operações em lote, selecione vários sistemas de arquivos usando as caixas de seleção e, em seguida, selecione *Editar parâmetros*.</block>
   <block id="b2aeb761bc232400fd3df8f389115970" category="paragraph">Considere estas recomendações ao usar o painel de Overview:</block>
   <block id="1fa1c236c7c4e85b71969a980c4956d3" category="summary">Use o painel de controle de Projetos para monitorar o uso de armazenamento, filtrar dados por projetos ou equipes e analisar o desempenho do volume para otimizar a alocação de recursos.</block>
   <block id="dcc687e70127f35861ac1fa0778b7f6a" category="doc">Utilize o painel de controle de Projetos no Workload Factory para EDA</block>
@@ -861,23 +819,16 @@
   <block id="6373f94eea8c31352a32986b39528f84" category="section-title">Análise AI</block>
   <block id="a0e9b8268d276ba4360cd030f4a16beb" category="paragraph">Embora uma análise básica possa identificar a origem da latência, situações mais complexas envolvendo dados ou componentes de cluster geralmente exigem uma investigação mais aprofundada. A análise por IA proporciona essa solução de problemas mais detalhada, encontrando problemas como volumes sobrecarregados, configuração inadequada ou a necessidade de adicionar mais capacidade, problemas que uma análise básica pode não detectar.</block>
   <block id="f7cc2329f80f5595e6165f0ae01f89d8" category="paragraph">Ao executar a análise de IA, o sistema fornece:</block>
-  <block id="a85c10dc3c62556ae33979822723a252" category="paragraph">A análise de IA requer um ARN de modelo do Amazon Bedrock nas configurações do Workload Factory. Se o Bedrock não estiver configurado, você ainda pode usar o monitoramento de latência e a análise automatizada básica.</block>
-  <block id="aa9409c6c0f733782e6dda3ceddb0522" category="paragraph">O painel de Visão Geral oferece aos administradores de TI um local centralizado para monitorar cargas de trabalho de EDA em vários sistemas de arquivos Amazon FSx for ONTAP. Use-o para verificar rapidamente a integridade e o uso do sistema, escolher onde alocar novos volumes ou trabalhos, encontrar volumes ou SVMs que podem precisar ser movidos e ver quando é hora de aumentar a capacidade ou a taxa de transferência.</block>
-  <block id="3da44da687acce7cdcda37885a84f5a5" category="list-text">*Estado de integridade do cluster*: Um resumo na parte superior destaca eventos de latência, uso de SSD, recomendações de capacidade e eventos do ONTAP EMS em seus sistemas de arquivos.</block>
   <block id="bc367175fa556d183c5708d2d174cdca" category="list-text">*Tabela de clusters*: Uma tabela pesquisável que mostra o uso e o desempenho de cada cluster. Você pode filtrar e classificar os dados, navegar entre as páginas e exportá-los como um arquivo CSV.</block>
   <block id="fa9972ab652846712fa1e09ccaac9fc8" category="paragraph">O indicador de integridade do cluster exibe uma visão rápida da atividade nos sistemas de arquivos que você selecionou. Isso aparece somente se pelo menos um link FSx for ONTAP estiver conectado aos seus sistemas de arquivos.</block>
   <block id="09a06e4cd6e2161d4864df4d4863dfe8" category="list-text">Exibe o número de eventos de latência encontrados nos sistemas de arquivos selecionados. Esta informação aparece somente se o monitoramento de latência estiver ativado.</block>
   <block id="eebb5c4c640c8d5aae10e93f05ea6459" category="list-text">O Workload Factory adiciona automaticamente mais espaço em SSD quando o uso atinge os limites definidos. Ele gerencia isso sozinho, então não é necessário nenhum trabalho manual. Isso funciona bem para ambientes que preferem o gerenciamento automático.</block>
   <block id="95be91e904bdbc9b99df160d0e2cb98f" category="list-text">O Workload Factory analisa como você usa seus SSDs e sugere quando aumentar a capacidade. Você revisa essas sugestões e decide se deseja aplicá-las. Isso mantém você no controle total das alterações de capacidade enquanto ainda se beneficia da análise automatizada.</block>
-  <block id="9aed0efec1adbd817d3bf632ef55c78c" category="list-text">O sistema não fornece recomendações de capacidade nem executa ações automatizadas. Use esta opção se você quiser gerenciar a capacidade por conta própria.</block>
-  <block id="81ebcda90587ec5bdc2f579d8e2ced58" category="paragraph">Quando o Workload Factory está no modo Automate ou Recommend, ele verifica automaticamente cada sistema de arquivos Amazon FSx for ONTAP e executa um algoritmo de recomendação de capacidade. O sistema faz uma varredura a cada 24 horas para verificar se a capacidade do SSD deve ser ajustada.</block>
   <block id="c3a8bcc1273489aff39484b64fd9efe7" category="list-text">Você recebe uma notificação imediata com base nas suas configurações de notificação do Workload Factory.</block>
-  <block id="6e95ed505105923898fa6b95ad157d5b" category="list-text">Identifique sistemas de arquivos com recomendações filtrando a tabela Clusters usando as colunas **Último carimbo de data/hora de aumento de SSD** ou **Última descrição de aumento de SSD**.</block>
   <block id="a3eb814e72de4d40c0767efe37beafe1" category="list-text">A interface mostra o número total de sistemas de arquivos que atualmente possuem recomendações ativas.</block>
   <block id="f7f59f0b5632d026e80fe90b1eec8f63" category="list-text">A porcentagem de uso do SSD que aciona recomendações de capacidade ou ações de automação. Por exemplo, um limite de 80% significa que recomendações ou ações ocorrem quando o uso do SSD atinge 80%. Essa configuração está disponível nos modos Recommend e Automate.</block>
   <block id="d5a40446a028d90d5bf46fe40624722d" category="paragraph">Você pode definir esses parâmetros para cada sistema de arquivos individualmente ou usar a edição em massa para aplicar as mesmas configurações a vários sistemas de arquivos.</block>
   <block id="1b07a2acaea0fa364496ba3afb977975" category="paragraph">O gráfico de utilização do SSD indica quando o sistema fez recomendações de capacidade ou executou ações automatizadas. Esses indicadores mostram como o algoritmo de gerenciamento de capacidade se comportou ao longo do tempo.</block>
-  <block id="bcdcc983b6c844f18e3b8d80d5e41c82" category="list-text">Aparecem quando o sistema detecta que é necessária mais capacidade de SSD. Se a capacidade não tiver sido aumentada, esses pontos podem aparecer a cada 30 minutos. O gráfico mostra cada ponto de decisão quando possível. Se o intervalo de tempo selecionado for muito denso, os pontos são agrupados.</block>
   <block id="47daf1022723b90d90f96e2d735e2267" category="list-text">Aparecem quando o sistema de automação tenta aumentar a capacidade do SSD. Indicam se a ação foi bem-sucedida ou falhou.</block>
   <block id="5d75c0e68111b8bb5d2e043a495c6e39" category="paragraph">Utilize o gráfico de histórico de uso do SSD para:</block>
   <block id="9515f88eb47a770a2eae21e430e5b3ff" category="list-text">Veja com que frequência você precisa alterar o tamanho do armazenamento</block>
@@ -904,8 +855,6 @@
   <block id="456a947e9547d010c7b158d878d435bb" category="paragraph">Quando os mesmos volumes aparecem em várias métricas, o painel usa as mesmas cores na legenda para que você possa acompanhar facilmente esses volumes em diferentes métricas.</block>
   <block id="04bf2aa98e8d18ad472023065bc02b58" category="paragraph">Passe o cursor sobre o gráfico para ver os valores exatos em momentos específicos. Isso ajuda você a associar as alterações de desempenho a eventos ou períodos de tempo. Os dados detalhados podem ajudar você a encontrar problemas de desempenho, confirmar que as otimizações funcionaram e explicar o uso de recursos a outras pessoas.</block>
   <block id="2c9c01f739bda3b88955518e1a8bd5f6" category="doc">Avisos legais para Workload Factory for EDA</block>
-  <block id="ecef6dbbde04af3b41133a448afc36be" category="paragraph">Defina limites de latência para identificar e resolver proativamente problemas de desempenho antes que eles afetem o tempo de execução da simulação. Configure alertas de aviso e críticos, configure notificações por e-mail ou SNS para receber alertas em tempo real, aproveite a análise básica automatizada e, opcionalmente, habilite a análise de IA para cenários complexos configurando um ARN de modelo do Amazon Bedrock.</block>
-  <block id="9524723f7ae06bcfcde3bd095351914f" category="admonition">As credenciais da AWS também são necessárias para usar o recurso de monitoramento de latência, que coleta métricas do CloudWatch para análise de desempenho de volume. Para receber notificações de eventos de latência, configure as preferências de notificação nas configurações do Workload Factory. Para habilitar a análise opcional de IA para cenários de latência complexos, você também deve fornecer um ARN de modelo do Amazon Bedrock. <block ref="9a573596af789d1f770a6210c953bdc7" category="inline-link-macro-rx"></block>.</block>
   <block id="c6fcda3d315da3ee7fd5818580b95ce2" category="paragraph">Ative o painel Visão geral para começar a coletar métricas do CloudWatch para seus sistemas de arquivos FSx for ONTAP. O painel permite que você veja a integridade do cluster, a capacidade e a taxa de transferência em um só lugar.</block>
   <block id="56ec2175657135172133d058c441dd94" category="paragraph">Após o Workload Factory verificar as credenciais com permissões de visualização, ative o painel para começar a coletar métricas do CloudWatch para seus sistemas de arquivos FSx for ONTAP.</block>
   <block id="d13a18ba5d5fe55df783d45bf87a6b38" category="admonition">Após você dar seu consentimento, a coleta de métricas pode levar algum tempo. O painel de controle notificará você enquanto a primeira coleta estiver em andamento.</block>
@@ -938,10 +887,8 @@
   <block id="62a34debf77a6128a6965a2a38f02a39" category="paragraph">Defina limites de aviso e críticos para latência de leitura e escrita para monitorar o desempenho do volume FSx for ONTAP. Você também pode ativar alertas por e-mail ou Amazon SNS para receber notificações em tempo real quando ocorrerem problemas de latência.</block>
   <block id="300b116cb80775fee186061f2db9383b" category="paragraph">Você precisa de pelo menos um FSx for ONTAP sistema de arquivos com volumes implantados em seu ambiente AWS.</block>
   <block id="c5b5706a9b0819cf12786c1caa809bef" category="paragraph">Para visualizar a decomposição de componentes na análise básica, você deve associar um link ao sistema de arquivos FSx for ONTAP. Sem um link, você ainda pode visualizar os gráficos de latência, IOPS e taxa de transferência. Se nenhum link já estiver associado, selecione *Associar link* em EDA, escolha se deseja criar um novo link ou associar um link existente e, em seguida, selecione *Continuar* para ir automaticamente para a página de criação de link em Storage workloads.</block>
-  <block id="66b8b53d32c8c50e6fcd0dadc2aa901f" category="paragraph">(Opcional) Para usar a análise de IA, forneça um ARN de modelo do Amazon Bedrock nas configurações do Workload Factory. Sem ele, você ainda pode usar o monitoramento de latência e a análise básica.</block>
   <block id="59cbd9a4d580062062bfc4ff383f14c2" category="paragraph">Defina limites de aviso e críticos para leitura e gravação. O sistema verifica esses limites continuamente e envia um alerta quando eles são atingidos.</block>
   <block id="11fda7252f626757b0488cd577f27860" category="admonition">Defina o limite de eventos críticos acima do limite de aviso. Caso contrário, você não poderá salvar a configuração.</block>
-  <block id="5a1211a74ff4c3bb3c0672678c971e1f" category="paragraph">O Workload Factory coleta métricas de latência para todos os volumes FSx for ONTAP vinculados às suas credenciais da AWS. Ele reúne essas métricas pelo menos a cada 20 minutos. Os volumes que excedem os limites definidos aparecem na tabela de eventos de latência.</block>
   <block id="d1b1c2aa5d228f69be0ebddab772256e" category="admonition">Se mais de 10 volumes forem afetados, o e-mail exibirá os 10 primeiros volumes e mostrará quantos volumes adicionais são afetados. Você pode visualizar todos os volumes afetados no console do Workload Factory.</block>
   <block id="95ae0d98cc5a0df87238eb0392c461da" category="paragraph">Após a configuração, você pode alterar seus limites a qualquer momento.</block>
   <block id="f40c1de6b7f8b45f157d4a9ef124471c" category="admonition">Defina o limite crítico acima do limite de aviso. Se você definir o limite crítico abaixo do limite de aviso, o sistema exibirá um erro.</block>
@@ -957,27 +904,16 @@
   <block id="13ca4d38a549dd80154f6c31ff972f26" category="paragraph">Se você não configurar nenhum filtro personalizado, os filtros padrão, sistema de arquivos, tipo de volume e intervalo de tempo, continuarão disponíveis, assim você pode continuar visualizando e usando seus painéis.</block>
   <block id="87f0c9dedf72ec5858b069afcb6474bf" category="admonition">Os filtros aparecem no painel na ordem em que você os definiu. Coloque os filtros que você usa com mais frequência no topo para facilitar o acesso.</block>
   <block id="018b86ea23a301b6964d68c015f28735" category="paragraph">Ao aplicar essas tags, o Workload Factory começa a coletar e exibir as métricas do CloudWatch. Seu painel de controle então ajuda você a organizar recursos, acompanhar custos e filtrar itens de acordo com suas necessidades.</block>
-  <block id="46220b67a512908bf4486784f983f3cb" category="paragraph">Use o painel Visão geral para verificar a integridade e a capacidade dos seus sistemas de arquivos FSx for ONTAP. Você pode filtrar os dados, ver recomendações de capacidade, ajustar as configurações de capacidade do SSD e analisar as tendências de desempenho para ajudar a decidir onde alocar volumes e quando aumentar a capacidade.</block>
   <block id="3add6a53fd27e48c56df398ecbb78292" category="paragraph">Use os filtros na parte superior do painel para visualizar sistemas de arquivos específicos. Os filtros se aplicam às seções de latência, utilização, eventos ONTAP e à tabela de clusters.</block>
   <block id="9a30a7ccabea3f518b310e693e0fc96d" category="paragraph">Na parte superior do painel, você vê um resumo da integridade e da atividade dos sistemas de arquivos que você selecionou. Isso aparece somente quando pelo menos um link FSx for ONTAP está conectado aos seus sistemas de arquivos.</block>
-  <block id="ae3614d3cd65ac5c752d924e02a1fa78" category="paragraph">O Workload Factory executa automaticamente uma recomendação de capacidade para cada sistema de arquivos FSx for ONTAP. Você pode encontrar sistemas de arquivos com recomendações filtrando a tabela Clusters.</block>
   <block id="5b9d5469c481b2fd86bb70731779a54a" category="paragraph">Para cada sistema de arquivos, escolha como a capacidade do SSD é gerenciada: receba recomendações manuais ou permita o dimensionamento automático.</block>
-  <block id="1c08c9ffdcf47e8352d0dcea15aa6e82" category="list-text">*Recomendar*: Obtenha recomendações de capacidade que você revisa e aplica manualmente</block>
   <block id="75be33f2f4cc39082bea6e44e8406df7" category="paragraph">O sistema de arquivos alterna imediatamente para o novo modo. Se você escolher Recomendar ou Automatizar, o sistema usa as configurações definidas para analisar a capacidade de storage e tomar decisões.</block>
-  <block id="d5bb16d68714d3db13fbab892226cb41" category="paragraph">Altere as configurações de capacidade do SSD para vários sistemas de arquivos ao mesmo tempo, assim as mesmas configurações serão aplicadas em todos os seus clusters.</block>
-  <block id="60515a553e6eb79b08bb8285ab90f14e" category="list-text">Se todos os sistemas de arquivos selecionados usarem as mesmas configurações, essas configurações aparecerão como padrão na caixa de diálogo de edição.</block>
-  <block id="167cf84f26c8db07780538e5c9c2a1a6" category="list-text">Se algum sistema de arquivos selecionado estiver no modo None, valores padrão serão preenchidos na caixa de diálogo.</block>
-  <block id="31bbbab643d141284e55ffdabc79d809" category="list-text">Se os valores dos parâmetros forem diferentes entre os sistemas de arquivos selecionados, os valores padrão serão exibidos na caixa de diálogo.</block>
   <block id="65bd457971cf8d44b2a0e065d040b668" category="paragraph">Use o gráfico de utilização do SSD para ver como o uso do storage muda ao longo do tempo e identificar padrões.</block>
   <block id="adcae559988943cef6bf4b9ce78904b2" category="list-text">*Pontos de decisão da automação*: O sistema de automação tentou aumentar a capacidade do SSD. Esses pontos mostram se a ação foi bem-sucedida ou falhou.</block>
   <block id="27e86a81d2f78cd7f4181479163bbbeb" category="paragraph">A tabela de clusters fornece uma visão detalhada de cada sistema de arquivos FSx for ONTAP com métricas de desempenho e uso.</block>
   <block id="27a39463cff24c056326230d2490c6d4" category="list-text">*Monitoramento regular*: Verifique o painel de controle com frequência para identificar tendências antes que se tornem problemas.</block>
-  <block id="849da6653ce7bf79c189bb41b1834198" category="list-text">**Defina limites claros**: escolha limites de gerenciamento de SSD que se adequem à sua carga de trabalho e aos seus planos de capacidade.</block>
   <block id="5f387dd12e491b49648cab4ae9d1263e" category="list-text">**Use filtros**: aplique filtros de região e de conta para se concentrar nas partes da sua infraestrutura que você deseja revisar.</block>
-  <block id="5e810eea3af8d4d51d6899ff557b31d2" category="list-text">**Consulte as recomendações rapidamente**: filtre a tabela Clusters por **Data e hora do último aumento de SSD** ou por descrição para encontrar sistemas de arquivos com recomendações de capacidade. Verifique-as e tome as medidas necessárias para evitar ficar sem espaço.</block>
-  <block id="9c4d4827772eaa05e6c2cafcf423f1ae" category="list-text">**Escolha o modo correto**: Use o modo **Recomendar** se você quiser aprovar as alterações de capacidade você mesmo. Use o modo **Automação** se você quiser que o sistema gerencie a capacidade automaticamente.</block>
   <block id="7780e54da604364e93f91b1ab2a73f3e" category="list-text">**Observe os pontos de decisão**: verifique os pontos de decisão nos gráficos de capacidade para ver como o sistema está tomando decisões e confirme se as configurações atendem às suas necessidades.</block>
-  <block id="bbfdb9c9eb2013e51184ee47b811d284" category="list-text">**Edição em massa**: Ao gerenciar vários sistemas de arquivos, use a edição em massa para manter as configurações de capacidade consistentes.</block>
   <block id="0828a499bedded78f0e58a1aaac8fc54" category="paragraph">Use o painel de controle de Projetos para monitorar o uso de storage em seus sistemas de arquivos e volumes do FSx for ONTAP. Filtre os dados por projeto, equipe ou aplicativo. Visualize o desempenho geral e por volume para ajudar a planejar a capacidade e usar os recursos de forma mais eficiente.</block>
   <block id="6feca8836221824749b3de5d47b2f6c3" category="paragraph">A filtragem permite que você se concentre em grupos específicos de recursos de storage. Isso facilita a identificação de tendências, a detecção de problemas e a criação de relatórios para as partes interessadas. Ao usar vários filtros em conjunto, você pode responder a perguntas específicas, como: "Quanto storage a equipe do projeto ASIC está usando?" ou "Quais volumes na região US-West têm o maior número de IOPS?"</block>
   <block id="ab9c9a87abc6a80362a1e681ade6ed57" category="paragraph">Analisar o desempenho do volume total e dos volumes individuais ajuda você a planejar a capacidade e melhorar o desempenho. A visualização Total mostra as tendências gerais. A visualização de Volume ajuda você a encontrar volumes específicos que podem precisar de atenção, ajuste ou mais recursos.</block>
@@ -1018,16 +954,13 @@
   <block id="7e9591a005bdef4cdf16dfd575186f3b" category="paragraph">Você pode ajustar a visualização e correlacionar picos de latência com alterações em IOPS e taxa de transferência. Marcadores de violação e detalhes ao passar o mouse ajudam você a ver quando os limites foram excedidos e a analisar as principais métricas da violação detectada.</block>
   <block id="94865ed9933801afc860536ada02e496" category="summary">Visualize e analise eventos de latência para encontrar problemas de desempenho com volumes FSx for ONTAP. Use análise básica e, opcionalmente, análise de IA para identificar a causa raiz e correções sugeridas.</block>
   <block id="939c818555e5fa65655d447cc97817ae" category="section-title">Visualizar volumes com latência acima do limite</block>
-  <block id="bbc7d21521d2a10f49812344ac8d5c6a" category="paragraph">A tabela "Volumes com latência acima do limite" mostra os volumes que ultrapassaram o limite de latência de aviso ou crítico nas últimas 72 horas.</block>
   <block id="f06921222f3510361d45443110e72880" category="list-text">Revise as informações de cada evento na tabela.</block>
   <block id="3cd32cbc73706e6bc220ece19622d604" category="list-text">O painel de análise de latência fornece uma visão rápida da violação, incluindo um gráfico de latência e controles para período e tipo. Selecione *Ver análise completa* para abrir a página detalhada de análise de latência com análise básica, análise de IA (opcional) e gráficos adicionais. Consulte <block ref="6ebd25eb4c135c18dd20612e63ec5166" category="inline-link-macro-rx"></block> para obter detalhes.</block>
   <block id="0665519f24690502dfcb8f5913d6b056" category="paragraph">Selecione um evento de latência na coluna *Gravidade* para abrir o painel de análise de latência desse evento. O painel inclui guias que fornecem diferentes visualizações do evento de latência.</block>
-  <block id="c1316b241fd76c7d425cf326dd63f142" category="paragraph">Se um ARN de modelo do Amazon Bedrock estiver configurado, você pode executar análises de IA em cenários de dados e clusters. Se o Bedrock não estiver configurado, um link para a página de configuração de Storage Workloads desse sistema de arquivos será fornecido, onde você pode configurar o acesso ao Bedrock.</block>
   <block id="0f76eb72044a145a7b1eb778e6653a96" category="list-text">*Básico*: Exibe os resultados de uma análise automática. Se estiver vinculado ao sistema de arquivos, exibe um detalhamento dos componentes e mostra qual deles está causando a latência. Se não houver vínculo, você será solicitado a adicionar um. Um gráfico interativo de latência das métricas do CloudWatch para o volume afetado é exibido. Ele exibe métricas de leitura ou gravação, dependendo de qual alarme disparou o evento. Você pode escolher diferentes intervalos de tempo e usar um filtro para visualizar todas, leitura, gravação ou operações de metadados.</block>
   <block id="56dacd4284bdced92c0b004472a11758" category="list-text">*Análise por IA*: mostra uma investigação mais aprofundada para determinar a causa raiz específica e as possíveis etapas de remediação.</block>
   <block id="633009349fd0d4ddd69254b14ddb614b" category="list-text">*Análise detalhada de latência*: Exibe gráficos interativos das métricas do CloudWatch para o volume afetado. Esses gráficos mostram latência, IOPS e taxa de transferência ao longo do tempo. Eles exibem métricas de leitura ou gravação, dependendo de qual alarme disparou o evento. Você pode escolher diferentes intervalos de tempo e usar um filtro para visualizar todas, leitura, gravação ou operações de metadados.</block>
   <block id="b40f6683a1eb1ae3afa3737db2b06397" category="list-text">Revise a guia *Básico*. Se um link estiver conectado, abra a análise detalhada do componente para ver de onde vem o atraso. Se nenhum link estiver conectado, selecione o prompt para conectar um e assim você poderá analisar os componentes.</block>
-  <block id="48b3037533aefc21a7c0b33e38b9d2cf" category="list-text">Na aba *Análise de IA*, selecione *Analisar* para visualizar os resultados de uma investigação mais aprofundada, como possíveis problemas de dados ou de cluster. Isso ajuda a determinar a causa raiz específica e possíveis etapas de correção.</block>
   <block id="92ffa2df9924192cd277aff197d336a5" category="list-text">Selecione *Ver análise completa* para visualizar os resultados completos da análise de IA, incluindo gráficos de desempenho que mostram latência, IOPS e taxa de transferência das métricas do CloudWatch durante o período selecionado.</block>
   <block id="ac750ed2f2d8556a0303fc989b1e0872" category="list-text">*Monitore tendências*: Verifique regularmente a tabela de Volumes com latência acima do limite para identificar padrões ou problemas recorrentes que possam indicar problemas de configuração.</block>
   <block id="22da945b536d75359bd27d704612a787" category="summary">Utilize os gráficos interativos para analisar as tendências de latência de volume ao longo do tempo, identificar padrões e acompanhar a eficácia das medidas corretivas.</block>
@@ -1051,4 +984,113 @@
   <block id="6b0164f0c47ac1625dba2aff92f54ca0" category="list-text">Utilize os marcadores de pico e o resumo da violação (por exemplo, "1 violação crítica detectada neste período") para correlacionar aumentos de latência com alterações de IOPS e taxa de transferência.</block>
   <block id="e40e1e13d45e3125fff8c83420101578" category="list-text">Passe o cursor sobre um marcador de violação para visualizar os detalhes da violação (gravidade, horário de detecção, latência mediana CW e componentes de latência QoS).</block>
   <block id="d55195576b5cc1af51f0d8ba78078a8c" category="admonition">Os gráficos utilizam as métricas do CloudWatch. Estas podem diferir ligeiramente dos componentes de latência reportados pelo QoS, pois são coletadas de maneiras diferentes.</block>
+  <block id="1eda45f1f79ca6e9d6b738032665f7c6" category="doc">Análise de latência de IA com controles de custo</block>
+  <block id="b171182b7dc211a76d3e7cecbdf5e425" category="paragraph">Como administrador do Workload Factory, você pode controlar o acesso à análise de latência por IA em toda a sua organização.</block>
+  <block id="4c9d3f8b46f94437f92a47d3612a2829" category="list-text">*NetApp-créditos de IA gerenciados*: Se o seu administrador habilitar, você pode usar a análise de IA por meio da integração gerenciada do Amazon Bedrock da NetApp. Nenhuma configuração adicional é necessária. Seu uso mensal é limitado pelo seu orçamento atribuído. Se você atingir o limite mensal, os recursos com IA serão desativados e você verá uma mensagem.</block>
+  <block id="67ee5da1047f90d8a684f7e0d2ca1944" category="list-text">*Desativado pelo administrador*: Se o seu administrador desativar os recursos de IA, as opções de análise de IA ficarão acinzentadas e você verá uma mensagem informando que o recurso está desativado.</block>
+  <block id="69e316ff96b412dd2a5045f8dd2f433c" category="section-title">Gerenciamento de aumento de throughput elástico</block>
+  <block id="a01f5f5609c9aee121b699114cfe006f" category="paragraph">Agora você pode gerenciar o comportamento de aumento de throughput na página Visão geral do EDA para um ou mais sistemas de arquivos FSx for ONTAP selecionados.</block>
+  <block id="9c3ee7dcbca3424fcc3c760549aa303d" category="list-text">*Seleção de modo*: escolha *Automatizar* ou *Recomendar*.</block>
+  <block id="b9722197734c8293fedc4e7c6db77abe" category="list-text">*Atualizações em lote*: selecione um ou mais sistemas de arquivos e aplique as alterações de modo e parâmetros em uma única ação.</block>
+  <block id="1a97c66f134399c6e8ddf03e8cd9055e" category="list-text">*Caixa de diálogo de gerenciamento de taxa de transferência*: edite as configurações de aumento de taxa de transferência com os valores padrão do EDA na caixa de diálogo.</block>
+  <block id="0e71e5ed033b79a12a3d33146bbef832" category="list-text">*Configurações avançadas*: Configure parâmetros adicionais de decisão de throughput em uma seção expansível de *configuração avançada*.</block>
+  <block id="3c559babe76da927fd273d0640ba2089" category="list-text">*Visibilidade da tabela*: Uma nova coluna *Gerenciamento de throughput* está disponível na tabela Clusters e pode ser ativada nas configurações da coluna.</block>
+  <block id="b353daec82916c89eec0f9b0557132c1" category="list-text">*Configuração da placa superior*: A placa superior agora suporta a configuração do modo de aumento de throughput, semelhante ao gerenciamento de SSD.</block>
+  <block id="e6ae1bdcdd4c1d6a5bc23c326f27ff3f" category="inline-link-macro">Aprenda a usar o painel de visão geral</block>
+  <block id="070faad8fac25fb3d4c659a4b7497b19" category="paragraph"><block ref="0a3eee7cb6c31ec86c09cd7ae18ee1d3" category="inline-link-macro-rx"></block>.</block>
+  <block id="21b694dc2503eab08ab245a8bcfe9f1c" category="inline-link">Aprenda sobre administração de IA</block>
+  <block id="95586dc24a07faa8b220610ee081b258" category="admonition">Se o administrador da sua conta desativou os recursos de IA, você verá uma mensagem e não poderá usar a análise de IA. Entre em contato com seu administrador ou <block ref="8a07854225cea4e549749d8d6bd03ae4" category="inline-link-rx"></block>.</block>
+  <block id="8aa7f64b5600149a4f1b16f3cd4cdf44" category="paragraph">A disponibilidade da análise por IA depende da configuração da sua conta:</block>
+  <block id="79280f8412f92a7b9f71d47cf17b93e8" category="list-text">*NetApp-créditos de IA gerenciados ativados*: você pode executar análises de IA sem configuração adicional do Bedrock.</block>
+  <block id="b22abc9ad9d115a1ead6c959afc1a6d3" category="list-text">*Desativado pelo administrador*: As opções de IA não estão disponíveis.</block>
+  <block id="10fe983c3658bd7369e2e51b32dd02b0" category="paragraph">Se os créditos de IA gerenciados pela NetApp estiverem ativados, mas seu orçamento mensal for atingido, a análise de IA ficará indisponível e uma mensagem será exibida.</block>
+  <block id="de79278e73fba0adc101d9d3c999eb2d" category="paragraph">O painel de Visão Geral oferece aos administradores de TI um local centralizado para monitorar as cargas de trabalho de EDA em vários sistemas de arquivos FSx for ONTAP. Use-o para verificar rapidamente a integridade e o uso do sistema, escolher onde alocar novos volumes ou trabalhos, encontrar volumes ou SVMs que podem precisar ser movidos e ver quando é hora de aumentar a capacidade ou a taxa de transferência.</block>
+  <block id="2f25e466d496297f51432be2f864f308" category="list-text">*Estado de integridade do cluster*: Um resumo na parte superior destaca eventos de latência, uso de SSD, status do modo de throughput, recomendações de capacidade e eventos do ONTAP EMS em seus sistemas de arquivos.</block>
+  <block id="929261095300bce39be28cdc60e46b85" category="list-text">*elasticidade do sistema de arquivos*</block>
+  <block id="20ed77fd0e548f70d1a8b8bd340ed628" category="list-text">*Capacidade do SSD*: Mostra quantos sistemas de arquivos usam Automate, Recommend ou None para gerenciar a capacidade do SSD.</block>
+  <block id="f811d9a1edf56398351dffaef0b6506e" category="list-text">*Taxa de transferência*: Mostra quantos sistemas de arquivos usam Automatizar, Recomendar ou Nenhuma para gerenciar a taxa de transferência.</block>
+  <block id="94e78450902ff8802101a87715f2120e" category="paragraph">Selecione um sistema de arquivos para abrir os detalhes do cluster, incluindo informações do cluster, valores de capacidade do SSD e o gráfico de capacidade do SSD ao longo do tempo.</block>
+  <block id="7ae10da71cdf204162f214a176b66232" category="list-text">*Notificar apenas (modo de recomendação)*</block>
+  <block id="a50d39f8ae7bb4152ca8de0ad153c7d5" category="list-text">Se você não habilitou o gerenciamento de capacidade SSD, o sistema não faz recomendações de capacidade nem executa ações automatizadas. Use esta opção se você quiser gerenciar a capacidade por conta própria.</block>
+  <block id="f015d9c2fdd7ed0dc64dd7b4f0a18c1f" category="list-text">*Previsão* (1-200 horas)</block>
+  <block id="38c7d65d5f4a826a4cbebb3cbd830aa7" category="section-title">Gerenciamento de throughput</block>
+  <block id="2d348ce7eda962f77c6f3fda676f0ef3" category="paragraph">Você pode configurar o comportamento de aumento elástico de throughput para um ou vários sistemas de arquivos.</block>
+  <block id="9742c6be7550041a8a978c20a7f329b5" category="list-text">O Workload Factory avalia a pressão de throughput e fornece recomendações para você aplicar.</block>
+  <block id="2f882e10485d69032dad3d1a3d01d0c8" category="list-text">O Workload Factory aumenta a taxa de transferência automaticamente quando as condições configuradas são atendidas.</block>
+  <block id="a405996fe13edb89232941c32273c746" category="list-text">Se você não habilitou o gerenciamento de throughput, o sistema não faz recomendações nem executa ações automatizadas. Use esta opção se você quiser gerenciar a capacidade por conta própria.</block>
+  <block id="d3aed1774bd96469066136147ccf776d" category="section-title">Parâmetros de taxa de transferência</block>
+  <block id="f4df5bd5733eb09f7877774ff6b6785e" category="paragraph">A caixa de diálogo de configuração de taxa de transferência inclui:</block>
+  <block id="cefa84109bb319467bf84082791215a9" category="list-text">*Limite de utilização* (50-100%, padrão 80%): percentual de utilização da capacidade de processamento que aciona recomendações ou automação.</block>
+  <block id="88e1a3bdc81a3ce0c3ca08f4b614c81b" category="paragraph">Os parâmetros avançados de taxa de transferência estão disponíveis em uma seção expansível de *Configuração avançada*.</block>
+  <block id="9ca0190a3d03e23e117e89b8b7ddadea" category="list-text">*Período de avaliação (horas)* (12-72 horas, padrão 24)</block>
+  <block id="58238753e59408aed401e0d78bd759e8" category="list-text">*Métricas violadas (%)* (padrão 66%): limite percentual para determinar a violação</block>
+  <block id="b193a1ca71211b390aed1c0437449230" category="list-text">*Período de violações consecutivas (horas)* (1-5 horas, padrão 2)</block>
+  <block id="5f66ad8118a41aafd37415323727b06c" category="list-text">*Métricas de violação consecutiva (%)* (padrão 95%)</block>
+  <block id="622a5b145e5cdfd92b8124baf3f8e5d7" category="list-text">*Latência mínima (ms)* (padrão 10 ms)</block>
+  <block id="4067af77fe7df9f9047c8c4eeb9490b5" category="list-text">*SKU de capacidade máxima de processamento* (padrão: nenhum)</block>
+  <block id="e4612c732ae1c64db60c83cb8cae8381" category="section-title">Recomendações de elasticidade do sistema de arquivos</block>
+  <block id="cc8b8287cb9875fcd93e6deecaaa1c10" category="paragraph">Quando o Workload Factory está no modo Automatizar ou Recomendar, ele verifica automaticamente cada sistema de arquivos FSx for ONTAP e executa um algoritmo de recomendação de capacidade. O sistema realiza verificações periódicas para determinar se a capacidade ou a taxa de transferência do SSD precisam ser ajustadas.</block>
+  <block id="1c5b8d97751372161e201f333f1b4f62" category="list-text">Identifique sistemas de arquivos com recomendações filtrando a tabela Clusters.</block>
+  <block id="25dc82340ec038ecbda8ab79823e242a" category="list-text">Aparecem quando o sistema detecta que é necessária mais capacidade de SSD. Se a capacidade não tiver sido aumentada, esses pontos podem aparecer a cada 30 minutos. O gráfico mostra cada ponto de decisão quando possível. Se o intervalo de tempo selecionado for muito denso, os pontos são agrupados.</block>
+  <block id="d5781ee1e2ae2729d18fc69fc41ec67a" category="paragraph">Você só pode selecionar sistemas de arquivos que estejam configurados com um link. <block ref="959c1faca1dbb57f8dac1b5058bf9c58" category="inline-link-macro-rx"></block>.</block>
+  <block id="eccc4e57aadb72693d5183af6a022273" category="paragraph">Defina limites de latência para identificar e resolver proativamente problemas de desempenho antes que eles afetem o tempo de execução da simulação. Configure alertas de aviso e críticos, configure notificações por e-mail ou SNS para receber alertas em tempo real, aproveite a análise básica automatizada e, opcionalmente, use análise de IA para cenários complexos.</block>
+  <block id="4e63edb8bda7c519ba5aff97d0f43dc4" category="admonition">As credenciais da AWS também são necessárias para usar o recurso de monitoramento de latência, que coleta métricas do CloudWatch para análise de desempenho de volume. Para receber notificações de eventos de latência, configure as preferências de notificação nas configurações do Workload Factory. A análise opcional de IA para cenários complexos de latência está disponível quando a análise de IA gerenciada pela NetApp está habilitada. <block ref="9a573596af789d1f770a6210c953bdc7" category="inline-link-macro-rx"></block>.</block>
+  <block id="3807ad76b2b22289bd370b283d385057" category="list-text">O sistema de arquivos deve ser configurado com um link. <block ref="959c1faca1dbb57f8dac1b5058bf9c58" category="inline-link-macro-rx"></block>.</block>
+  <block id="a027a945e2e098018b818ab7e14eca34" category="paragraph">Você deve configurar as credenciais da AWS no Workload Factory com pelo menos permissões de leitura (visualização) para General Storage. Credenciais _básicas_ não são suportadas porque não incluem as permissões de leitura necessárias para as métricas do CloudWatch.</block>
+  <block id="2733df4f5d332cf0fbf7a918cce60410" category="inline-link-macro">Ative e configure os modos de gerenciamento de capacidade do SSD</block>
+  <block id="806c2769f2f8cebfc3e1fb594f627f17" category="list-text"><block ref="4f6b89d6de6199c28054a07fffc78ba6" category="inline-link-macro-rx"></block> (Recomendar, Automatizar ou Nenhuma)</block>
+  <block id="c3bb386a8cfadc37852e3ce68761e026" category="inline-link-macro">Ative e configure os modos de gerenciamento de taxa de transferência</block>
+  <block id="ef059ce8f7b1372dd14393349e748478" category="list-text"><block ref="5d06130fa1ae401255bccec02e322846" category="inline-link-macro-rx"></block> (Recomendar, Automatizar ou Nenhuma)</block>
+  <block id="683bf754f6d5b462112697dff4acbaff" category="paragraph">A tabela "Volumes com latência acima do limite" mostra os volumes que ultrapassaram o limite de latência de aviso ou crítico.</block>
+  <block id="43e51668c0ad9e465aa60ee53e88035c" category="paragraph">A análise de latência ajuda você a encontrar rapidamente o que está causando lentidão sem precisar investigar manualmente.</block>
+  <block id="ebd4b28f0632a0dc47fff6d0e28857b1" category="inline-link-macro">Gerencie recursos de IA</block>
+  <block id="5b06554fbb08d458e1042daf51052ac2" category="admonition">Para usar a análise de IA, você precisa ter a IA gerenciada pela NetApp ativada. Para obter mais informações, consulte <block ref="69e7c47a4606efdcdab5ffc01c37b56c" category="inline-link-macro-rx"></block>.</block>
+  <block id="d4aa2b3d15c42ad4fd480c90a0dd2ff0" category="paragraph">A disponibilidade da análise de IA depende da configuração da sua conta. Se a IA gerenciada pela NetApp estiver ativada, você pode executar a análise de IA sem precisar configurar o Bedrock. A análise de IA fica indisponível se o limite de crédito mensal for atingido ou se o seu administrador desativar os recursos de IA.</block>
+  <block id="d8f181efec7f7692ea2986c04f76ad86" category="list-text">Na aba *Análise de IA*, selecione *Analisar* (quando disponível) para visualizar os resultados de uma investigação mais aprofundada, como possíveis problemas de dados ou de cluster. Isso ajuda a determinar a causa raiz específica e as possíveis etapas de correção.</block>
+  <block id="6b8fd76380721adcae59e2f78429da04" category="paragraph">Se você ainda não configurou as credenciais da AWS, consulte <block ref="53eda59ec5ff13cb6e6660c47027e8c7" category="inline-link-macro-rx"></block>.</block>
+  <block id="4a8ea5fe52d04902d327965c730c1ad7" category="paragraph">Para obter instruções sobre como criar e associar links, consulte <block ref="27f80dd01569e18971f783f257cc7294" category="inline-link-macro-rx"></block>.</block>
+  <block id="b13e77bb3b51ad8a4cb2477cb77b8724" category="section-title">Ative as configurações de IA</block>
+  <block id="c7eb3bf26071ff1a6e729a2e8e5e9474" category="paragraph">Se o administrador da sua conta desativou os recursos de IA, você verá uma mensagem e não poderá usar a análise de IA. Entre em contato com seu administrador ou consulte <block ref="a4efb9d0168cfdc15063741b91ed0040" category="inline-link-macro-rx"></block>.</block>
+  <block id="cb3c4d469cc9b1d3a35815fa8abbc3e3" category="paragraph">O Workload Factory coleta métricas de latência para todos os volumes FSx for ONTAP vinculados às suas credenciais da AWS. Os volumes que excedem os limites definidos aparecem na tabela de eventos de latência.</block>
+  <block id="4f6828db383900c2a44b6c32349373a7" category="paragraph">Para ativar as notificações, consulte <block ref="760d5a248a4ffda4abc117648b19c119" category="inline-link-macro-rx"></block>.</block>
+  <block id="42e48676b85dbff1f2792294e6831dc0" category="list-text">Selecione *Adicionar filtros*.</block>
+  <block id="c71e0da6508887a77f334a554ab5495a" category="summary">Use o painel Visão geral para monitorar a integridade do cluster, visualizar recomendações de capacidade, gerenciar configurações de SSD e taxa de transferência e analisar tendências de desempenho em seus sistemas de arquivos FSx for ONTAP.</block>
+  <block id="4c3cb97ad8dafb44b4527de840549941" category="paragraph">Use o painel Visão geral para verificar a integridade e a capacidade dos seus sistemas de arquivos FSx for ONTAP. Você pode filtrar os dados, ver recomendações de capacidade, ajustar as configurações de SSD e de taxa de transferência e analisar as tendências de desempenho para ajudar a decidir onde alocar volumes e quando aumentar a capacidade.</block>
+  <block id="3e245db3deb2fe7b566f9dfe8f122ad3" category="list-text">*Elasticidade do sistema de arquivos*:</block>
+  <block id="f3e0de8b6d05c856fde2eaa835f504ef" category="section-title">Visualize e aplique recomendações de capacidade ou throughput</block>
+  <block id="e07b408f972ad269d9fed5451f31d8c9" category="paragraph">O Workload Factory executa automaticamente recomendações para cada sistema de arquivos FSx for ONTAP. Você pode encontrar sistemas de arquivos com recomendações filtrando a tabela Clusters.</block>
+  <block id="134805f5ae47607c74a2fad588bcc889" category="list-text">Na tabela *Clusters*, filtre pelas colunas de tempo ou detalhes relevantes.</block>
+  <block id="24d2cca093d1c5de7004998f60efdd3e" category="paragraph">Os sistemas de arquivos com recomendações de capacidade ou taxa de transferência aparecem no topo da tabela.</block>
+  <block id="165679cbea8b2f7dd4336d430e4dd726" category="list-text">Selecione um nome de sistema de arquivos na tabela para abrir os detalhes do cluster.</block>
+  <block id="33c83a7b34dbfa47935b0be5b097865d" category="list-text">Analise a recomendação e o gráfico.</block>
+  <block id="fd896caec9b1904e01ed5b6a90b096d9" category="paragraph">O gráfico apresenta o uso atual juntamente com as tendências históricas.</block>
+  <block id="7269a303313716fe145ba2b18acc49d7" category="list-text">No canto superior direito do gráfico, selecione o intervalo de tempo para alterar o período exibido.</block>
+  <block id="c7ac58faf1984cf107f3421908d2207c" category="list-text">Selecione *Ativar gerenciamento de capacidade SSD* e, em seguida, selecione *Aplicar*.</block>
+  <block id="da35cbad278570472c076b6042a5b528" category="list-text">Configure os parâmetros de gerenciamento de capacidade do SSD:</block>
+  <block id="166c4a53ef8fc50b9b03ca91c1c677bc" category="list-text">*Limite (%)*: percentual de utilização do SSD que aciona uma recomendação</block>
+  <block id="87ad0cdc7f64b3a67d168c0b688707d9" category="list-text">*Período de análise retrospectiva (%)*: período histórico de dados de utilização para análise</block>
+  <block id="c145adb97f2b8334fc44cf65b5905694" category="list-text">*Previsão (%)*: projeção de utilização para o planejamento futuro da capacidade</block>
+  <block id="b1cdaa357e55e42271ce9aa34e86e440" category="section-title">Alterar o modo de gerenciamento de throughput</block>
+  <block id="86161e58ce8677bff58de719cb9f29a8" category="paragraph">Para cada sistema de arquivos, escolha como o aumento de taxa de transferência é gerenciado.</block>
+  <block id="441fc54d05bba2a603a05c500cf068c7" category="list-text">Na guia *Visão geral*, selecione um ou mais sistemas de arquivos na tabela Clusters.</block>
+  <block id="0231f044766e71e4fe49a62ba8e8bbbe" category="list-text">Selecione *Alterar gerenciamento de taxa de transferência*.</block>
+  <block id="652aab445f49bb41fa3e8774b5719cf2" category="list-text">Selecione *Ativar gerenciamento de taxa de transferência* e, em seguida, selecione *Aplicar*.</block>
+  <block id="16393cf33b95f8ff007d76d513b875d7" category="list-text">Na caixa de diálogo, configure os parâmetros de gerenciamento de throughput:</block>
+  <block id="083678f0efe5919237188ee0ee5d0b90" category="list-text">*Janela de avaliação (horas)*: Período de tempo para analisar os padrões de throughput</block>
+  <block id="ed38b15c549d9cd41a86a3787f5fee23" category="list-text">*Métricas violadas (%)*: limite percentual para determinar a violação</block>
+  <block id="5e1e1daa7e6d115a54180e147895003e" category="list-text">*Período de violações consecutivas (horas)*: duração de violações consecutivas antes da tomada de providências</block>
+  <block id="91455d18a42b79b1a34df0d97bfbaffd" category="list-text">*Latência mínima (ms)*: limiar de latência usado para determinar o aumento da taxa de transferência</block>
+  <block id="0a2daf37cc4cac8c9a3da95290e9a399" category="list-text">*Throughput máximo (SKUs)*: SKU de throughput máximo permitido</block>
+  <block id="6b482ace535080820ca5dea3bb557cb6" category="paragraph">Os sistemas de arquivos selecionados alternam imediatamente para o novo modo de taxa de transferência.</block>
+  <block id="be76a5f710c434b57d7bb9106913548d" category="section-title">Gerenciar parâmetros de edição em massa</block>
+  <block id="399db4c92643ea16a6e10865b34f5b4f" category="paragraph">Altere as configurações de vários sistemas de arquivos simultaneamente para que as mesmas configurações sejam aplicadas em todos os seus clusters.</block>
+  <block id="93343e8a72e86eb0283fa9c6fb77b48b" category="list-text">Selecione *Alterar gerenciamento de capacidade de SSD* ou *Alterar gerenciamento de taxa de transferência* acima da tabela.</block>
+  <block id="a707a072d0b2b11d2c3e5a2160f9cd48" category="list-text">Na caixa de diálogo de edição, ajuste os parâmetros conforme necessário.</block>
+  <block id="80c68bda2149e685b2c9d4a63c1abe0b" category="paragraph">Os parâmetros são atualizados para todos os sistemas de arquivos selecionados. Os sistemas de arquivos nos modos Recomendar ou Automatizar utilizam os novos parâmetros imediatamente para análise e tomada de decisão.</block>
+  <block id="232af3ec8ca37d39f0b49ddb6c81830a" category="list-text">*Pontos de decisão de recomendação*: O algoritmo de recomendação de capacidade identificou que é necessária capacidade adicional de SSD.</block>
+  <block id="0d606a9207ef786e2b3dc99ea3fe3ad8" category="list-text">**Defina limites claros**: Escolha limites de uso de SSD e parâmetros de taxa de transferência que se adequem à sua carga de trabalho e aos seus planos de capacidade.</block>
+  <block id="c6e183b5112db7515b7bc4904a3b374b" category="list-text">**Analise as recomendações rapidamente**: filtre a tabela Clusters para encontrar sistemas de arquivos com recomendações de capacidade ou taxa de transferência. Verifique-as e aja para evitar a falta de espaço.</block>
+  <block id="0ecfcdfed86b687b39299cccc3380def" category="list-text">**Escolha o modo correto**: use o modo **Recomendar** se você quiser aprovar as alterações de capacidade ou de throughput manualmente. Use o modo **Automatizar** se você quiser que o sistema gerencie a capacidade ou o throughput automaticamente.</block>
+  <block id="88a7c4b8bd498e193a117097af5581b1" category="list-text">**Edição em massa**: ao gerenciar vários sistemas de arquivos, use a edição em massa para manter as configurações consistentes.</block>
+  <block id="951a51b60db3d63eb71726cd5fe6fbad" category="section-title">3 de agosto de 2026</block>
 </blocks>

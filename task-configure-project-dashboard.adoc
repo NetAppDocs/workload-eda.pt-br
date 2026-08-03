@@ -40,7 +40,7 @@ Se você não configurar nenhum filtro personalizado, os filtros padrão, sistem
 +
 Se você ainda não configurou seu painel de controle, será solicitado automaticamente que o faça.
 
-. Selecione *+ Add filters*.
+. Selecione *Adicionar filtros*.
 . Para cada filtro personalizado que você deseja criar, adicione os detalhes:
 +
 ** Nome do rótulo do filtro (o nome exibido no painel)

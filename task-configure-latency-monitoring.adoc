@@ -29,7 +29,7 @@ Você deve adicionar as credenciais da AWS ao Workload Factory com permissões d
 
 As permissões de modo _Basic_ e modo _Read-only_ não são suportadas para monitoramento de latência.
 
-Se você ainda não configurou as credenciais AWS, consulte link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Adicionar credenciais da AWS"^].
+Se você ainda não configurou as credenciais da AWS, consulte link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Adicionar credenciais da AWS"^].
 
 
 
@@ -49,12 +49,10 @@ Para obter instruções sobre como criar e associar links, consulte link:https:/
 
 
 
-[[amazon-bedrock-model-arn-optional]]
-=== ARN do modelo Amazon Bedrock (opcional)
+[[turn-on-ai-settings]]
+=== Ative as configurações de IA
 
-(Opcional) Para usar a análise de IA, forneça um ARN de modelo do Amazon Bedrock nas configurações do Workload Factory. Sem ele, você ainda pode usar o monitoramento de latência e a análise básica.
-
-Para obter mais detalhes, consulte link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/requirements-knowledge-base.html#basic-genai-requirements["Requisitos básicos do GenAI"^].
+Se o administrador da sua conta desativou os recursos de IA, você verá uma mensagem e não poderá usar a análise de IA. Entre em contato com seu administrador ou consulte link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["Aprenda sobre administração de IA"^].
 
 
 
@@ -92,7 +90,7 @@ NOTE: Os limites de latência definidos no EDA aplicam-se a toda a sua conta por
 
 
 .Resultado
-O Workload Factory coleta métricas de latência para todos os volumes FSx for ONTAP vinculados às suas credenciais da AWS. Ele reúne essas métricas pelo menos a cada 20 minutos. Os volumes que excedem os limites definidos aparecem na tabela de eventos de latência.
+O Workload Factory coleta métricas de latência para todos os volumes FSx for ONTAP vinculados às suas credenciais da AWS. Os volumes que excedem os limites definidos aparecem na tabela de eventos de latência.
 
 
 

@@ -23,6 +23,9 @@ A análise de latência coleta métricas do CloudWatch para atividade de leitura
 Se a latência aumentar, o Workload Factory analisa automaticamente as métricas de latência de QoS do ONTAP para identificar a principal causa da lentidão. Para problemas mais complexos envolvendo dados ou componentes do cluster, você pode executar uma análise opcional de IA que fornece a provável causa raiz, identifica os clientes afetados e sugere etapas para resolver o problema.
 
 
+NOTE: Se o administrador da sua conta desativou os recursos de IA, você verá uma mensagem e não poderá usar a análise de IA. Entre em contato com seu administrador ou  https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["Aprenda sobre administração de IA"^].
+
+
 
 [[alert-generation]]
 === Geração de alertas
@@ -107,14 +110,20 @@ NOTE: Os valores de latência da análise de QoS do ONTAP e do CloudWatch podem 
 
 Embora uma análise básica possa identificar a origem da latência, situações mais complexas envolvendo dados ou componentes de cluster geralmente exigem uma investigação mais aprofundada. A análise por IA proporciona essa solução de problemas mais detalhada, encontrando problemas como volumes sobrecarregados, configuração inadequada ou a necessidade de adicionar mais capacidade, problemas que uma análise básica pode não detectar.
 
+A disponibilidade da análise por IA depende da configuração da sua conta:
+
+* *NetApp-créditos de IA gerenciados ativados*: você pode executar análises de IA sem configuração adicional do Bedrock.
+* *Desativado pelo administrador*: As opções de IA não estão disponíveis.
+
+
+Se os créditos de IA gerenciados pela NetApp estiverem ativados, mas seu orçamento mensal for atingido, a análise de IA ficará indisponível e uma mensagem será exibida.
+
 Ao executar a análise de IA, o sistema fornece:
 
 * *Possível causa raiz*: Explicação detalhada do que está causando o problema de latência
 * *Clientes afetados*: Lista de nomes de instâncias EC2 impactadas pela latência
 * *Possíveis medidas corretivas*: Duas ou mais ações específicas para resolver o problema
 
-
-A análise de IA requer um ARN de modelo do Amazon Bedrock nas configurações do Workload Factory. Se o Bedrock não estiver configurado, você ainda pode usar o monitoramento de latência e a análise automatizada básica.
 
 
 

@@ -34,7 +34,7 @@ Você pode criar um novo projeto EDA para aproveitar os recursos de proteção d
 ... *Região*: Selecione a região em que este sistema de arquivos FSx para ONTAP reside.
 ... *FSx for ONTAP file system*: Selecione um FSx for ONTAP file system para usar com este projeto.
 +
-Você só pode selecionar sistemas de arquivos que estejam configurados com um link. https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Saiba mais sobre links"^].
+Você só pode selecionar sistemas de arquivos que estejam configurados com um link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Saiba mais sobre links"^].
 
 ... *Escolha um volume*: Selecione um volume para armazenar o projeto; o EDA usa este volume como repositório de software.
 +
