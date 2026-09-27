@@ -453,7 +453,6 @@
   <block id="7b0ddde1961cce4426c7f0cf5da65e0d" category="doc">Recomendações de capacidade EDA</block>
   <block id="edb815136867c3359e368e3f925ae387" category="paragraph">O Workload Factory agora analisa automaticamente a capacidade SSD de cada FSx for ONTAP cluster em seu inventário EDA e gera recomendações de capacidade quando ajustes são necessários. O algoritmo é executado uma vez a cada 24 horas para cada cluster.</block>
   <block id="1f9c155d60450baccee27bca630b6497" category="paragraph">Quando uma recomendação for identificada:</block>
-  <block id="8d65ccbe024d7453ace82bd13b7980d8" category="list-text">Você recebe um e-mail ou notificação WAD imediatamente (não faz parte do resumo semanal).</block>
   <block id="8e5fe5a1e14c6d69b9c457c33f0204a7" category="list-text">Um indicador em forma de lâmpada aparece no cluster afetado na tabela Clusters.</block>
   <block id="c38bddc25aeb4374d71816e0b71a53a0" category="list-text">Um resumo no painel de Visão Geral mostra o número total de clusters com recomendações ativas.</block>
   <block id="1471ae7120155f3a06fa9c0a62a7f3f5" category="paragraph">Selecione um cluster com uma recomendação ativa para visualizar a recomendação, que explica a alteração sugerida e o raciocínio.</block>
@@ -1093,4 +1092,5 @@
   <block id="0ecfcdfed86b687b39299cccc3380def" category="list-text">**Escolha o modo correto**: use o modo **Recomendar** se você quiser aprovar as alterações de capacidade ou de throughput manualmente. Use o modo **Automatizar** se você quiser que o sistema gerencie a capacidade ou o throughput automaticamente.</block>
   <block id="88a7c4b8bd498e193a117097af5581b1" category="list-text">**Edição em massa**: ao gerenciar vários sistemas de arquivos, use a edição em massa para manter as configurações consistentes.</block>
   <block id="951a51b60db3d63eb71726cd5fe6fbad" category="section-title">3 de agosto de 2026</block>
+  <block id="73c57946c156d22b4a35f2e089180ab4" category="list-text">Você recebe um e-mail imediato ou uma notificação Well-Architected (não faz parte do resumo semanal).</block>
 </blocks>

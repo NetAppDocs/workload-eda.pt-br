@@ -11,7 +11,7 @@ O Workload Factory agora analisa automaticamente a capacidade SSD de cada FSx fo
 
 Quando uma recomendação for identificada:
 
-* Você recebe um e-mail ou notificação WAD imediatamente (não faz parte do resumo semanal).
+* Você recebe um e-mail imediato ou uma notificação Well-Architected (não faz parte do resumo semanal).
 * Um indicador em forma de lâmpada aparece no cluster afetado na tabela Clusters.
 * Um resumo no painel de Visão Geral mostra o número total de clusters com recomendações ativas.
 
