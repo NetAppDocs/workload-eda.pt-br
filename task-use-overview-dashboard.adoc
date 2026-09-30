@@ -113,11 +113,10 @@ O gráfico também exibe os pontos de decisão de recomendação e os pontos de 
 Para cada sistema de arquivos, escolha como a capacidade do SSD é gerenciada: receba recomendações manuais ou permita o dimensionamento automático.
 
 .Passos
-. Na tabela Clusters, encontre o nome do sistema de arquivos. Ao lado, abra image:icon-action.png["o ícone do menu de ações"] e selecione *Alterar gerenciamento de capacidade de SSD*.
-. Selecione *Ativar gerenciamento de capacidade SSD* e, em seguida, selecione *Aplicar*.
+. Na tabela Clusters, localize e selecione o nome do sistema de arquivos e selecione *Alterar gerenciamento de capacidade do SSD*.
 . Escolha o modo de sua preferência:
 +
-** *Notificar apenas (modo de recomendação)*
+** *Recomendar*
 ** *Automatizar*
 
 
@@ -144,18 +143,20 @@ Para cada sistema de arquivos, escolha como o aumento de taxa de transferência 
 .Passos
 . Na guia *Visão geral*, selecione um ou mais sistemas de arquivos na tabela Clusters.
 . Selecione *Alterar gerenciamento de taxa de transferência*.
-. Selecione *Ativar gerenciamento de taxa de transferência* e, em seguida, selecione *Aplicar*.
+. Selecione *Ativar gerenciamento de throughput*.
 . Escolha o modo de sua preferência:
 +
 ** *Notificar apenas (modo de recomendação)*
 ** *Automatizar*
 
 
-. Na caixa de diálogo, configure os parâmetros de gerenciamento de throughput:
+. Em *Limite de utilização (%)* defina o nível de utilização que aciona recomendações ou ações de automação.
+. Em *Configuração avançada*, configure os parâmetros de gerenciamento de throughput:
 +
 ** *Janela de avaliação (horas)*: Período de tempo para analisar os padrões de throughput
 ** *Métricas violadas (%)*: limite percentual para determinar a violação
-** *Período de violações consecutivas (horas)*: duração de violações consecutivas antes da tomada de providências
+** *Janela de violação consecutiva (horas)*: duração de violações consecutivas antes da tomada de medidas
+** *Métricas de violação consecutiva (%)*: limite percentual para determinar violações consecutivas
 ** *Latência mínima (ms)*: limiar de latência usado para determinar o aumento da taxa de transferência
 ** *Throughput máximo (SKUs)*: SKU de throughput máximo permitido
 
@@ -165,31 +166,6 @@ Para cada sistema de arquivos, escolha como o aumento de taxa de transferência 
 
 .Resultado
 Os sistemas de arquivos selecionados alternam imediatamente para o novo modo de taxa de transferência.
-
-
-
-[[bulk-edit-management-parameters]]
-== Gerenciar parâmetros de edição em massa
-
-Altere as configurações de vários sistemas de arquivos simultaneamente para que as mesmas configurações sejam aplicadas em todos os seus clusters.
-
-.Passos
-. Na aba *Visão geral*, selecione os sistemas de arquivos que deseja editar na tabela.
-+
-
-TIP: Você pode selecionar sistemas de arquivos individuais ou usar a caixa de seleção do cabeçalho para selecionar todos os sistemas de arquivos visíveis.
-
-. Selecione *Alterar gerenciamento de capacidade de SSD* ou *Alterar gerenciamento de taxa de transferência* acima da tabela.
-. Escolha o modo de sua preferência.
-. Na caixa de diálogo de edição, ajuste os parâmetros conforme necessário.
-+
-Cada campo de parâmetro inclui uma dica de ferramenta que descreve sua finalidade e intervalo válido. A caixa de diálogo indica os valores atuais ou os valores padrão com base na sua seleção.
-
-. Selecione *Aplicar* para aplicar as alterações a todos os sistemas de arquivos selecionados.
-
-
-.Resultado
-Os parâmetros são atualizados para todos os sistemas de arquivos selecionados. Os sistemas de arquivos nos modos Recomendar ou Automatizar utilizam os novos parâmetros imediatamente para análise e tomada de decisão.
 
 
 
@@ -203,23 +179,20 @@ Os pontos de decisão no gráfico indicam quando:
 
 * *Pontos de decisão de recomendação*: O algoritmo de recomendação de capacidade identificou que é necessária capacidade adicional de SSD.
 * *Pontos de decisão da automação*: O sistema de automação tentou aumentar a capacidade do SSD. Esses pontos mostram se a ação foi bem-sucedida ou falhou.
++
+Se o gerenciamento de capacidade de SSD estiver desativado, o gráfico mostrará apenas o uso passado e não exibirá recomendações nem decisões de automação.
+
 
 
 .Passos
-. Na guia *Visão geral*, selecione um nome de sistema de arquivos na tabela.
-. Analise o gráfico de utilização do SSD, que mostra as tendências históricas de capacidade.
-. Selecione diferentes intervalos de tempo para visualizar o comportamento da capacidade em vários períodos.
-. Passe o cursor sobre os pontos de decisão no gráfico para visualizar detalhes sobre recomendações ou ações de automação em momentos específicos.
-. Utilize as informações do gráfico para:
-+
-** Entenda com que frequência são necessários ajustes de capacidade
-** Avalie se o modo de automação ou o modo de recomendação se adapta melhor aos seus padrões de carga de trabalho
-** Identificar restrições de capacidade recorrentes
-** Planeje as necessidades futuras de capacidade com base nas tendências de crescimento
-** Solucionar problemas em tentativas de automação malsucedidas
+. Na guia *Visão geral*, selecione o nome de um sistema de arquivos na tabela. Na visualização de detalhes do cluster, selecione a opção *Taxa de transferência* ou *Capacidade do SSD* para alternar a exibição do gráfico.
 
 
+Se você selecionar *Taxa de transferência*, o gráfico mostrará a taxa de transferência e a utilização do cliente para que você possa comparar a demanda com o nível de taxa de transferência e os limites configurados.
 
+Se você selecionar *Capacidade do SSD*, o gráfico mostrará o uso do SSD, incluindo tendências históricas de capacidade e pontos de decisão de capacidade.
+
+Selecione diferentes intervalos de tempo para visualizar as tendências de taxa de transferência ou capacidade em diferentes períodos. . Passe o cursor sobre os pontos de decisão no gráfico para visualizar detalhes sobre recomendações ou ações de automação em momentos específicos. . Use as informações do gráfico para: * Entender com que frequência os ajustes de capacidade são necessários * Avaliar se o modo de automação ou recomendação se adapta melhor aos seus padrões de carga de trabalho * Identificar restrições de capacidade recorrentes * Planejar as necessidades futuras de capacidade com base nas tendências de crescimento * Solucionar problemas em tentativas de automação malsucedidas
 
 
 

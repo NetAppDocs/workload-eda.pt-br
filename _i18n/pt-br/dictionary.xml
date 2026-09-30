@@ -621,11 +621,6 @@
   <block id="fa0b4e3f4266abe4ec93e3058cfcd2aa" category="section-title">Entendendo os pontos de decisão de capacidade</block>
   <block id="c27f88e562f3ed3c4000570673348297" category="list-text">*Pontos de decisão para recomendação*</block>
   <block id="153ea1a28a0f56dba57777e1680e1f76" category="list-text">*Pontos de decisão de automação*</block>
-  <block id="8aa0b0a22cf225f503177c8f1de7df3c" category="list-text">Entenda com que frequência são necessários ajustes de capacidade</block>
-  <block id="dc036d0aefd6c43f7e0e90f879128e16" category="list-text">Avalie se o modo de automação ou o modo de recomendação se adapta melhor aos seus padrões de carga de trabalho</block>
-  <block id="274e06045627d8934cd9bb52e8c64f53" category="list-text">Identificar restrições de capacidade recorrentes</block>
-  <block id="38e979158d55ae25a36aba4d97b0a8b4" category="list-text">Planeje as necessidades futuras de capacidade com base nas tendências de crescimento</block>
-  <block id="2814ccd9bf1ef1faffa5931e29ee7f74" category="list-text">Solucionar problemas em tentativas de automação malsucedidas</block>
   <block id="0a77401b929110d42e7c36ac77c37872" category="inline-link-macro">Ative o painel de visão geral</block>
   <block id="b20e509aee340813d832ff54146a6123" category="list-text"><block ref="b20e509aee340813d832ff54146a6123" category="inline-link-macro-rx"></block></block>
   <block id="a35e94495c93c5d785f8b1240c15be6a" category="inline-link-macro">Use o painel de visão geral</block>
@@ -739,21 +734,9 @@
   <block id="76a0ca3e805dbf2778413ce26855f65b" category="paragraph">O gráfico também exibe os pontos de decisão de recomendação e os pontos de decisão de automação (se o modo de automação estiver ativado). Passe o cursor sobre qualquer ponto de decisão para ver detalhes sobre a recomendação de capacidade ou a ação de automação naquele momento.</block>
   <block id="37b5b20fd94de2275a255ae79e7ac8f0" category="list-text">Para aplicar a recomendação, siga as orientações fornecidas na mensagem de recomendação.</block>
   <block id="95138c66b91ee03084dfba9068536d5e" category="section-title">Alterar o modo de gerenciamento do SSD</block>
-  <block id="6d8ccfb06da581a2d86feacefa3b4869" category="inline-image-macro">o ícone do menu de ações</block>
-  <block id="c9eecdb0eb0ca75174ea4d40e628f365" category="list-text">Na tabela Clusters, encontre o nome do sistema de arquivos. Ao lado, abra <block ref="db26b5e8c520e1d883813594c799d7f7" category="inline-image-macro-rx" type="image"></block> e selecione *Alterar gerenciamento de capacidade de SSD*.</block>
   <block id="b689124bbd04a08329d8f616990fa06d" category="list-text">Escolha o modo de sua preferência:</block>
-  <block id="cc009bfb1b3b40af528a54a164d8b953" category="list-text">Na aba *Visão geral*, selecione os sistemas de arquivos que deseja editar na tabela.</block>
-  <block id="8cd7391e66f29fd726ffdf9a59961f54" category="admonition">Você pode selecionar sistemas de arquivos individuais ou usar a caixa de seleção do cabeçalho para selecionar todos os sistemas de arquivos visíveis.</block>
-  <block id="b97c770bb654f2ef0b93eb759a99c159" category="list-text">Escolha o modo de sua preferência.</block>
-  <block id="43c2e4748a7a87eb44a6cb86329b0750" category="paragraph">Cada campo de parâmetro inclui uma dica de ferramenta que descreve sua finalidade e intervalo válido. A caixa de diálogo indica os valores atuais ou os valores padrão com base na sua seleção.</block>
-  <block id="3f254e874f94d9cc6daffdbea2c76012" category="list-text">Selecione *Aplicar* para aplicar as alterações a todos os sistemas de arquivos selecionados.</block>
   <block id="84a7874f129070a914f70dd3d70a6716" category="section-title">Analisar tendências de capacidade e pontos de decisão</block>
   <block id="4dbca2bab9fb0222adee0d079e0d2127" category="paragraph">Os pontos de decisão no gráfico indicam quando:</block>
-  <block id="322cceacdd52c951c88a1d93df7f0dd8" category="list-text">Na guia *Visão geral*, selecione um nome de sistema de arquivos na tabela.</block>
-  <block id="c7967065af6ac7703ee14f60f2812ccb" category="list-text">Analise o gráfico de utilização do SSD, que mostra as tendências históricas de capacidade.</block>
-  <block id="6f6089a81e1a8064861733b4969654d6" category="list-text">Selecione diferentes intervalos de tempo para visualizar o comportamento da capacidade em vários períodos.</block>
-  <block id="8d33ce28efafbfe7600930c556bcfd55" category="list-text">Passe o cursor sobre os pontos de decisão no gráfico para visualizar detalhes sobre recomendações ou ações de automação em momentos específicos.</block>
-  <block id="4d43a6d1e695bf0a99e5bc33d3ca3fda" category="list-text">Utilize as informações do gráfico para:</block>
   <block id="e307894bdae8efc4f4fdacf666cf2573" category="section-title">Use a tabela de clusters</block>
   <block id="88dc1144edaa697995919551780b6e93" category="list-text">Na aba *Visão geral*, revise a tabela de clusters.</block>
   <block id="8e6be07248fc78ed27f8d01305999436" category="list-text">Utilize a caixa de pesquisa para encontrar sistemas de arquivos específicos pelo nome.</block>
@@ -827,7 +810,6 @@
   <block id="a3eb814e72de4d40c0767efe37beafe1" category="list-text">A interface mostra o número total de sistemas de arquivos que atualmente possuem recomendações ativas.</block>
   <block id="f7f59f0b5632d026e80fe90b1eec8f63" category="list-text">A porcentagem de uso do SSD que aciona recomendações de capacidade ou ações de automação. Por exemplo, um limite de 80% significa que recomendações ou ações ocorrem quando o uso do SSD atinge 80%. Essa configuração está disponível nos modos Recommend e Automate.</block>
   <block id="d5a40446a028d90d5bf46fe40624722d" category="paragraph">Você pode definir esses parâmetros para cada sistema de arquivos individualmente ou usar a edição em massa para aplicar as mesmas configurações a vários sistemas de arquivos.</block>
-  <block id="1b07a2acaea0fa364496ba3afb977975" category="paragraph">O gráfico de utilização do SSD indica quando o sistema fez recomendações de capacidade ou executou ações automatizadas. Esses indicadores mostram como o algoritmo de gerenciamento de capacidade se comportou ao longo do tempo.</block>
   <block id="47daf1022723b90d90f96e2d735e2267" category="list-text">Aparecem quando o sistema de automação tenta aumentar a capacidade do SSD. Indicam se a ação foi bem-sucedida ou falhou.</block>
   <block id="5d75c0e68111b8bb5d2e043a495c6e39" category="paragraph">Utilize o gráfico de histórico de uso do SSD para:</block>
   <block id="9515f88eb47a770a2eae21e430e5b3ff" category="list-text">Veja com que frequência você precisa alterar o tamanho do armazenamento</block>
@@ -1008,7 +990,6 @@
   <block id="929261095300bce39be28cdc60e46b85" category="list-text">*elasticidade do sistema de arquivos*</block>
   <block id="20ed77fd0e548f70d1a8b8bd340ed628" category="list-text">*Capacidade do SSD*: Mostra quantos sistemas de arquivos usam Automate, Recommend ou None para gerenciar a capacidade do SSD.</block>
   <block id="f811d9a1edf56398351dffaef0b6506e" category="list-text">*Taxa de transferência*: Mostra quantos sistemas de arquivos usam Automatizar, Recomendar ou Nenhuma para gerenciar a taxa de transferência.</block>
-  <block id="94e78450902ff8802101a87715f2120e" category="paragraph">Selecione um sistema de arquivos para abrir os detalhes do cluster, incluindo informações do cluster, valores de capacidade do SSD e o gráfico de capacidade do SSD ao longo do tempo.</block>
   <block id="7ae10da71cdf204162f214a176b66232" category="list-text">*Notificar apenas (modo de recomendação)*</block>
   <block id="a50d39f8ae7bb4152ca8de0ad153c7d5" category="list-text">Se você não habilitou o gerenciamento de capacidade SSD, o sistema não faz recomendações de capacidade nem executa ações automatizadas. Use esta opção se você quiser gerenciar a capacidade por conta própria.</block>
   <block id="f015d9c2fdd7ed0dc64dd7b4f0a18c1f" category="list-text">*Previsão* (1-200 horas)</block>
@@ -1028,7 +1009,6 @@
   <block id="622a5b145e5cdfd92b8124baf3f8e5d7" category="list-text">*Latência mínima (ms)* (padrão 10 ms)</block>
   <block id="4067af77fe7df9f9047c8c4eeb9490b5" category="list-text">*SKU de capacidade máxima de processamento* (padrão: nenhum)</block>
   <block id="e4612c732ae1c64db60c83cb8cae8381" category="section-title">Recomendações de elasticidade do sistema de arquivos</block>
-  <block id="cc8b8287cb9875fcd93e6deecaaa1c10" category="paragraph">Quando o Workload Factory está no modo Automatizar ou Recomendar, ele verifica automaticamente cada sistema de arquivos FSx for ONTAP e executa um algoritmo de recomendação de capacidade. O sistema realiza verificações periódicas para determinar se a capacidade ou a taxa de transferência do SSD precisam ser ajustadas.</block>
   <block id="1c5b8d97751372161e201f333f1b4f62" category="list-text">Identifique sistemas de arquivos com recomendações filtrando a tabela Clusters.</block>
   <block id="25dc82340ec038ecbda8ab79823e242a" category="list-text">Aparecem quando o sistema detecta que é necessária mais capacidade de SSD. Se a capacidade não tiver sido aumentada, esses pontos podem aparecer a cada 30 minutos. O gráfico mostra cada ponto de decisão quando possível. Se o intervalo de tempo selecionado for muito denso, os pontos são agrupados.</block>
   <block id="d5781ee1e2ae2729d18fc69fc41ec67a" category="paragraph">Você só pode selecionar sistemas de arquivos que estejam configurados com um link. <block ref="959c1faca1dbb57f8dac1b5058bf9c58" category="inline-link-macro-rx"></block>.</block>
@@ -1064,7 +1044,6 @@
   <block id="33c83a7b34dbfa47935b0be5b097865d" category="list-text">Analise a recomendação e o gráfico.</block>
   <block id="fd896caec9b1904e01ed5b6a90b096d9" category="paragraph">O gráfico apresenta o uso atual juntamente com as tendências históricas.</block>
   <block id="7269a303313716fe145ba2b18acc49d7" category="list-text">No canto superior direito do gráfico, selecione o intervalo de tempo para alterar o período exibido.</block>
-  <block id="c7ac58faf1984cf107f3421908d2207c" category="list-text">Selecione *Ativar gerenciamento de capacidade SSD* e, em seguida, selecione *Aplicar*.</block>
   <block id="da35cbad278570472c076b6042a5b528" category="list-text">Configure os parâmetros de gerenciamento de capacidade do SSD:</block>
   <block id="166c4a53ef8fc50b9b03ca91c1c677bc" category="list-text">*Limite (%)*: percentual de utilização do SSD que aciona uma recomendação</block>
   <block id="87ad0cdc7f64b3a67d168c0b688707d9" category="list-text">*Período de análise retrospectiva (%)*: período histórico de dados de utilização para análise</block>
@@ -1073,19 +1052,11 @@
   <block id="86161e58ce8677bff58de719cb9f29a8" category="paragraph">Para cada sistema de arquivos, escolha como o aumento de taxa de transferência é gerenciado.</block>
   <block id="441fc54d05bba2a603a05c500cf068c7" category="list-text">Na guia *Visão geral*, selecione um ou mais sistemas de arquivos na tabela Clusters.</block>
   <block id="0231f044766e71e4fe49a62ba8e8bbbe" category="list-text">Selecione *Alterar gerenciamento de taxa de transferência*.</block>
-  <block id="652aab445f49bb41fa3e8774b5719cf2" category="list-text">Selecione *Ativar gerenciamento de taxa de transferência* e, em seguida, selecione *Aplicar*.</block>
-  <block id="16393cf33b95f8ff007d76d513b875d7" category="list-text">Na caixa de diálogo, configure os parâmetros de gerenciamento de throughput:</block>
   <block id="083678f0efe5919237188ee0ee5d0b90" category="list-text">*Janela de avaliação (horas)*: Período de tempo para analisar os padrões de throughput</block>
   <block id="ed38b15c549d9cd41a86a3787f5fee23" category="list-text">*Métricas violadas (%)*: limite percentual para determinar a violação</block>
-  <block id="5e1e1daa7e6d115a54180e147895003e" category="list-text">*Período de violações consecutivas (horas)*: duração de violações consecutivas antes da tomada de providências</block>
   <block id="91455d18a42b79b1a34df0d97bfbaffd" category="list-text">*Latência mínima (ms)*: limiar de latência usado para determinar o aumento da taxa de transferência</block>
   <block id="0a2daf37cc4cac8c9a3da95290e9a399" category="list-text">*Throughput máximo (SKUs)*: SKU de throughput máximo permitido</block>
   <block id="6b482ace535080820ca5dea3bb557cb6" category="paragraph">Os sistemas de arquivos selecionados alternam imediatamente para o novo modo de taxa de transferência.</block>
-  <block id="be76a5f710c434b57d7bb9106913548d" category="section-title">Gerenciar parâmetros de edição em massa</block>
-  <block id="399db4c92643ea16a6e10865b34f5b4f" category="paragraph">Altere as configurações de vários sistemas de arquivos simultaneamente para que as mesmas configurações sejam aplicadas em todos os seus clusters.</block>
-  <block id="93343e8a72e86eb0283fa9c6fb77b48b" category="list-text">Selecione *Alterar gerenciamento de capacidade de SSD* ou *Alterar gerenciamento de taxa de transferência* acima da tabela.</block>
-  <block id="a707a072d0b2b11d2c3e5a2160f9cd48" category="list-text">Na caixa de diálogo de edição, ajuste os parâmetros conforme necessário.</block>
-  <block id="80c68bda2149e685b2c9d4a63c1abe0b" category="paragraph">Os parâmetros são atualizados para todos os sistemas de arquivos selecionados. Os sistemas de arquivos nos modos Recomendar ou Automatizar utilizam os novos parâmetros imediatamente para análise e tomada de decisão.</block>
   <block id="232af3ec8ca37d39f0b49ddb6c81830a" category="list-text">*Pontos de decisão de recomendação*: O algoritmo de recomendação de capacidade identificou que é necessária capacidade adicional de SSD.</block>
   <block id="0d606a9207ef786e2b3dc99ea3fe3ad8" category="list-text">**Defina limites claros**: Escolha limites de uso de SSD e parâmetros de taxa de transferência que se adequem à sua carga de trabalho e aos seus planos de capacidade.</block>
   <block id="c6e183b5112db7515b7bc4904a3b374b" category="list-text">**Analise as recomendações rapidamente**: filtre a tabela Clusters para encontrar sistemas de arquivos com recomendações de capacidade ou taxa de transferência. Verifique-as e aja para evitar a falta de espaço.</block>
@@ -1093,4 +1064,30 @@
   <block id="88a7c4b8bd498e193a117097af5581b1" category="list-text">**Edição em massa**: ao gerenciar vários sistemas de arquivos, use a edição em massa para manter as configurações consistentes.</block>
   <block id="951a51b60db3d63eb71726cd5fe6fbad" category="section-title">3 de agosto de 2026</block>
   <block id="73c57946c156d22b4a35f2e089180ab4" category="list-text">Você recebe um e-mail imediato ou uma notificação Well-Architected (não faz parte do resumo semanal).</block>
+  <block id="08b543f700a568688a9f78d874d0ce8b" category="doc">Notificações aprimoradas de capacidade do SSD</block>
+  <block id="f37e9239265205bdf39af7b4def6f75a" category="paragraph">As notificações de gerenciamento de capacidade de SSD agora incluem mensagens de erro detalhadas para solucionar problemas de falhas de automação. As notificações são enviadas para aumentos de capacidade bem-sucedidos, erros durante operações de aumento, falhas na verificação de capacidade, avisos de limite e recomendações. Os detalhes do erro incluem motivos específicos da falha, como permissões ausentes, atualizações simultâneas em andamento, períodos de resfriamento da AWS ou problemas na recuperação de métricas do CloudWatch.</block>
+  <block id="4a3354724a06bbb8040fa512f39a5e07" category="inline-link-macro">Saiba mais sobre o gerenciamento de capacidade de SSD</block>
+  <block id="3e69b701694082d892b97eb050525650" category="paragraph"><block ref="bc2811c6501476df42adeca777dc6dd3" category="inline-link-macro-rx"></block>.</block>
+  <block id="b1b09cb9ca77b33ed95a7406fab56623" category="section-title">Período de uma semana para os gráficos de latência</block>
+  <block id="a5ff2097c50c86e897e35110fe5629d9" category="paragraph">Os gráficos de análise de latência agora suportam um período de 1 semana, além das opções existentes (1 hora, 3 horas, 12 horas, 24 horas, 72 horas). Use a visualização semanal para identificar padrões e tendências de longo prazo no comportamento da latência do volume.</block>
+  <block id="8d6933264e6e5f9ec4a93a7936daf177" category="inline-link-macro">Aprenda sobre a análise de tendências de latência</block>
+  <block id="f00c9e117aa43f7e65780e53b18b74a8" category="paragraph"><block ref="8280dff077bedc5ff5df29e3a9ab24f4" category="inline-link-macro-rx"></block>.</block>
+  <block id="dad79f11b2960d3be921e97689e00796" category="section-title">Visibilidade aprimorada do sistema de arquivos na interface</block>
+  <block id="856b733ee2011b50fb74e26e28353b8c" category="paragraph">O Workload Factory agora oferece uma visão mais clara dos seus sistemas de arquivos na interface. Você pode visualizar tendências de uso da capacidade e da taxa de transferência do SSD, resumos de cargas de trabalho e informações detalhadas de configuração diretamente da visão geral do sistema de arquivos.</block>
+  <block id="05d2715aacab706b61cab6ab5eae577f" category="paragraph">Selecione um sistema de arquivos para visualizar os detalhes do cluster, incluindo informações do cluster, capacidade do SSD e gráficos. Na visualização de detalhes do cluster, use as opções *Throughput* e *SSD Capacity* para alternar entre as visualizações.</block>
+  <block id="44ad493c3ed3456875890a0633967832" category="paragraph">A visualização de taxa de transferência mostra a taxa de transferência do cliente e a utilização de recursos. A visualização de capacidade do SSD mostra as tendências de uso do SSD e as recomendações de capacidade.</block>
+  <block id="0575d3bb4ddf703c8919e95c56fd6669" category="paragraph">Quando o Workload Factory está no modo Automate ou Recommend, ele verifica automaticamente cada sistema de arquivos do FSx for ONTAP e recomenda alterações de capacidade. Ele verifica regularmente o sistema para determinar se a capacidade ou a taxa de transferência do SSD devem ser ajustadas. Quando o gerenciamento está habilitado, a página de detalhes do sistema de arquivos exibe a capacidade e a taxa de transferência do SSD, juntamente com tendências históricas e pontos de ajuste recomendados.</block>
+  <block id="3b39aa368232f477c3b4544b63a58a94" category="paragraph">O gráfico de utilização do SSD mostra quando o sistema recomendou alterações na capacidade ou fez ajustes automáticos. Esses marcadores indicam como o sistema gerenciou a capacidade ao longo do tempo. Se o gerenciamento de capacidade de SSD estiver desativado, o gráfico mostrará apenas o uso passado e não exibirá recomendações nem ações automáticas.</block>
+  <block id="cc23b0ef8b8c73f4efb0ced4281250f3" category="list-text">Na tabela Clusters, localize e selecione o nome do sistema de arquivos e selecione *Alterar gerenciamento de capacidade do SSD*.</block>
+  <block id="d9a44929e0eea557983dbb6917008a70" category="list-text">Selecione *Ativar gerenciamento de throughput*.</block>
+  <block id="1cbae666f242dee35d801763ff6c587f" category="list-text">Em *Limite de utilização (%)* defina o nível de utilização que aciona recomendações ou ações de automação.</block>
+  <block id="e920df7cb27871af178ff85a428a8b4e" category="list-text">Em *Configuração avançada*, configure os parâmetros de gerenciamento de throughput:</block>
+  <block id="39122245b5363dc3871538d2ef59784e" category="list-text">*Janela de violação consecutiva (horas)*: duração de violações consecutivas antes da tomada de medidas</block>
+  <block id="a9d111294543c201d767519d991c1b8d" category="list-text">*Métricas de violação consecutiva (%)*: limite percentual para determinar violações consecutivas</block>
+  <block id="d385fd0ac858ff17553d407851f64c48" category="paragraph">Se o gerenciamento de capacidade de SSD estiver desativado, o gráfico mostrará apenas o uso passado e não exibirá recomendações nem decisões de automação.</block>
+  <block id="1de4de358ec9c3a1cd36180e2c13a443" category="list-text">Na guia *Visão geral*, selecione o nome de um sistema de arquivos na tabela. Na visualização de detalhes do cluster, selecione a opção *Taxa de transferência* ou *Capacidade do SSD* para alternar a exibição do gráfico.</block>
+  <block id="a01346bc61a98c025144199b0893e264" category="paragraph">Se você selecionar *Taxa de transferência*, o gráfico mostrará a taxa de transferência e a utilização do cliente para que você possa comparar a demanda com o nível de taxa de transferência e os limites configurados.</block>
+  <block id="e56ecd5b4053d7385c23bb7c3422bdd5" category="paragraph">Se você selecionar *Capacidade do SSD*, o gráfico mostrará o uso do SSD, incluindo tendências históricas de capacidade e pontos de decisão de capacidade.</block>
+  <block id="d73906b15c9fc84c1806084ce8720a42" category="paragraph">Selecione diferentes intervalos de tempo para visualizar as tendências de taxa de transferência ou capacidade em diferentes períodos. . Passe o cursor sobre os pontos de decisão no gráfico para visualizar detalhes sobre recomendações ou ações de automação em momentos específicos. . Use as informações do gráfico para: * Entender com que frequência os ajustes de capacidade são necessários * Avaliar se o modo de automação ou recomendação se adapta melhor aos seus padrões de carga de trabalho * Identificar restrições de capacidade recorrentes * Planejar as necessidades futuras de capacidade com base nas tendências de crescimento * Solucionar problemas em tentativas de automação malsucedidas</block>
+  <block id="301497b54979bb49bba5249c4f44b4ad" category="section-title">27 de setembro de 2026</block>
 </blocks>

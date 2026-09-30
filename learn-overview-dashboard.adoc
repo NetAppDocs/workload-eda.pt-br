@@ -77,7 +77,9 @@ Utilize a tabela para:
 * Selecione vários clusters para atualizações de parâmetros em massa
 
 
-Selecione um sistema de arquivos para abrir os detalhes do cluster, incluindo informações do cluster, valores de capacidade do SSD e o gráfico de capacidade do SSD ao longo do tempo.
+Selecione um sistema de arquivos para visualizar os detalhes do cluster, incluindo informações do cluster, capacidade do SSD e gráficos. Na visualização de detalhes do cluster, use as opções *Throughput* e *SSD Capacity* para alternar entre as visualizações.
+
+A visualização de taxa de transferência mostra a taxa de transferência do cliente e a utilização de recursos. A visualização de capacidade do SSD mostra as tendências de uso do SSD e as recomendações de capacidade.
 
 
 
@@ -150,7 +152,7 @@ Os parâmetros avançados de taxa de transferência estão disponíveis em uma s
 [[file-system-elasticity-recommendations]]
 == Recomendações de elasticidade do sistema de arquivos
 
-Quando o Workload Factory está no modo Automatizar ou Recomendar, ele verifica automaticamente cada sistema de arquivos FSx for ONTAP e executa um algoritmo de recomendação de capacidade. O sistema realiza verificações periódicas para determinar se a capacidade ou a taxa de transferência do SSD precisam ser ajustadas.
+Quando o Workload Factory está no modo Automate ou Recommend, ele verifica automaticamente cada sistema de arquivos do FSx for ONTAP e recomenda alterações de capacidade. Ele verifica regularmente o sistema para determinar se a capacidade ou a taxa de transferência do SSD devem ser ajustadas. Quando o gerenciamento está habilitado, a página de detalhes do sistema de arquivos exibe a capacidade e a taxa de transferência do SSD, juntamente com tendências históricas e pontos de ajuste recomendados.
 
 Quando uma recomendação for identificada:
 
@@ -166,7 +168,7 @@ A recomendação explica a alteração sugerida e o raciocínio por trás dela, 
 [[understanding-capacity-decision-points]]
 === Entendendo os pontos de decisão de capacidade
 
-O gráfico de utilização do SSD indica quando o sistema fez recomendações de capacidade ou executou ações automatizadas. Esses indicadores mostram como o algoritmo de gerenciamento de capacidade se comportou ao longo do tempo.
+O gráfico de utilização do SSD mostra quando o sistema recomendou alterações na capacidade ou fez ajustes automáticos. Esses marcadores indicam como o sistema gerenciou a capacidade ao longo do tempo. Se o gerenciamento de capacidade de SSD estiver desativado, o gráfico mostrará apenas o uso passado e não exibirá recomendações nem ações automáticas.
 
 *Pontos de decisão para recomendação*:: Aparecem quando o sistema detecta que é necessária mais capacidade de SSD. Se a capacidade não tiver sido aumentada, esses pontos podem aparecer a cada 30 minutos. O gráfico mostra cada ponto de decisão quando possível. Se o intervalo de tempo selecionado for muito denso, os pontos são agrupados.
 *Pontos de decisão de automação*:: Aparecem quando o sistema de automação tenta aumentar a capacidade do SSD. Indicam se a ação foi bem-sucedida ou falhou.
