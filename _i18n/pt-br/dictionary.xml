@@ -720,9 +720,6 @@
   <block id="b6c7799b0c3cb63df1897b6e33e5ffe9" category="list-text">*Credenciais*: filtre por credenciais específicas da AWS caso tenha várias configuradas</block>
   <block id="dd10257a52cc4af5c67ff37ab0bb4d74" category="list-text">*Regiões*: filtre por uma ou mais regiões da AWS</block>
   <block id="fb3123e7d905f809c3bdf82e3ceca6af" category="section-title">Visualizar o estado de saúde do cluster</block>
-  <block id="7da261fafbc98c685b2c0c780ccdbcf1" category="paragraph">O estado de saúde do cluster inclui as seguintes áreas principais:</block>
-  <block id="ac97fe213f96cc9db6b4ee38d70f798b" category="list-text">*Latência*: Número de eventos de latência detectados</block>
-  <block id="a51f6183fddbec434723cff9a6cb22f0" category="list-text">*Eventos ONTAP*: Número de eventos EMS por categoria (Capacidade, Disponibilidade e proteção, Segurança e outros)</block>
   <block id="c569953f651916e8d6fb2a2e26996486" category="list-text">Verifique o estado de integridade do cluster na parte superior do painel de controle.</block>
   <block id="45cd3072594a40004f1648f957b11b4f" category="list-text">Para visualizar eventos de latência:</block>
   <block id="9bab24fe4c951c13841b658922a21a8b" category="list-text">Selecione *Revisar* para navegar até a aba *Latência*</block>
@@ -735,8 +732,6 @@
   <block id="37b5b20fd94de2275a255ae79e7ac8f0" category="list-text">Para aplicar a recomendação, siga as orientações fornecidas na mensagem de recomendação.</block>
   <block id="95138c66b91ee03084dfba9068536d5e" category="section-title">Alterar o modo de gerenciamento do SSD</block>
   <block id="b689124bbd04a08329d8f616990fa06d" category="list-text">Escolha o modo de sua preferência:</block>
-  <block id="84a7874f129070a914f70dd3d70a6716" category="section-title">Analisar tendências de capacidade e pontos de decisão</block>
-  <block id="4dbca2bab9fb0222adee0d079e0d2127" category="paragraph">Os pontos de decisão no gráfico indicam quando:</block>
   <block id="e307894bdae8efc4f4fdacf666cf2573" category="section-title">Use a tabela de clusters</block>
   <block id="88dc1144edaa697995919551780b6e93" category="list-text">Na aba *Visão geral*, revise a tabela de clusters.</block>
   <block id="8e6be07248fc78ed27f8d01305999436" category="list-text">Utilize a caixa de pesquisa para encontrar sistemas de arquivos específicos pelo nome.</block>
@@ -890,7 +885,6 @@
   <block id="5b9d5469c481b2fd86bb70731779a54a" category="paragraph">Para cada sistema de arquivos, escolha como a capacidade do SSD é gerenciada: receba recomendações manuais ou permita o dimensionamento automático.</block>
   <block id="75be33f2f4cc39082bea6e44e8406df7" category="paragraph">O sistema de arquivos alterna imediatamente para o novo modo. Se você escolher Recomendar ou Automatizar, o sistema usa as configurações definidas para analisar a capacidade de storage e tomar decisões.</block>
   <block id="65bd457971cf8d44b2a0e065d040b668" category="paragraph">Use o gráfico de utilização do SSD para ver como o uso do storage muda ao longo do tempo e identificar padrões.</block>
-  <block id="adcae559988943cef6bf4b9ce78904b2" category="list-text">*Pontos de decisão da automação*: O sistema de automação tentou aumentar a capacidade do SSD. Esses pontos mostram se a ação foi bem-sucedida ou falhou.</block>
   <block id="27e86a81d2f78cd7f4181479163bbbeb" category="paragraph">A tabela de clusters fornece uma visão detalhada de cada sistema de arquivos FSx for ONTAP com métricas de desempenho e uso.</block>
   <block id="27a39463cff24c056326230d2490c6d4" category="list-text">*Monitoramento regular*: Verifique o painel de controle com frequência para identificar tendências antes que se tornem problemas.</block>
   <block id="5f387dd12e491b49648cab4ae9d1263e" category="list-text">**Use filtros**: aplique filtros de região e de conta para se concentrar nas partes da sua infraestrutura que você deseja revisar.</block>
@@ -935,7 +929,6 @@
   <block id="7e9591a005bdef4cdf16dfd575186f3b" category="paragraph">Você pode ajustar a visualização e correlacionar picos de latência com alterações em IOPS e taxa de transferência. Marcadores de violação e detalhes ao passar o mouse ajudam você a ver quando os limites foram excedidos e a analisar as principais métricas da violação detectada.</block>
   <block id="94865ed9933801afc860536ada02e496" category="summary">Visualize e analise eventos de latência para encontrar problemas de desempenho com volumes FSx for ONTAP. Use análise básica e, opcionalmente, análise de IA para identificar a causa raiz e correções sugeridas.</block>
   <block id="939c818555e5fa65655d447cc97817ae" category="section-title">Visualizar volumes com latência acima do limite</block>
-  <block id="f06921222f3510361d45443110e72880" category="list-text">Revise as informações de cada evento na tabela.</block>
   <block id="3cd32cbc73706e6bc220ece19622d604" category="list-text">O painel de análise de latência fornece uma visão rápida da violação, incluindo um gráfico de latência e controles para período e tipo. Selecione *Ver análise completa* para abrir a página detalhada de análise de latência com análise básica, análise de IA (opcional) e gráficos adicionais. Consulte <block ref="6ebd25eb4c135c18dd20612e63ec5166" category="inline-link-macro-rx"></block> para obter detalhes.</block>
   <block id="0665519f24690502dfcb8f5913d6b056" category="paragraph">Selecione um evento de latência na coluna *Gravidade* para abrir o painel de análise de latência desse evento. O painel inclui guias que fornecem diferentes visualizações do evento de latência.</block>
   <block id="0f76eb72044a145a7b1eb778e6653a96" category="list-text">*Básico*: Exibe os resultados de uma análise automática. Se estiver vinculado ao sistema de arquivos, exibe um detalhamento dos componentes e mostra qual deles está causando a latência. Se não houver vínculo, você será solicitado a adicionar um. Um gráfico interativo de latência das métricas do CloudWatch para o volume afetado é exibido. Ele exibe métricas de leitura ou gravação, dependendo de qual alarme disparou o evento. Você pode escolher diferentes intervalos de tempo e usar um filtro para visualizar todas, leitura, gravação ou operações de metadados.</block>
@@ -1035,7 +1028,6 @@
   <block id="42e48676b85dbff1f2792294e6831dc0" category="list-text">Selecione *Adicionar filtros*.</block>
   <block id="c71e0da6508887a77f334a554ab5495a" category="summary">Use o painel Visão geral para monitorar a integridade do cluster, visualizar recomendações de capacidade, gerenciar configurações de SSD e taxa de transferência e analisar tendências de desempenho em seus sistemas de arquivos FSx for ONTAP.</block>
   <block id="4c3cb97ad8dafb44b4527de840549941" category="paragraph">Use o painel Visão geral para verificar a integridade e a capacidade dos seus sistemas de arquivos FSx for ONTAP. Você pode filtrar os dados, ver recomendações de capacidade, ajustar as configurações de SSD e de taxa de transferência e analisar as tendências de desempenho para ajudar a decidir onde alocar volumes e quando aumentar a capacidade.</block>
-  <block id="3e245db3deb2fe7b566f9dfe8f122ad3" category="list-text">*Elasticidade do sistema de arquivos*:</block>
   <block id="f3e0de8b6d05c856fde2eaa835f504ef" category="section-title">Visualize e aplique recomendações de capacidade ou throughput</block>
   <block id="e07b408f972ad269d9fed5451f31d8c9" category="paragraph">O Workload Factory executa automaticamente recomendações para cada sistema de arquivos FSx for ONTAP. Você pode encontrar sistemas de arquivos com recomendações filtrando a tabela Clusters.</block>
   <block id="134805f5ae47607c74a2fad588bcc889" category="list-text">Na tabela *Clusters*, filtre pelas colunas de tempo ou detalhes relevantes.</block>
@@ -1057,7 +1049,6 @@
   <block id="91455d18a42b79b1a34df0d97bfbaffd" category="list-text">*Latência mínima (ms)*: limiar de latência usado para determinar o aumento da taxa de transferência</block>
   <block id="0a2daf37cc4cac8c9a3da95290e9a399" category="list-text">*Throughput máximo (SKUs)*: SKU de throughput máximo permitido</block>
   <block id="6b482ace535080820ca5dea3bb557cb6" category="paragraph">Os sistemas de arquivos selecionados alternam imediatamente para o novo modo de taxa de transferência.</block>
-  <block id="232af3ec8ca37d39f0b49ddb6c81830a" category="list-text">*Pontos de decisão de recomendação*: O algoritmo de recomendação de capacidade identificou que é necessária capacidade adicional de SSD.</block>
   <block id="0d606a9207ef786e2b3dc99ea3fe3ad8" category="list-text">**Defina limites claros**: Escolha limites de uso de SSD e parâmetros de taxa de transferência que se adequem à sua carga de trabalho e aos seus planos de capacidade.</block>
   <block id="c6e183b5112db7515b7bc4904a3b374b" category="list-text">**Analise as recomendações rapidamente**: filtre a tabela Clusters para encontrar sistemas de arquivos com recomendações de capacidade ou taxa de transferência. Verifique-as e aja para evitar a falta de espaço.</block>
   <block id="0ecfcdfed86b687b39299cccc3380def" category="list-text">**Escolha o modo correto**: use o modo **Recomendar** se você quiser aprovar as alterações de capacidade ou de throughput manualmente. Use o modo **Automatizar** se você quiser que o sistema gerencie a capacidade ou o throughput automaticamente.</block>
@@ -1084,11 +1075,8 @@
   <block id="e920df7cb27871af178ff85a428a8b4e" category="list-text">Em *Configuração avançada*, configure os parâmetros de gerenciamento de throughput:</block>
   <block id="39122245b5363dc3871538d2ef59784e" category="list-text">*Janela de violação consecutiva (horas)*: duração de violações consecutivas antes da tomada de medidas</block>
   <block id="a9d111294543c201d767519d991c1b8d" category="list-text">*Métricas de violação consecutiva (%)*: limite percentual para determinar violações consecutivas</block>
-  <block id="d385fd0ac858ff17553d407851f64c48" category="paragraph">Se o gerenciamento de capacidade de SSD estiver desativado, o gráfico mostrará apenas o uso passado e não exibirá recomendações nem decisões de automação.</block>
-  <block id="1de4de358ec9c3a1cd36180e2c13a443" category="list-text">Na guia *Visão geral*, selecione o nome de um sistema de arquivos na tabela. Na visualização de detalhes do cluster, selecione a opção *Taxa de transferência* ou *Capacidade do SSD* para alternar a exibição do gráfico.</block>
   <block id="a01346bc61a98c025144199b0893e264" category="paragraph">Se você selecionar *Taxa de transferência*, o gráfico mostrará a taxa de transferência e a utilização do cliente para que você possa comparar a demanda com o nível de taxa de transferência e os limites configurados.</block>
   <block id="e56ecd5b4053d7385c23bb7c3422bdd5" category="paragraph">Se você selecionar *Capacidade do SSD*, o gráfico mostrará o uso do SSD, incluindo tendências históricas de capacidade e pontos de decisão de capacidade.</block>
-  <block id="d73906b15c9fc84c1806084ce8720a42" category="paragraph">Selecione diferentes intervalos de tempo para visualizar as tendências de taxa de transferência ou capacidade em diferentes períodos. . Passe o cursor sobre os pontos de decisão no gráfico para visualizar detalhes sobre recomendações ou ações de automação em momentos específicos. . Use as informações do gráfico para: * Entender com que frequência os ajustes de capacidade são necessários * Avaliar se o modo de automação ou recomendação se adapta melhor aos seus padrões de carga de trabalho * Identificar restrições de capacidade recorrentes * Planejar as necessidades futuras de capacidade com base nas tendências de crescimento * Solucionar problemas em tentativas de automação malsucedidas</block>
   <block id="74bc5d714652a3ae18c64ee93e4ba085" category="section-title">30 de setembro de 2026</block>
   <block id="e52235241b1ae81de07e54f4309b150e" category="summary">Perguntas frequentes sobre a NetApp Workload Factory para EDA.</block>
   <block id="f66051160a7d32c47d92cf8ad2688857" category="doc">Perguntas frequentes sobre o Workload Factory para EDA</block>
@@ -1137,4 +1125,42 @@
   <block id="944e61de0f91bfc0cd15e211ebfe75af" category="inline-link-macro">Obtendo ajuda para EDA</block>
   <block id="1b3bafacd5fad351f7d20e33c6af1735" category="paragraph">Amazon FSx for NetApp ONTAP é uma solução própria da AWS, portanto, para obter suporte, use a Central de Suporte no seu Console de Gerenciamento da AWS e abra um caso selecionando "FSx for ONTAP". Para perguntas gerais sobre o Workload Factory ou seus aplicativos e serviços, consulte <block ref="b373eb075b7d6f2dc82d0ceae72b0277" category="inline-link-macro-rx"></block>.</block>
   <block id="7e286d8febc5746f20c7282a62edee9c" category="sidebar">Perguntas frequentes sobre a NetApp Workload Factory para EDA</block>
+  <block id="c13ffbb74415f75e6bfbceb28746aa00" category="doc">Detalhes do volume na análise de latência</block>
+  <block id="e702df4af5908b691938e2a636bf0d11" category="paragraph">Agora você pode visualizar os detalhes adicionais do volume *Tipo de volume* (RW/DP), *Estilo do volume* (o FlexVol e o FlexGroup) na página *Análise detalhada de latência*.</block>
+  <block id="84040e078366ab4b302c9f45a3caa89d" category="section-title">Verificação da pressão do sistema de arquivos para eventos de latência</block>
+  <block id="06aefa6560003b3171cd7662ef2b3d9d" category="paragraph">Para volumes com um alerta de latência, agora você pode verificar se o sistema de arquivos estava sob pressão suficiente para afetar o desempenho no momento em que o evento ocorreu. Você pode visualizar os dados do CloudWatch dos 40 minutos anteriores ao evento e seguir um link para o sistema de arquivos para uma investigação mais detalhada.</block>
+  <block id="3e7850720206a5fe00f7310f49f139ef" category="inline-link-macro">Aprenda a analisar tendências de latência</block>
+  <block id="4082bd9c59dc64a78f083ec07f0f1ade" category="paragraph"><block ref="e0c19bfe1186d72bb091851a5915268f" category="inline-link-macro-rx"></block>.</block>
+  <block id="84ae0158deb3f95e6027fdf8d5ff467d" category="section-title">Pontos de decisão da taxa de transferência</block>
+  <block id="d561222faafa1c2e107d8307549a4372" category="paragraph">Agora você pode ver a recomendação de throughput do cliente e os pontos de decisão da automação. Passe o cursor sobre um ponto de decisão para ver detalhes, como o SKU atual e o recomendado ou as métricas que excederam o limite na janela de tempo (%).</block>
+  <block id="e7e1d8130eb396a11055ef0aad27b20c" category="inline-link-macro">Saiba mais sobre pontos de decisão</block>
+  <block id="b1b6afda8cefc68653435f204de78f32" category="paragraph"><block ref="c182c1de3b13ab1f612ac32dab94169a" category="inline-link-macro-rx"></block>.</block>
+  <block id="1e67c2facf6c9ccaed8c578497980ba2" category="section-title">Executar novamente a análise de latência</block>
+  <block id="95386ac844fe5334b9e7743d6098dfab" category="paragraph">Agora você pode selecionar *Executar análise novamente* para iniciar uma nova análise de latência de um volume e atualizar os resultados sob demanda.</block>
+  <block id="1e2beb43d53ce6e7e78ce598ad680f34" category="inline-link-macro">Aprenda a analisar problemas de latência</block>
+  <block id="7ab17ff19aa466bc8531cc7568dea5a6" category="paragraph"><block ref="13291cb64cb4778475d22fb041bce2e0" category="inline-link-macro-rx"></block>.</block>
+  <block id="faffdafc286086cc0dbf1bbb1be9ad24" category="section-title">Pressão do sistema de arquivos</block>
+  <block id="b174f2d4d910ae1039afecd55cf7605d" category="paragraph">Para volumes com um alerta de latência, você pode executar uma verificação sob demanda para ver se o sistema de arquivos estava sob pressão suficiente para afetar o desempenho quando o evento ocorreu. A verificação analisa os 40 minutos de dados do CloudWatch anteriores ao evento e retorna *Pressured* ou *Not pressured*. Um resultado *Pressured* significa que há mais de 80% de chance de que a pressão no sistema de arquivos tenha afetado o desempenho e a latência. A verificação também inclui um link para o recurso do FSx for ONTAP para que você possa revisar as métricas relacionadas.</block>
+  <block id="e886df54588d52e0380fc881467880b0" category="section-title">Entendendo os pontos de decisão da taxa de transferência</block>
+  <block id="d5b00b16ab6db83fdf23282158c24ffc" category="paragraph">O gráfico de taxa de transferência do cliente mostra quando a taxa de transferência recomendada pelo sistema muda ou é ajustada automaticamente. Esses marcadores também aparecem na legenda do gráfico. Se o gerenciamento de taxa de transferência estiver desativado, o gráfico mostra apenas a taxa de transferência passada e não exibe recomendações nem alterações automáticas.</block>
+  <block id="1478d9dba08b46cdbef08e98cdb80335" category="list-text">Exibido quando o sistema detecta que a taxa de transferência precisa ser aumentada. Passe o cursor sobre um ponto de decisão para ver os detalhes. Se várias recomendações ocorrerem no mesmo carimbo de data/hora, o ponto mostra o número de recomendações e os detalhes da mais recente.</block>
+  <block id="0c990789e7c8c34746cdf8245924ae90" category="list-text">Exibido quando o sistema de automação tenta aumentar a taxa de transferência. Passe o cursor sobre um ponto de decisão para ver os detalhes. Se o aumento for bem-sucedido, o novo SKU também será exibido. Se falhar, uma breve explicação será exibida. Se várias falhas ocorrerem ao mesmo tempo, o ponto mostrará o número de falhas e os detalhes da mais recente.</block>
+  <block id="c6f02cbeb83957a98e034aa44ac8d06b" category="paragraph">Use o gráfico de throughput do cliente para:</block>
+  <block id="bcc32ea0c2c748a56864977ad681aae4" category="list-text">Veja com que frequência você precisa de maior taxa de transferência</block>
+  <block id="627aca367632fb159e4a6c08e87b8226" category="list-text">Escolha se o modo de automação ou o modo de recomendação atende melhor às suas necessidades</block>
+  <block id="c44c2990e89eee02f130dbf8adf9df07" category="list-text">Identifique limites recorrentes de taxa de transferência</block>
+  <block id="47c3141ddd1f9f9483f34cdb8af8ae43" category="list-text">Planeje as necessidades futuras de taxa de transferência à medida que o uso crescer ao longo do tempo</block>
+  <block id="77940ad0aaabd15b52dda5e8a86f480b" category="list-text">Para atualizar os resultados, selecione *Executar análise novamente*. Uma nova análise é iniciada para o volume, e o painel é atualizado quando a análise é concluída.</block>
+  <block id="6f751f6512545197043d490e308e9992" category="section-title">Analisar as tendências de capacidade e taxa de transferência e os pontos de decisão</block>
+  <block id="322cceacdd52c951c88a1d93df7f0dd8" category="list-text">Na guia *Visão geral*, selecione o nome de um sistema de arquivos na tabela.</block>
+  <block id="ddbda74454b43f792ee3816b12e08af9" category="list-text">Na visualização de detalhes do cluster, selecione a opção *Taxa de transferência* ou *Capacidade do SSD* para alternar a exibição do gráfico.</block>
+  <block id="d92136d041599b752e93710c829f0583" category="list-text">Selecione diferentes intervalos de tempo para visualizar as tendências de taxa de transferência ou capacidade em diferentes períodos.</block>
+  <block id="8d33ce28efafbfe7600930c556bcfd55" category="list-text">Passe o cursor sobre os pontos de decisão no gráfico para visualizar detalhes sobre recomendações ou ações de automação em momentos específicos.</block>
+  <block id="4d43a6d1e695bf0a99e5bc33d3ca3fda" category="list-text">Utilize as informações do gráfico para:</block>
+  <block id="8aa0b0a22cf225f503177c8f1de7df3c" category="list-text">Entenda com que frequência são necessários ajustes de capacidade</block>
+  <block id="dc036d0aefd6c43f7e0e90f879128e16" category="list-text">Avalie se o modo de automação ou o modo de recomendação se adapta melhor aos seus padrões de carga de trabalho</block>
+  <block id="274e06045627d8934cd9bb52e8c64f53" category="list-text">Identificar restrições de capacidade recorrentes</block>
+  <block id="38e979158d55ae25a36aba4d97b0a8b4" category="list-text">Planeje as necessidades futuras de capacidade com base nas tendências de crescimento</block>
+  <block id="2814ccd9bf1ef1faffa5931e29ee7f74" category="list-text">Solucionar problemas em tentativas de automação malsucedidas</block>
+  <block id="7dc50386b3284326e1114e4e7f4eb3fd" category="section-title">1 de novembro de 2026</block>
 </blocks>

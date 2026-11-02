@@ -185,6 +185,26 @@ Utilize o gráfico de histórico de uso do SSD para:
 
 
 
+[[understanding-throughput-decision-points]]
+=== Entendendo os pontos de decisão da taxa de transferência
+
+O gráfico de taxa de transferência do cliente mostra quando a taxa de transferência recomendada pelo sistema muda ou é ajustada automaticamente. Esses marcadores também aparecem na legenda do gráfico. Se o gerenciamento de taxa de transferência estiver desativado, o gráfico mostra apenas a taxa de transferência passada e não exibe recomendações nem alterações automáticas.
+
+*Pontos de decisão para recomendação*:: Exibido quando o sistema detecta que a taxa de transferência precisa ser aumentada. Passe o cursor sobre um ponto de decisão para ver os detalhes. Se várias recomendações ocorrerem no mesmo carimbo de data/hora, o ponto mostra o número de recomendações e os detalhes da mais recente.
+*Pontos de decisão de automação*:: Exibido quando o sistema de automação tenta aumentar a taxa de transferência. Passe o cursor sobre um ponto de decisão para ver os detalhes. Se o aumento for bem-sucedido, o novo SKU também será exibido. Se falhar, uma breve explicação será exibida. Se várias falhas ocorrerem ao mesmo tempo, o ponto mostrará o número de falhas e os detalhes da mais recente.
+
+
+Use o gráfico de throughput do cliente para:
+
+* Veja com que frequência você precisa de maior taxa de transferência
+* Escolha se o modo de automação ou o modo de recomendação atende melhor às suas necessidades
+* Identifique limites recorrentes de taxa de transferência
+* Planeje as necessidades futuras de taxa de transferência à medida que o uso crescer ao longo do tempo
+* Investigue por que as tentativas de automação falharam
+
+
+
+
 [[related-information]]
 == Informações relacionadas
 

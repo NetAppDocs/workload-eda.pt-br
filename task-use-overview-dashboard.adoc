@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-use-overview-dashboard.html 
-keywords: cluster overview, filter dashboard, cluster health, capacity recommendations, SSD management, throughput management, bulk edit, decision points, clusters table, ONTAP events, latency events 
+keywords: cluster overview, filter dashboard, cluster health, capacity recommendations, SSD management, throughput management, bulk edit, decision points, throughput decision points, clusters table, ONTAP events, latency events 
 summary: Use o painel Visão geral para monitorar a integridade do cluster, visualizar recomendações de capacidade, gerenciar configurações de SSD e taxa de transferência e analisar tendências de desempenho em seus sistemas de arquivos FSx for ONTAP. 
 ---
 = Utilize o painel de Visão Geral no Workload Factory para EDA
@@ -47,19 +47,6 @@ Use os filtros na parte superior do painel para visualizar sistemas de arquivos 
 == Visualizar o estado de saúde do cluster
 
 Na parte superior do painel, você vê um resumo da integridade e da atividade dos sistemas de arquivos que você selecionou. Isso aparece somente quando pelo menos um link FSx for ONTAP está conectado aos seus sistemas de arquivos.
-
-.Sobre esta tarefa
-O estado de saúde do cluster inclui as seguintes áreas principais:
-
-* *Latência*: Número de eventos de latência detectados
-* *Elasticidade do sistema de arquivos*:
-+
-** *Capacidade do SSD*: Mostra quantos sistemas de arquivos usam Automate, Recommend ou None para gerenciar a capacidade do SSD.
-** *Taxa de transferência*: Mostra quantos sistemas de arquivos usam Automatizar, Recomendar ou Nenhuma para gerenciar a taxa de transferência.
-
-
-* *Eventos ONTAP*: Número de eventos EMS por categoria (Capacidade, Disponibilidade e proteção, Segurança e outros)
-
 
 .Passos
 . Verifique o estado de integridade do cluster na parte superior do painel de controle.
@@ -169,30 +156,31 @@ Os sistemas de arquivos selecionados alternam imediatamente para o novo modo de 
 
 
 
-[[analyze-capacity-trends-and-decision-points]]
-== Analisar tendências de capacidade e pontos de decisão
+[[analyze-capacity-and-throughput-trends-and-decision-points]]
+== Analisar as tendências de capacidade e taxa de transferência e os pontos de decisão
 
 Use o gráfico de utilização do SSD para ver como o uso do storage muda ao longo do tempo e identificar padrões.
 
-.Sobre esta tarefa
-Os pontos de decisão no gráfico indicam quando:
-
-* *Pontos de decisão de recomendação*: O algoritmo de recomendação de capacidade identificou que é necessária capacidade adicional de SSD.
-* *Pontos de decisão da automação*: O sistema de automação tentou aumentar a capacidade do SSD. Esses pontos mostram se a ação foi bem-sucedida ou falhou.
-+
-Se o gerenciamento de capacidade de SSD estiver desativado, o gráfico mostrará apenas o uso passado e não exibirá recomendações nem decisões de automação.
-
-
-
 .Passos
-. Na guia *Visão geral*, selecione o nome de um sistema de arquivos na tabela. Na visualização de detalhes do cluster, selecione a opção *Taxa de transferência* ou *Capacidade do SSD* para alternar a exibição do gráfico.
+. Na guia *Visão geral*, selecione o nome de um sistema de arquivos na tabela.
+. Na visualização de detalhes do cluster, selecione a opção *Taxa de transferência* ou *Capacidade do SSD* para alternar a exibição do gráfico.
++
+** Se você selecionar *Taxa de transferência*, o gráfico mostrará a taxa de transferência e a utilização do cliente para que você possa comparar a demanda com o nível de taxa de transferência e os limites configurados.
+** Se você selecionar *Capacidade do SSD*, o gráfico mostrará o uso do SSD, incluindo tendências históricas de capacidade e pontos de decisão de capacidade.
 
 
-Se você selecionar *Taxa de transferência*, o gráfico mostrará a taxa de transferência e a utilização do cliente para que você possa comparar a demanda com o nível de taxa de transferência e os limites configurados.
+. Selecione diferentes intervalos de tempo para visualizar as tendências de taxa de transferência ou capacidade em diferentes períodos.
+. Passe o cursor sobre os pontos de decisão no gráfico para visualizar detalhes sobre recomendações ou ações de automação em momentos específicos.
+. Utilize as informações do gráfico para:
++
+** Entenda com que frequência são necessários ajustes de capacidade
+** Avalie se o modo de automação ou o modo de recomendação se adapta melhor aos seus padrões de carga de trabalho
+** Identificar restrições de capacidade recorrentes
+** Planeje as necessidades futuras de capacidade com base nas tendências de crescimento
+** Solucionar problemas em tentativas de automação malsucedidas
 
-Se você selecionar *Capacidade do SSD*, o gráfico mostrará o uso do SSD, incluindo tendências históricas de capacidade e pontos de decisão de capacidade.
 
-Selecione diferentes intervalos de tempo para visualizar as tendências de taxa de transferência ou capacidade em diferentes períodos. . Passe o cursor sobre os pontos de decisão no gráfico para visualizar detalhes sobre recomendações ou ações de automação em momentos específicos. . Use as informações do gráfico para: * Entender com que frequência os ajustes de capacidade são necessários * Avaliar se o modo de automação ou recomendação se adapta melhor aos seus padrões de carga de trabalho * Identificar restrições de capacidade recorrentes * Planejar as necessidades futuras de capacidade com base nas tendências de crescimento * Solucionar problemas em tentativas de automação malsucedidas
+
 
 
 
